@@ -1,0 +1,61 @@
+.home_Wrapper {
+  min-height: 100vh;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.home_header {
+  margin-bottom: 1.5rem;
+}
+
+.home_logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff8cbf;
+}
+
+.divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #e2e2e2;
+  margin: 1.5rem auto 1.5rem auto; /* 위 아래 여백 조절 */
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2열 구성 */
+  gap: 1rem;
+  max-width: 400px;
+  margin: 1.5rem auto 0;
+  width: 100%;
+}
+
+.choosely-button {
+  background-color: #ff8cbf;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
