@@ -8,4 +8,5 @@
   scale: 0.8;
   transition: all 0.5s ease;
   z-index: 10;
+  border-color: #ab35ff;
 }
