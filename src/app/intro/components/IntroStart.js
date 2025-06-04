@@ -9,75 +9,50 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function IntroStart() {
   const sectionRef = useRef(null);
-  const bgContainerRef = useRef(null);
-  const bgRef = useRef(null); // ✅ 배경 이미지용 ref 추가
   const logoRef = useRef(null);
-  const arrowRef = useRef(null);
-  const heroRef = useRef(null);
+  const circleRefs = useRef([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // 로고 자간 + 블러 제거
+      gsap.to(logoRef.current, {
+        filter: "blur(0px)",
+        letterSpacing: "0px",
+        opacity: 1,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=30%",
+          scrub: true,
+        },
+      });
+
+      // 모든 원 애니메이션을 한 timeline으로 묶고, pin도 한 번만!
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=200%",
+          end: "+=100%",
           scrub: true,
           pin: true,
         },
       });
 
-      // 줌인 효과
-      tl.to(bgContainerRef.current, {
-        scale: 1.5,
-        ease: "power2.inOut",
-      });
+      circleRefs.current.forEach((circle, i) => {
+        const length = circle.getTotalLength();
+        circle.style.strokeDasharray = length;
+        circle.style.strokeDashoffset = length;
 
-      // 로고/화살표 사라짐
-      tl.to(
-        logoRef.current,
-        {
-          opacity: 0,
-          scale: 0.8,
-        },
-        "<"
-      );
-
-      tl.to(
-        arrowRef.current,
-        {
-          opacity: 0,
-        },
-        "<"
-      );
-
-      // ✅ 배경 이미지 페이드아웃
-      tl.to(
-        bgRef.current,
-        {
-          opacity: 0,
-          duration: 1,
-          ease: "power2.inOut",
-        },
-        "<+0.2"
-      );
-
-      // ✅ 배경색 전환
-      tl.to(
-        bgContainerRef.current,
-        {
-          backgroundColor: "#fff3e6",
-          duration: 1,
-          ease: "power2.inOut",
-        },
-        "<"
-      );
-
-      // 텍스트 등장
-      tl.to(heroRef.current, {
-        opacity: 1,
-        duration: 1,
-        ease: "power2.inOut",
+        tl.to(
+          circle,
+          {
+            strokeDashoffset: -1,
+            ease: "power2.out",
+          },
+          0
+        ); // 동시에 실행되게 타이밍 0으로 맞춤
       });
     }, sectionRef);
 
@@ -86,35 +61,30 @@ export default function IntroStart() {
 
   return (
     <section ref={sectionRef} className={styles.intro_wrapper}>
-      {/* Scene 1 */}
-      <div ref={bgContainerRef} className={styles.scene_bg}>
-        <img
-          ref={bgRef}
-          src="/background.jpg"
-          alt="background"
-          className={styles.bg_image}
-        />
-        <h1 ref={logoRef} className={styles.intro_logo}>
-          Fylto.
-        </h1>
-        <div ref={arrowRef} className={styles.scroll_arrow}>
-          ↓
-        </div>
-      </div>
+      {/* 배경 그리드 */}
+      <div className={styles.grid_bg} />
 
-      {/* Scene 2 */}
-      <div ref={heroRef} className={styles.scene_hero}>
-        <video
-          src="/robo.webm"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className={styles.robo_video}
-        />
-        <h2>어서오세요, 여기는 Fylto입니다.</h2>
-        <p>필요한 것만 쏙 골라주는, 감각적인 큐레이션 스튜디오예요.</p>
-      </div>
+      {/* 로고 */}
+      <h1 ref={logoRef} className={styles.intro_logo}>
+        Fylto.
+      </h1>
+
+      {/* 원형 초점 SVG */}
+      <svg width="360" height="360" className={styles.focus_svg}>
+        {[...Array(4)].map((_, i) => (
+          <circle
+            key={i}
+            ref={(el) => (circleRefs.current[i] = el)}
+            cx={180 + i * 2}
+            cy={180 - i * 2.5}
+            r={100 + i * 1.5}
+            stroke="black"
+            strokeWidth={i === 0 ? 2 : 1}
+            fill="none"
+            className={styles.focus_circle}
+          />
+        ))}
+      </svg>
     </section>
   );
 }

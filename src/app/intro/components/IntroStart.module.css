@@ -1,82 +1,52 @@
 .intro_wrapper {
-  position: relative;
   height: 100vh;
+  width: 100%;
+  position: relative;
   overflow: hidden;
+  background-color: #f0f0f0;
 }
 
-.scene_bg {
+.grid_bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent;
-  transform-origin: center center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.bg_image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  background-image: linear-gradient(to right, #d9d9d9 1px, transparent 1px),
+    linear-gradient(to bottom, #d9d9d9 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 0;
 }
 
 .intro_logo {
-  font-size: 48px;
-  font-weight: bold;
-  color: #111;
   font-family: "Aclonica", sans-serif;
-  z-index: 2;
-}
-
-.scroll_arrow {
-  margin-top: 20px;
-  font-size: 24px;
-  color: #111;
-  z-index: 2;
-}
-
-.scene_hero {
+  font-size: 72px;
+  font-weight: bold;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  opacity: 0;
-  z-index: 3;
+  letter-spacing: 10px;
+  filter: blur(10px);
+  opacity: 0.3;
+  z-index: 2;
+  color: black;
 }
 
-.scene_hero h2 {
-  font-size: 28px;
-  margin-bottom: 12px;
-  color: #111;
+.focus_svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 360px;
+  height: 360px;
 }
 
-.scene_hero p {
-  font-size: 16px;
-  color: #444;
-}
-
-.robo_video {
-  width: 240px;
-  height: auto;
-  margin-bottom: 20px;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.focus_circle {
+  stroke: black;
+  fill: none;
+  opacity: 0.15;
+  stroke-linecap: round;
 }
