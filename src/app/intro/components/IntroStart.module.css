@@ -18,31 +18,6 @@
   z-index: 2;
 }
 
-/* 🔹 Spline 화면 */
-.spline_scene {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  transition: opacity 0.8s ease;
-  z-index: 0;
-  background-color: #f0f0f0;
-}
-
-.overlay_text {
-  font-family: "NanumSquareNeo";
-  line-height: 1.5;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  text-align: center;
-  color: black;
-}
-
 /* 🔹 공통 배경 그리드 */
 .grid_bg {
   position: absolute;
@@ -120,8 +95,69 @@
   z-index: 0;
 }
 
+/* 🔹 Spline 화면 */
+.spline_scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
+  z-index: 0;
+  background-color: #f0f0f0;
+}
+
+.scene2_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay_text {
+  font-family: "NanumSquareNeo";
+  line-height: 1.5;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  color: black;
+}
+
 .reveal {
   opacity: 1;
   pointer-events: auto;
   z-index: 2;
+}
+
+.choice_buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.choice_buttons button {
+  font-size: 16px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.choice_buttons button:hover {
+  background-color: #f6f6f6;
+  transform: translateY(-2px);
 }

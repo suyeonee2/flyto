@@ -14,8 +14,10 @@ export default function IntroStart() {
   const bgRef = useRef(null);
   const circleRefs = useRef([]);
   const splineRef = useRef(null);
+  const buttonRef = useRef(null);
 
   const [showSpline, setShowSpline] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -29,8 +31,19 @@ export default function IntroStart() {
           onUpdate: (self) => {
             if (self.progress > 0.99) {
               setShowSpline(true);
+
+              // 1.5초 뒤 버튼 페이드인
+              gsap.delayedCall(1.5, () => {
+                setShowButtons(true);
+                gsap.fromTo(
+                  buttonRef.current,
+                  { opacity: 0, y: 20 },
+                  { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+                );
+              });
             } else {
               setShowSpline(false);
+              setShowButtons(false);
             }
           },
         },
@@ -118,7 +131,7 @@ export default function IntroStart() {
       >
         <div className={styles.grid_bg} />
 
-        <div>
+        <div className={styles.scene2_container}>
           <Spline
             ref={splineRef}
             scene="https://prod.spline.design/3SOFYmZPFxWU5zPY/scene.splinecode"
@@ -131,12 +144,21 @@ export default function IntroStart() {
               zIndex: 1,
             }}
           />
-        </div>
-        <div className={styles.overlay_text}>
-          <h2>
-            <span style={{ fontFamily: "Aclonica" }}>Fylto</span>에 어서오세요.
-          </h2>
-          <p>저희 스튜디오에 처음 오셨나요?</p>
+
+          <div className={styles.overlay_text}>
+            <h2>
+              <span style={{ fontFamily: "Aclonica" }}>Fylto</span>에
+              어서오세요.
+            </h2>
+            <p>저희 스튜디오에 처음 오셨나요?</p>
+          </div>
+
+          {showButtons && (
+            <div className={styles.choice_buttons} ref={buttonRef}>
+              <button>네, 첫 방문이에요</button>
+              <button>아뇨, 재방문이에요</button>
+            </div>
+          )}
         </div>
       </div>
     </section>
