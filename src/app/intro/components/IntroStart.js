@@ -44,11 +44,14 @@ export default function IntroStart() {
         const length = circle.getTotalLength();
         circle.style.strokeDasharray = length;
         circle.style.strokeDashoffset = length;
+        circle.style.opacity = 0;
 
         tl.to(
           circle,
           {
             strokeDashoffset: -1,
+            opacity: 0.15,
+            duration: 0.4,
             ease: "power2.out",
           },
           0

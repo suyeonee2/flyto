@@ -12,13 +12,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, #dbdbdb 1px, transparent 1px),
-    linear-gradient(to bottom, #dbdbdb 1px, transparent 1px),
-    radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.05), transparent 70%);
 
-  background-size: 40px 40px, 40px 40px, 100% 100%;
+  background-image: linear-gradient(to right, #eee 1px, transparent 1px),
+    linear-gradient(to bottom, #eee 1px, transparent 1px),
+    url("/intro_back.png");
+
+  background-size: 30px 30px, 30px 30px, cover;
+
   background-repeat: repeat, repeat, no-repeat;
-  background-position: top left, top left, bottom;
+
+  background-position: top left, top left, 80% center;
+
+  background-blend-mode: multiply; /* multiply 또는 lighten 도 테스트 가능 */
+  opacity: 0.95;
   z-index: 0;
 }
 
@@ -28,8 +34,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30%;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.5), transparent);
+  height: 35%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.7), transparent);
   pointer-events: none;
 }
 
@@ -60,7 +66,7 @@
 }
 
 .focus_circle {
-  stroke: black;
+  stroke: rgb(68, 68, 68);
   fill: none;
   opacity: 0.15;
   stroke-linecap: round;
