@@ -1,11 +1,49 @@
+.scene_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 🔹 인트로 화면 */
 .intro_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
-  position: relative;
   overflow: hidden;
+  background-color: #f0f0f0;
+  transition: opacity 0.8s ease;
+  z-index: 2;
+}
+
+/* 🔹 Spline 화면 */
+.spline_scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
+  z-index: 0;
   background-color: #f0f0f0;
 }
 
+.overlay_text {
+  font-family: "NanumSquareNeo";
+  line-height: 1.5;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  color: black;
+}
+
+/* 🔹 공통 배경 그리드 */
 .grid_bg {
   position: absolute;
   top: 0;
@@ -19,16 +57,14 @@
     url("/intro_back.png");
 
   background-size: 30px 30px, 30px 30px, cover;
-
   background-repeat: repeat, repeat, no-repeat;
-
   background-position: top left, top left, bottom center;
-
-  background-blend-mode: multiply; /* multiply 또는 lighten 도 테스트 가능 */
+  background-blend-mode: multiply;
   opacity: 0.95;
   z-index: 0;
 }
 
+/* 🔹 배경 그라디언트 효과 */
 .grid_bg::after {
   content: "";
   position: absolute;
@@ -40,6 +76,7 @@
   pointer-events: none;
 }
 
+/* 🔹 텍스트 로고 */
 .intro_logo {
   font-family: "Aclonica", sans-serif;
   font-size: 72px;
@@ -54,11 +91,11 @@
   opacity: 0.3;
   z-index: 2;
   color: black;
-
   text-shadow: 6px 10px 30px rgba(0, 0, 0, 0.05),
     20px 25px 60px rgba(0, 0, 0, 0.08);
 }
 
+/* 🔹 원형 포커스 */
 .focus_svg {
   position: absolute;
   top: 50%;
@@ -74,4 +111,17 @@
   fill: none;
   opacity: 0.15;
   stroke-linecap: round;
+}
+
+/* 🔹 상태 전환 */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reveal {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
 }
