@@ -1,4 +1,4 @@
-/* FirstTime.module.css */
+/* 🟣 전체 래퍼 */
 .scene_wrapper {
   position: relative;
   width: 100%;
@@ -7,19 +7,16 @@
   background-color: #f0f0f0;
 }
 
-/* 🔹 공통 배경 그리드 */
+/* 🟣 배경 그리드 */
 .grid_bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scale(1);
-
   background-image: linear-gradient(to right, #eee 1px, transparent 1px),
     linear-gradient(to bottom, #eee 1px, transparent 1px),
     url("/intro_back.png");
-
   background-size: 30px 30px, 30px 30px, cover;
   background-repeat: repeat, repeat, no-repeat;
   background-position: top left, top left, bottom center;
@@ -39,9 +36,97 @@
   pointer-events: none;
 }
 
+/* 🟣 필토 아이콘 */
+.fylto_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rem;
+  margin-bottom: 24px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 🟣 콘텐츠 영역 */
 .content {
   position: relative;
   z-index: 1;
-  padding-top: 150px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🟣 말풍선 공통 */
+.bubble {
+  font-family: "NanumSquareNeo";
+  font-size: 16px;
+  color: #333;
+  max-width: 300px;
+  background-color: #ffffff3c;
+  border: 1px solid whitesmoke;
+  border-radius: 16px;
+  padding: 16px 20px;
+  line-height: 1.5;
+  box-shadow: 0 10px 30px rgba(62, 62, 62, 0.1);
+  text-align: left;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* 🟣 떠다니는 애니메이션 */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* 🟣 말풍선 등장 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.down_arrow {
+  margin-top: 100px;
+  color: #4d4d4d;
+  animation: fadeInUpArrow 0.8s ease-out forwards, bounceDown 1.5s infinite 0.8s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUpArrow {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceDown {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.6;
+  }
 }

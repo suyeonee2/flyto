@@ -17,7 +17,7 @@ export default function IntroStart() {
   const circleRefs = useRef([]);
   const splineRef = useRef(null);
   const buttonRef = useRef(null);
-  const headerRef = useRef(null); // 🔹 헤더용 ref
+  const headerRef = useRef(null);
 
   const [showSpline, setShowSpline] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
@@ -162,20 +162,23 @@ export default function IntroStart() {
             scene="https://prod.spline.design/3SOFYmZPFxWU5zPY/scene.splinecode"
             style={{
               position: "absolute",
-              top: 0,
+              top: "-50px",
               left: 0,
+              scale: 0.8,
               width: "100%",
               height: "100%",
               zIndex: 1,
             }}
           />
 
-          <div className={styles.overlay_text}>
-            <h2>
-              <span style={{ fontFamily: "Aclonica" }}>Fylto</span>에
-              어서오세요.
+          <div className={styles.text_wrapper}>
+            <h2 className={styles.introText}>
+              안녕하세요! <br />
+              <span style={{ color: "#5783a2" }}>큐레이션 콘텐츠 스튜디오</span>
+              <br />
+              <span style={{ fontFamily: "Aclonica" }}>Fylto</span>입니다.
             </h2>
-            <p>저희 스튜디오에 처음 오셨나요?</p>
+            <p className={styles.subText}>저희 스튜디오에 처음 오셨나요?</p>
           </div>
           {showButtons && (
             <div className={styles.choice_buttons} ref={buttonRef}>

@@ -115,16 +115,28 @@
   justify-content: center;
 }
 
-.overlay_text {
-  font-family: "NanumSquareNeo";
-  line-height: 1.5;
+.text_wrapper {
   position: absolute;
-  top: 45%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
   text-align: center;
-  color: black;
+  z-index: 2;
+}
+
+.introText {
+  font-family: "NanumSquareNeo";
+  font-size: 17px;
+  line-height: 1.6;
+  color: #111;
+  margin-bottom: 25px;
+  width: 300px;
+}
+
+.subText {
+  font-family: "NanumSquareNeo";
+  font-size: 15px;
+  color: #777;
 }
 
 .reveal {
@@ -139,7 +151,7 @@
   justify-content: center;
   gap: 20px;
   position: absolute;
-  top: 62%;
+  top: 63%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
