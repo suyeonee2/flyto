@@ -12,7 +12,7 @@ export default function Header({ className = "" }) {
         </div>
         <nav className={styles.nav}>
           <Link href="/project">Project</Link>
-          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/csoncepts">Concepts</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
         </nav>

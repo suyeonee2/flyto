@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./IntroStart.module.css";
 import Spline from "@splinetool/react-spline";
 import Header from "@/Components/Header/Header";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -176,11 +177,14 @@ export default function IntroStart() {
             </h2>
             <p>저희 스튜디오에 처음 오셨나요?</p>
           </div>
-
           {showButtons && (
             <div className={styles.choice_buttons} ref={buttonRef}>
-              <button>네, 첫 방문이에요</button>
-              <button>아뇨, 재방문이에요</button>
+              <Link href="/intro/first-time" className={styles.choice_link}>
+                네, 첫 방문이에요
+              </Link>
+              <Link href="/intro/returning" className={styles.choice_link}>
+                아뇨, 재방문이에요
+              </Link>
             </div>
           )}
         </div>

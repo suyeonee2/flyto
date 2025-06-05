@@ -38,8 +38,11 @@
   text-decoration: none;
   color: #444;
   transition: color 0.3s ease;
+  padding-bottom: 1px; /* 라인 간격 조절용 */
+  border-bottom: 1px solid transparent; /* 기본 라인 유지 */
 }
 
 .nav a:hover {
   color: black;
+  border-bottom: 1px solid black;
 }
