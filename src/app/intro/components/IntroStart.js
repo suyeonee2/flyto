@@ -173,7 +173,7 @@ export default function IntroStart() {
 
           <div className={styles.text_wrapper}>
             <h2 className={styles.introText}>
-              안녕하세요! <br />
+              안녕하세요, <br />
               <span style={{ color: "#5783a2" }}>큐레이션 콘텐츠 스튜디오</span>
               <br />
               <span style={{ fontFamily: "Aclonica" }}>Fylto</span>입니다.

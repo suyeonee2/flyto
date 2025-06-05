@@ -100,9 +100,9 @@
   }
 }
 
-.down_arrow {
+.scroll_arrow {
   margin-top: 100px;
-  color: #4d4d4d;
+  text-align: center;
   animation: fadeInUpArrow 0.8s ease-out forwards, bounceDown 1.5s infinite 0.8s;
   opacity: 0;
   transform: translateY(20px);
@@ -128,5 +128,90 @@
   50% {
     transform: translateY(6px);
     opacity: 0.6;
+  }
+}
+
+.flow_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+  font-family: "NanumSquareNeo";
+  line-height: 1.5;
+}
+
+.step h4 {
+  font-family: "NanumSquareNeoExtraBold";
+}
+
+.node1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #c2c2c2;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.node2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #707070;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.node3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #181818;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.line {
+  width: 2px;
+  height: 40px;
+  background-color: #ccc;
+}
+
+/* 데스크탑 레이아웃 변경 */
+@media screen and (min-width: 768px) {
+  .flow_wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .step {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .line {
+    width: 60px;
+    height: 2px;
   }
 }
