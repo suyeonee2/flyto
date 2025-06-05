@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./IntroStart.module.css";
 import Spline from "@splinetool/react-spline";
+import Header from "@/Components/Header/Header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,9 +16,11 @@ export default function IntroStart() {
   const circleRefs = useRef([]);
   const splineRef = useRef(null);
   const buttonRef = useRef(null);
+  const headerRef = useRef(null); // 🔹 헤더용 ref
 
   const [showSpline, setShowSpline] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -32,7 +35,20 @@ export default function IntroStart() {
             if (self.progress > 0.99) {
               setShowSpline(true);
 
-              // 1.5초 뒤 버튼 페이드인
+              // 헤더 먼저 보여주기
+              setShowHeader(true);
+              gsap.fromTo(
+                headerRef.current,
+                { opacity: 0, y: -40 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 1.8,
+                  ease: "expo.out",
+                }
+              );
+
+              // 버튼은 나중에 등장
               gsap.delayedCall(1.5, () => {
                 setShowButtons(true);
                 gsap.fromTo(
@@ -44,6 +60,7 @@ export default function IntroStart() {
             } else {
               setShowSpline(false);
               setShowButtons(false);
+              setShowHeader(false);
             }
           },
         },
@@ -98,6 +115,13 @@ export default function IntroStart() {
 
   return (
     <section ref={sectionRef} className={styles.scene_wrapper}>
+      {/* 헤더 */}
+      {showHeader && (
+        <div ref={headerRef} className={styles.header_wrapper}>
+          <Header />
+        </div>
+      )}
+
       {/* Intro 화면 */}
       <div
         className={`${styles.intro_wrapper} ${showSpline ? styles.hidden : ""}`}
