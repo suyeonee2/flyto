@@ -178,7 +178,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 70px auto;
 }
 
@@ -207,31 +207,36 @@
   padding: 4px 12px;
   border-radius: 999px;
   border: 1px solid #ddd;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .stepTitle {
+  font-family: "NanumSquareNeoExtraBold";
   font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
 .stepDescription {
-  font-size: 1rem;
+  font-family: "NanumSquareNeo";
+  font-size: 0.9rem;
   color: #444;
   line-height: 1.6;
 }
 
-.gridText h3 {
-  font-family: "NanumSquareNeoExtraBold";
-  font-size: 1.5rem;
-  margin-bottom: 16px;
+.stepDivider {
+  width: 50px;
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
 }
 
-.gridText p {
-  font-size: 1rem;
+.stepExample {
+  font-family: "NanumSquareNeo";
+  font-size: 13px;
+  color: #888;
   line-height: 1.6;
-  color: #444;
+  white-space: pre-line;
 }
 
 /* 반응형 */
