@@ -104,36 +104,54 @@ export default function FirstTime() {
           )}
         </div>
       </div>
-
-      <div className={styles.flow_wrapper}>
-        <div className={styles.step}>
-          <div className={styles.node1}>1</div>
-          <h4>미니 테스트</h4>
-          <p>
-            간단한 테스트로 고객의 <br />
-            취향, 상황, 감정 등을 파악해요
-          </p>
+      <section className={styles.processGridSection}>
+        <h2 className={styles.processTitle}>
+          <span className={styles.subtitle}>"어떻게 만드는데?🤔"</span>
+          <div className={styles.divider} />
+          <span className={styles.maintitle}>큐레이션 콘텐츠 제작과정</span>
+        </h2>
+        <div className={styles.processGrid}>
+          <div className={styles.gridImage}>
+            <Image src="/test.png" alt="Step 1" width={500} height={500} />
+          </div>
+          <div className={styles.gridText}>
+            <span className={styles.stepBadge}>STEP 1</span>
+            <h3 className={styles.stepTitle}>미니 테스트</h3>
+            <p className={styles.stepDescription}>
+              간단한 테스트로 고객의 취향, 상황, 감정 등을 파악해요.
+            </p>
+          </div>
         </div>
 
-        <div className={styles.line} />
-
-        <div className={styles.step}>
-          <div className={styles.node2}>2</div>
-          <h4>큐레이션 로직 적용</h4>
-          <p>
-            테스트 결과를 기반으로 큐레이션 로직을 적용해요.
-            <br /> 가장 적합한 제품 or 서비스 데이터를 준비하는 과정이에요.
-          </p>
+        <div className={`${styles.processGrid} ${styles.reverse}`}>
+          <div className={styles.gridImage}>
+            <Image src="/test.png" alt="Step 2" width={500} height={500} />
+          </div>
+          <div className={styles.gridText}>
+            <span className={styles.stepBadge}>STEP 2</span>
+            <h3 className={styles.stepTitle}>큐레이션 로직 적용</h3>
+            <p className={styles.stepDescription}>
+              테스트 결과를 기반으로 큐레이션 로직을 적용해요. 가장 적합한 제품
+              or 서비스 데이터를 준비하는 과정이에요.
+            </p>
+          </div>
         </div>
 
-        <div className={styles.line} />
+        <div className={styles.processGrid}>
+          <div className={styles.gridImage}>
+            <Image src="/test.png" alt="Step 3" width={500} height={500} />
+          </div>
 
-        <div className={styles.step}>
-          <div className={styles.node3}>3</div>
-          <h4>브랜드 스타일링</h4>
-          <p>추천 결과를 브랜드의 무드와 방향성에 맞춰 콘텐츠로 제작해요</p>
+          <div className={styles.gridText}>
+            <span className={styles.stepBadge}>STEP 3</span>
+            <h3 className={styles.stepTitle}>브랜드 스타일링</h3>
+            <p className={styles.stepDescription}>
+              추천 결과를 브랜드의 무드와 방향성에 맞춰 콘텐츠 스타일로
+              풀어내요.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
       <Footer />
     </div>
   );

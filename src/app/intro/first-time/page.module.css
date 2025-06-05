@@ -131,87 +131,116 @@
   }
 }
 
-.flow_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding: 60px 20px;
+.processGridSection {
+  padding: 100px 5vw;
+  background-color: #f7f7f7;
 }
 
-.step {
+.processTitle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  max-width: 300px;
+  justify-content: center;
   font-family: "NanumSquareNeo";
-  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 140px;
+  line-height: 1.4;
 }
 
-.step h4 {
+.divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 1px;
+  background-color: #7c7c7c;
+  margin: 12px 0;
+  opacity: 0.5;
+}
+
+.subtitle {
+  font-family: "Ownglyph_wiseelist-Rg";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #777;
+  letter-spacing: -0.2px;
+}
+
+.maintitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto 70px auto;
+}
+
+.processGrid.reverse {
+  direction: rtl;
+}
+
+.processGrid.reverse .gridText,
+.processGrid.reverse .gridImage {
+  direction: ltr;
+}
+
+.gridImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.stepBadge {
+  display: inline-block;
+  background-color: #f5f5f5;
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.stepTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.stepDescription {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.gridText h3 {
   font-family: "NanumSquareNeoExtraBold";
+  font-size: 1.5rem;
+  margin-bottom: 16px;
 }
 
-.node1 {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #c2c2c2;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 12px;
+.gridText p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
 }
 
-.node2 {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #707070;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.node3 {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #181818;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.line {
-  width: 2px;
-  height: 40px;
-  background-color: #ccc;
-}
-
-/* 데스크탑 레이아웃 변경 */
-@media screen and (min-width: 768px) {
-  .flow_wrapper {
-    flex-direction: row;
-    justify-content: center;
+/* 반응형 */
+@media (max-width: 768px) {
+  .processGrid {
+    grid-template-columns: 1fr;
   }
 
-  .step {
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .line {
-    width: 60px;
-    height: 2px;
+  .processGrid.reverse {
+    direction: ltr;
   }
 }
