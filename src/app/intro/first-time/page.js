@@ -8,6 +8,7 @@ import Image from "next/image";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Concepts from "./components/Concepts";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -179,17 +180,17 @@ export default function FirstTime() {
       </div>
 
       <section className={styles.processIntroSection}>
-        <p className={styles.processEyebrow} ref={introEyebrowRef}>
-          ✱
+        <p className={styles.processEyebrow}>
+          <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
+          <br />
+          <br />
+          How we Curate
         </p>
-        <h2 className={styles.processHeroTitle} ref={introTitleRef}>
+        <h2 className={styles.processHeroTitle}>
           큐레이션 콘텐츠
           <br />
           제작과정
         </h2>
-        <p className={styles.processHeroDescription} ref={introDescRef}>
-          좋은 제품은 더 많은 사랑을 받아야 하니까.
-        </p>
       </section>
 
       <section className={styles.processGridSection} ref={processRef}>
@@ -298,7 +299,7 @@ export default function FirstTime() {
           </div>
         </div>
       </section>
-
+      <Concepts />
       <Footer />
     </div>
   );

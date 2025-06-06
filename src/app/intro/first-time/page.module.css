@@ -162,16 +162,18 @@
 /* 🟣 큐레이션 콘텐츠 소개 */
 .processIntroSection {
   background: linear-gradient(#f8f8f8, #ede9e4);
-  padding: 80px 5vw 180px;
+  padding: 80px 5vw 130px;
   text-align: center;
   font-family: "Nanum Myeongjo", serif;
 }
 
 .processEyebrow {
-  font-size: 30px;
-  letter-spacing: 0.08em;
-  color: #888;
-  margin-bottom: 12px;
+  font-family: "NanumSquareNeo";
+  font-size: 14px;
+  color: #969696;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 19px;
 }
 
 .processHeroTitle {
