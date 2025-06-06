@@ -14,6 +14,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function FirstTime() {
   const [visibleBubbles, setVisibleBubbles] = useState([false, false, false]);
   const [showArrow, setShowArrow] = useState(false);
+  const [showCue, setShowCue] = useState(false);
+
   const processRef = useRef(null);
   const titleRef = useRef(null);
   const subTitleRef = useRef(null);
@@ -35,6 +37,7 @@ export default function FirstTime() {
       setTimeout(() => setVisibleBubbles([true, true, true]), 4000),
       setTimeout(() => {
         setShowArrow(true);
+        setShowCue(true);
         document.body.style.overflow = "auto";
       }, 6000),
     ];
@@ -45,6 +48,17 @@ export default function FirstTime() {
   }, []);
 
   useEffect(() => {
+    if (document.querySelector(`.${styles.scrollCue}`)) {
+      gsap.to(`.${styles.scrollCue}`, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: `.${styles.scrollCue}`,
+          start: "top 95%",
+        },
+      });
+    }
     if (subTitleRef.current) {
       gsap.fromTo(
         subTitleRef.current,
@@ -152,22 +166,19 @@ export default function FirstTime() {
 
           {showArrow && (
             <div
-              className={styles.scroll_arrow}
-              onClick={() => {
-                processRef.current?.scrollIntoView({ behavior: "smooth" });
-              }}
+              className={`${styles.scrollCue} ${showCue ? styles.visible : ""}`}
             >
-              <MdKeyboardDoubleArrowDown size={36} color="#888" />
+              <p className={styles.scrollQuestion}>"어떻게 만드는데?🤔"</p>
+              <MdKeyboardDoubleArrowDown
+                size={25}
+                className={styles.bouncingArrow}
+              />
             </div>
           )}
         </div>
       </div>
       <section className={styles.processGridSection} ref={processRef}>
         <h2 className={styles.processTitle}>
-          <span className={styles.subtitle} ref={subTitleRef}>
-            "어떻게 만드는데?🤔"
-          </span>
-          <div className={styles.divider} ref={dividerRef} />
           <span className={styles.maintitle} ref={titleRef}>
             큐레이션 콘텐츠 제작과정
           </span>
@@ -180,7 +191,7 @@ export default function FirstTime() {
             <span className={styles.stepBadge}>STEP 1</span>
             <h3 className={styles.stepTitle}>큐레이션 로직 설정</h3>
             <p className={styles.stepDescription}>
-              콘텐츠 제작 전에 브랜드와 협의해 큐레이션 로직을 정해요.
+              우선 브랜드와 협의해 큐레이션 로직을 정해요.
               <br /> 어떤 기준으로 제품을 묶고, 어떤 방식으로 추천할지 <br />
               구조를 먼저 설계합니다.
             </p>
@@ -192,7 +203,7 @@ export default function FirstTime() {
               <br />
               💭 무드 큐레이션: 제품이 주는 분위기별 추천
               <br />
-              📦 상황 큐레이션: 출근용, 선물용 등 사용 타이밍 기준
+              📦 상황 큐레이션: 출근용, 선물용 등 상황별 기준
             </p>
           </div>
         </div>
