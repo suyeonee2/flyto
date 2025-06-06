@@ -17,9 +17,9 @@ export default function FirstTime() {
   const [showCue, setShowCue] = useState(false);
 
   const processRef = useRef(null);
-  const titleRef = useRef(null);
-  const subTitleRef = useRef(null);
-  const dividerRef = useRef(null);
+  const introEyebrowRef = useRef(null);
+  const introTitleRef = useRef(null);
+  const introDescRef = useRef(null);
   const stepRefs = useRef([]);
 
   stepRefs.current = [];
@@ -59,49 +59,49 @@ export default function FirstTime() {
         },
       });
     }
-    if (subTitleRef.current) {
+
+    // Scroll animations for intro title section
+    if (introEyebrowRef.current) {
       gsap.fromTo(
-        subTitleRef.current,
-        { opacity: 0, y: 40 },
+        introEyebrowRef.current,
+        { opacity: 0, y: 30 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
-          scrollTrigger: {
-            trigger: subTitleRef.current,
-            start: "top 85%",
-          },
-        }
-      );
-    }
-
-    if (dividerRef.current) {
-      gsap.fromTo(
-        dividerRef.current,
-        { opacity: 0, scaleX: 0.5 },
-        {
-          opacity: 1,
-          scaleX: 1,
           duration: 0.6,
           scrollTrigger: {
-            trigger: dividerRef.current,
-            start: "top 85%",
+            trigger: introEyebrowRef.current,
+            start: "top 90%",
           },
         }
       );
     }
-
-    if (titleRef.current) {
+    if (introTitleRef.current) {
       gsap.fromTo(
-        titleRef.current,
-        { opacity: 0, y: 40 },
+        introTitleRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          scrollTrigger: {
+            trigger: introTitleRef.current,
+            start: "top 90%",
+          },
+        }
+      );
+    }
+    if (introDescRef.current) {
+      gsap.fromTo(
+        introDescRef.current,
+        { opacity: 0, y: 30 },
         {
           opacity: 1,
           y: 0,
           duration: 0.8,
           scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 85%",
+            trigger: introDescRef.current,
+            start: "top 90%",
           },
         }
       );
@@ -177,17 +177,21 @@ export default function FirstTime() {
           )}
         </div>
       </div>
+
       <section className={styles.processIntroSection}>
-        <p className={styles.processEyebrow}>✱</p>
-        <h2 className={styles.processHeroTitle}>
+        <p className={styles.processEyebrow} ref={introEyebrowRef}>
+          ✱
+        </p>
+        <h2 className={styles.processHeroTitle} ref={introTitleRef}>
           큐레이션 콘텐츠
           <br />
           제작과정
         </h2>
-        <p className={styles.processHeroDescription}>
+        <p className={styles.processHeroDescription} ref={introDescRef}>
           좋은 제품은 더 많은 사랑을 받아야 하니까.
         </p>
       </section>
+
       <section className={styles.processGridSection} ref={processRef}>
         <div className={styles.processGrid} ref={addToStepRefs}>
           <div className={styles.gridImage}>
@@ -198,7 +202,9 @@ export default function FirstTime() {
             <h3 className={styles.stepTitle}>큐레이션 로직 설정</h3>
             <p className={styles.stepDescription}>
               우선 브랜드와 협의해 큐레이션 로직을 정해요.
-              <br /> 어떤 기준으로 제품을 묶고, 어떤 방식으로 추천할지 <br />
+              <br />
+              어떤 기준으로 제품을 묶고, 어떤 방식으로 추천할지
+              <br />
               구조를 먼저 설계합니다.
             </p>
             <div className={styles.stepDivider} />
@@ -225,9 +231,11 @@ export default function FirstTime() {
             <span className={styles.stepBadge}>STEP 2</span>
             <h3 className={styles.stepTitle}>미니 테스트 기획</h3>
             <p className={styles.stepDescription}>
-              로직에 맞는 질문과 선택지를 기획해요. <br /> 고객의
-              취향∙상황∙감정을 파악할 수 있도록 <br /> 타깃에 맞는 테스트를
-              만듭니다.
+              로직에 맞는 질문과 선택지를 기획해요.
+              <br />
+              고객의 취향∙상황∙감정을 파악할 수 있도록
+              <br />
+              타깃에 맞는 테스트를 만듭니다.
             </p>
             <div className={styles.stepDivider} />
             <p className={styles.stepExample}>
@@ -270,28 +278,27 @@ export default function FirstTime() {
           <div className={styles.gridImage}>
             <Image src="/test.png" alt="Step 4" width={500} height={500} />
           </div>
-
           <div className={styles.gridText}>
-            <div className={styles.gridText}>
-              <span className={styles.stepBadge}>STEP 4</span>
-              <h3 className={styles.stepTitle}>콘텐츠 스타일링</h3>
-              <p className={styles.stepDescription}>
-                테스트와 결과 페이지를 브랜드 무드에 맞춰 스타일링해요. <br />
-                제품군과 목적에 따라 다양한 시각적 스타일로 구현됩니다.
-              </p>
-              <div className={styles.stepDivider} />
-              <p className={styles.stepExample}>
-                ex) 스타일 타입
-                <br />
-                🎨 미니멀한 2D 그래픽
-                <br />
-                🧊 직관적인 3D 비주얼
-                <br />✨ 애니메이션 or 인터랙티브 연출
-              </p>
-            </div>
+            <span className={styles.stepBadge}>STEP 4</span>
+            <h3 className={styles.stepTitle}>콘텐츠 스타일링</h3>
+            <p className={styles.stepDescription}>
+              테스트와 결과 페이지를 브랜드 무드에 맞춰 스타일링해요.
+              <br />
+              제품군과 목적에 따라 다양한 시각적 스타일로 구현됩니다.
+            </p>
+            <div className={styles.stepDivider} />
+            <p className={styles.stepExample}>
+              ex) 스타일 타입
+              <br />
+              🎨 미니멀한 2D 그래픽
+              <br />
+              🧊 직관적인 3D 비주얼
+              <br />✨ 애니메이션 or 인터랙티브 연출
+            </p>
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );

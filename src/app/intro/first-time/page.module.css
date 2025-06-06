@@ -75,7 +75,7 @@
   animation: fadeInUp 1s ease-out forwards;
 }
 
-/* 🟣 등장 애니메이션 */
+/* 🟣 애니메이션 */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -87,7 +87,6 @@
   }
 }
 
-/* 🟣 공통 float 애니메이션 (위아래 둥실둥실) */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -100,7 +99,7 @@
   }
 }
 
-/* 🟣 Scroll Cue 묶음 전체가 float */
+/* 🟣 Scroll Cue */
 .scrollCue {
   opacity: 0;
   text-align: center;
@@ -114,14 +113,17 @@
   animation-delay: 0s, 0.8s;
 }
 
-/* 텍스트 */
-.scrollQuestion {
-  font-family: "Ownglyph_wiseelist-Rg";
-  font-size: 23px;
-  margin-bottom: 10px;
+@keyframes fadeUpCue {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* 텍스트 & 화살표 전체 둥둥 뜨는 애니메이션 */
 @keyframes floatTogether {
   0% {
     transform: translateY(0);
@@ -134,19 +136,14 @@
   }
 }
 
-/* "어떻게 만드는데?" 페이드 등장 */
-@keyframes fadeUpCue {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.scrollQuestion {
+  font-family: "Ownglyph_wiseelist-Rg";
+  font-size: 23px;
+  margin-bottom: 10px;
+  transition: none;
 }
 
-/* 화살표 색상 변화 (단독) */
+/* 🟣 화살표 색상변화 */
 .bouncingArrow {
   display: inline-block;
   animation: arrowColorPulse 2s ease-in-out infinite;
@@ -162,8 +159,7 @@
   }
 }
 
-/* 🟣 큐레이션 제작 프로세스 관련 */
-
+/* 🟣 큐레이션 콘텐츠 소개 */
 .processIntroSection {
   background: linear-gradient(#f8f8f8, #ede9e4);
   padding: 80px 5vw 180px;
@@ -193,6 +189,7 @@
   font-style: italic;
 }
 
+/* 🟣 제작 과정 그리드 */
 .processGridSection {
   padding: 10px 5vw;
   background-color: #ede9e4;
