@@ -60,8 +60,8 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <Link href="/studio" onClick={handleClose}>
-                  Studio Styles
+                <Link href="/examples" onClick={handleClose}>
+                  Examples
                 </Link>
               </li>
               <li>

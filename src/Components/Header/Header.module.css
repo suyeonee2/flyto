@@ -124,6 +124,8 @@
   }
 
   .menuOverlay li {
+    font-size: 13px;
+    line-height: 1.6;
     text-align: left;
     padding-left: 4px;
   }

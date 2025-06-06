@@ -8,7 +8,7 @@ import Image from "next/image";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Concepts from "./components/Concepts";
+import Concepts from "./components/Examples";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -181,13 +181,9 @@ export default function FirstTime() {
           <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
           <br />
           <br />
-          How we Curate
+          큐레이션 콘텐츠 제작과정
         </p>
-        <h2 className={styles.processHeroTitle}>
-          큐레이션 콘텐츠
-          <br />
-          제작과정
-        </h2>
+        <h2 className={styles.processHeroTitle}>How We Curate</h2>
       </section>
 
       <section className={styles.processGridSection} ref={processRef}>

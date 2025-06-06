@@ -1,0 +1,75 @@
+.examplesSection {
+  background: linear-gradient(#ede9e4, #eaefff);
+  padding: 100px 5vw;
+  text-align: center;
+  font-family: "NanumSquareNeo", sans-serif;
+}
+
+.Eyebrow {
+  font-family: "NanumSquareNeo";
+  font-size: 14px;
+  color: #969696;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.HeroTitle {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.HeroDescription {
+  font-size: 13px;
+  color: #666;
+  font-style: normal;
+  line-height: 1.6;
+  margin-bottom: 80px;
+}
+
+.stylesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.styleCard {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.styleCard:hover {
+  transform: translateY(-4px);
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .stylesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .styleCard {
+    padding: 24px;
+  }
+}
