@@ -31,7 +31,6 @@ export default function FirstTime() {
   };
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
     const timers = [
       setTimeout(() => setVisibleBubbles([true, false, false]), 300),
       setTimeout(() => setVisibleBubbles([true, true, false]), 2200),
@@ -39,12 +38,10 @@ export default function FirstTime() {
       setTimeout(() => {
         setShowArrow(true);
         setShowCue(true);
-        document.body.style.overflow = "auto";
       }, 6000),
     ];
     return () => {
       timers.forEach(clearTimeout);
-      document.body.style.overflow = "auto";
     };
   }, []);
 
@@ -126,7 +123,7 @@ export default function FirstTime() {
   }, []);
 
   return (
-    <div>
+    <div style={{ overflowX: "hidden", width: "100%" }}>
       <Header />
       <div className={styles.scene_wrapper}>
         <div className={styles.grid_bg} />
@@ -179,7 +176,7 @@ export default function FirstTime() {
         </div>
       </div>
 
-      <section className={styles.processIntroSection}>
+      <section className={styles.processIntroSection} id="process">
         <p className={styles.processEyebrow}>
           <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
           <br />
