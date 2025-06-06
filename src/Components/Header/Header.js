@@ -14,15 +14,16 @@ export default function Header() {
 
   const handleOpen = () => {
     setMenuOpen(true);
-    setTimeout(() => setAnimateIn(true), 20); // DOM 붙인 다음에 slideIn 실행
+    setTimeout(() => setAnimateIn(true), 20);
   };
 
   const handleClose = () => {
     setAnimateIn(false);
-    setTimeout(() => setMenuOpen(false), 400); // 애니메이션 끝나고 DOM 제거
+    setTimeout(() => setMenuOpen(false), 400);
   };
 
-  const handleInternalScroll = () => {
+  const handleInternalScroll = (e) => {
+    e.preventDefault(); // 기본 a태그 동작 방지
     const target = document.querySelector(".processGridSection");
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
@@ -53,7 +54,11 @@ export default function Header() {
             }`}
           >
             <ul>
-              <li onClick={handleInternalScroll}>How We Curate</li>
+              <li>
+                <a href="#process" onClick={handleInternalScroll}>
+                  How We Curate
+                </a>
+              </li>
               <li>
                 <Link href="/studio" onClick={handleClose}>
                   Studio Styles
