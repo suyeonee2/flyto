@@ -117,7 +117,7 @@
 /* 텍스트 */
 .scrollQuestion {
   font-family: "Ownglyph_wiseelist-Rg";
-  font-size: 20px;
+  font-size: 23px;
   margin-bottom: 10px;
 }
 
@@ -163,26 +163,39 @@
 }
 
 /* 🟣 큐레이션 제작 프로세스 관련 */
-.processGridSection {
-  padding: 100px 5vw;
-  background-color: #f7f7f7;
+
+.processIntroSection {
+  background: linear-gradient(#f8f8f8, #ede9e4);
+  padding: 80px 5vw 180px;
+  text-align: center;
+  font-family: "Nanum Myeongjo", serif;
 }
 
-.processTitle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "NanumSquareNeo";
-  text-align: center;
-  margin-bottom: 140px;
+.processEyebrow {
+  font-size: 30px;
+  letter-spacing: 0.08em;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.processHeroTitle {
+  font-size: 36px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 24px;
   line-height: 1.4;
 }
 
-.maintitle {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #111;
+.processHeroDescription {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.processGridSection {
+  padding: 10px 5vw;
+  background-color: #ede9e4;
 }
 
 .processGrid {
@@ -206,7 +219,6 @@
 .gridImage img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
   object-fit: cover;
 }
 
@@ -239,7 +251,7 @@
 .stepDivider {
   width: 50px;
   height: 1px;
-  background-color: #ddd;
+  background-color: #b1b1b1;
   margin: 20px 0;
 }
 
@@ -253,6 +265,14 @@
 
 /* 🟣 반응형 */
 @media (max-width: 768px) {
+  .bubble {
+    font-size: 17px;
+  }
+
+  .scrollQuestion {
+    font-size: 29px;
+  }
+
   .processGrid {
     grid-template-columns: 1fr;
   }

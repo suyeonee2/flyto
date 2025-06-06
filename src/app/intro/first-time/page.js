@@ -177,12 +177,18 @@ export default function FirstTime() {
           )}
         </div>
       </div>
-      <section className={styles.processGridSection} ref={processRef}>
-        <h2 className={styles.processTitle}>
-          <span className={styles.maintitle} ref={titleRef}>
-            큐레이션 콘텐츠 제작과정
-          </span>
+      <section className={styles.processIntroSection}>
+        <p className={styles.processEyebrow}>✱</p>
+        <h2 className={styles.processHeroTitle}>
+          큐레이션 콘텐츠
+          <br />
+          제작과정
         </h2>
+        <p className={styles.processHeroDescription}>
+          좋은 제품은 더 많은 사랑을 받아야 하니까.
+        </p>
+      </section>
+      <section className={styles.processGridSection} ref={processRef}>
         <div className={styles.processGrid} ref={addToStepRefs}>
           <div className={styles.gridImage}>
             <Image src="/test.png" alt="Step 1" width={500} height={500} />
