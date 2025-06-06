@@ -143,7 +143,7 @@ export default function FirstTime() {
               <p>
                 고객이 많은 선택지 앞에서 고민할 때,
                 <br />
-                각자의 취향과 상황, 감정을 읽고
+                각자의 취향∙상황∙감정을 읽고
                 <br />
                 “이거다!” 하는 확신이 들도록 돕는 거죠.
               </p>
@@ -178,23 +178,21 @@ export default function FirstTime() {
           </div>
           <div className={styles.gridText}>
             <span className={styles.stepBadge}>STEP 1</span>
-            <h3 className={styles.stepTitle}>미니 테스트</h3>
+            <h3 className={styles.stepTitle}>큐레이션 로직 설정</h3>
             <p className={styles.stepDescription}>
-              브랜드와 충분한 소통을 통해 질문지부터 함께 기획해요. <br />
-              어떤 제품을 어떻게 셀링하고 싶은지 방향을 먼저 듣고, <br />
-              고객의 상황과 취향을 읽을 수 있는 질문을 만듭니다.
+              콘텐츠 제작 전에 브랜드와 협의해 큐레이션 로직을 정해요.
+              <br /> 어떤 기준으로 제품을 묶고, 어떤 방식으로 추천할지 <br />
+              구조를 먼저 설계합니다.
             </p>
             <div className={styles.stepDivider} />
             <p className={styles.stepExample}>
-              ex) 립틴트 콘텐츠의 질문지
+              ex) 큐레이션 로직 타입
               <br />
-              “나와 가장 잘 어울릴 것 같은 컬러는?”
+              🎨 색상 큐레이션: 립 전 색상 중 톤별 추천
               <br />
-              “지금 내 파우치에 가장 많은 립 컬러 톤은?”
+              💭 무드 큐레이션: 제품이 주는 분위기별 추천
               <br />
-              “시도해보고 싶은 색상은?”
-              <br />
-              “퍼스널컬러 테스트를 받았다면 어떤 결과였나요?”
+              📦 상황 큐레이션: 출근용, 선물용 등 사용 타이밍 기준
             </p>
           </div>
         </div>
@@ -208,22 +206,21 @@ export default function FirstTime() {
           </div>
           <div className={styles.gridText}>
             <span className={styles.stepBadge}>STEP 2</span>
-            <h3 className={styles.stepTitle}>큐레이션 로직 적용</h3>
+            <h3 className={styles.stepTitle}>미니 테스트 기획</h3>
             <p className={styles.stepDescription}>
-              브랜드와 사전에 협의한 큐레이션 로직에 따라 추천 구조를 설계해요.
-              <br />
-              색상, 무드, 사용상황, 소비자 성향 등 어떤 기준으로 제품을 엮을지
-              미리 정한 뒤, 미니테스트에서 나온 응답 결과에 이 로직을 적용해
-              가장 적합한 조합을 도출합니다.
+              로직에 맞는 질문과 선택지를 기획해요. <br /> 고객의
+              취향∙상황∙감정을 파악할 수 있도록 <br /> 타깃에 맞는 테스트를
+              만듭니다.
             </p>
             <div className={styles.stepDivider} />
             <p className={styles.stepExample}>
-              ex) 큐레이션 로직 타입 <br /> 🎨 색상 큐레이션: 립 전 색상 중 톤별
-              추천
+              ex) 질문 예시
               <br />
-              💭 무드 큐레이션: 제품이 주는 분위기별 추천
+              💄 메이크업: “나랑 제일 잘 어울린다고 생각하는 컬러는?”
               <br />
-              📦 상황 큐레이션: 출근용, 선물용 등 사용 타이밍 기준
+              🧴 스킨케어: “요즘 피부에서 가장 신경 쓰이는 부분은?”
+              <br />
+              🌸 향수: “내가 어떤 이미지로 보였으면 하나요?”
             </p>
           </div>
         </div>
@@ -232,17 +229,49 @@ export default function FirstTime() {
           <div className={styles.gridImage}>
             <Image src="/test.png" alt="Step 3" width={500} height={500} />
           </div>
-
           <div className={styles.gridText}>
             <span className={styles.stepBadge}>STEP 3</span>
-            <h3 className={styles.stepTitle}>브랜드 스타일링</h3>
+            <h3 className={styles.stepTitle}>큐레이션 실행</h3>
             <p className={styles.stepDescription}>
-              추천된 결과를 브랜드의 무드와 톤앤매너에 맞춰 스타일링해요.
+              미니테스트의 응답 결과에 로직을 적용해 추천 구조를 도출해요.
               <br />
-              단순한 결과 도출이 아닌, 브랜드와 어울리게끔 콘텐츠를 제작합니다.
+              결과값을 분석해 고객에게 가장 적합한 제품 구성을 만듭니다.
             </p>
             <div className={styles.stepDivider} />
-            <p className={styles.stepExample}>ex)</p>
+            <p className={styles.stepExample}>
+              ex) 분석 흐름
+              <br />
+              📝 테스트 결과값 → 🎯 색상 큐레이션 로직 적용 → 💡 제품 3종 추천
+            </p>
+          </div>
+        </div>
+
+        <div
+          className={`${styles.processGrid} ${styles.reverse}`}
+          ref={addToStepRefs}
+        >
+          <div className={styles.gridImage}>
+            <Image src="/test.png" alt="Step 4" width={500} height={500} />
+          </div>
+
+          <div className={styles.gridText}>
+            <div className={styles.gridText}>
+              <span className={styles.stepBadge}>STEP 4</span>
+              <h3 className={styles.stepTitle}>콘텐츠 스타일링</h3>
+              <p className={styles.stepDescription}>
+                테스트와 결과 페이지를 브랜드 무드에 맞춰 스타일링해요. <br />
+                제품군과 목적에 따라 다양한 시각적 스타일로 구현됩니다.
+              </p>
+              <div className={styles.stepDivider} />
+              <p className={styles.stepExample}>
+                ex) 스타일 타입
+                <br />
+                🎨 미니멀한 2D 그래픽
+                <br />
+                🧊 직관적인 3D 비주얼
+                <br />✨ 애니메이션 or 인터랙티브 연출
+              </p>
+            </div>
           </div>
         </div>
       </section>
