@@ -88,20 +88,19 @@
 }
 
 .arrow {
-  width: 36px;
-  height: 36px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ddd;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
   border-radius: 50%;
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #282828;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .arrowLeft {
@@ -119,9 +118,7 @@
 }
 
 .arrow:hover {
-  background-color: rgba(245, 245, 245, 0.95);
-  color: #111;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #757575;
 }
 
 @media (max-width: 768px) {
