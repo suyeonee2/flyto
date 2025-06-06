@@ -111,7 +111,7 @@ export default function Examples() {
         Examples
       </h2>
       <p className={styles.HeroDescription} ref={descRef}>
-        상업 목적이 아닌 포트폴리오 용도로 제작되었습니다.
+        상업 목적이 아닌 포트폴리오 용도로 제작되었습니다
       </p>
 
       <div className={styles.sliderWrapper} ref={sliderRefContainer}>
