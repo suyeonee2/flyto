@@ -2,7 +2,6 @@
   background: linear-gradient(#ede9e4, #eaefff);
   padding: 100px 5vw;
   text-align: center;
-  font-family: "NanumSquareNeo", sans-serif;
 }
 
 .Eyebrow {
@@ -10,8 +9,7 @@
   font-size: 14px;
   color: #969696;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .HeroTitle {
@@ -19,57 +17,115 @@
   font-size: 36px;
   font-weight: 500;
   color: #111;
-  line-height: 1.4;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .HeroDescription {
-  font-size: 13px;
-  color: #666;
-  font-style: normal;
-  line-height: 1.6;
-  margin-bottom: 80px;
+  font-family: "NanumSquareNeo";
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 50px;
 }
 
-.stylesGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  max-width: 1000px;
+.sliderWrapper {
+  position: relative;
+  max-width: calc(260px * 3 + 40px * 2); /* 카드 3장 + spacing 2개 */
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-.styleCard {
+.sliderContainer {
+  overflow: visible;
+}
+
+.keen-slider__slide {
+  display: flex;
+  justify-content: center;
+}
+
+.previewCard {
+  width: 260px;
   background: white;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  padding: 30px;
-  text-align: left;
-  transition: transform 0.2s ease;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(62, 62, 62, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 
-.styleCard:hover {
-  transform: translateY(-4px);
+.thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.cardContent {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cardTitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+}
+
+.moreButton {
+  padding: 6px 14px;
+  font-size: 13px;
+  background-color: #999;
+  color: #fff;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ddd;
+  border-radius: 50%;
   font-size: 18px;
-  font-weight: 600;
-  margin-top: 12px;
+  font-weight: bold;
   color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.arrowLeft {
+  position: absolute;
+  top: 50%;
+  left: -50px; /* 바깥으로 빼고 싶다면 음수 */
+  transform: translateY(-50%);
+}
+
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+}
+
+.arrow:hover {
+  background-color: rgba(245, 245, 245, 0.95);
+  color: #111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 768px) {
-  .heroTitle {
-    font-size: 28px;
-  }
-
-  .stylesGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .styleCard {
-    padding: 24px;
+  .arrow {
+    display: none;
   }
 }
