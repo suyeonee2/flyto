@@ -1,0 +1,107 @@
+.contactSection {
+  background: linear-gradient(#eaefff, #fff4ff);
+  padding: 100px 5vw;
+  text-align: center;
+}
+
+.contactEyebrow {
+  font-family: "NanumSquareNeo";
+  font-size: 14px;
+  color: #969696;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.contactTitle {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 50px;
+}
+
+.processWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.processStep {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #575757;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "NanumSquareNeo";
+  font-size: 13px;
+  color: #575757;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.line {
+  width: 30px;
+  height: 1px;
+  background-color: #575757;
+}
+
+.contactDescription {
+  font-family: "NanumSquareNeo";
+  font-size: 16px;
+  color: #111;
+  line-height: 1.6;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.contactButton {
+  font-size: 15px;
+  font-family: "NanumSquareNeo";
+  padding: 14px 24px;
+  border: 1px solid #111;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.contactButton:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.contactButton {
+  padding: 14px 18px;
+  font-size: 15px;
+  font-family: "NanumSquareNeo";
+  border: 1px solid #111;
+  background-color: transparent;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.contactButton:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .processWrapper {
+    gap: 7px;
+  }
+
+  .processStep {
+    width: 40px;
+    height: 40px;
+    font-size: 11px;
+  }
+  .line {
+    width: 11px;
+  }
+}
