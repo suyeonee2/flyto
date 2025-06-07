@@ -1,4 +1,8 @@
 .examplesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(#ede9e4, #eaefff);
   padding: 100px 5vw;
   text-align: center;
@@ -28,31 +32,36 @@
   margin-bottom: 50px;
 }
 
-/* Swiper 래퍼 */
-.sliderOuterWrapper {
+/* 카드 전체를 감싸는 래퍼 */
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
   position: relative;
-  max-width: calc(260px * 3 + 40px * 2);
-  margin: 0 auto;
+  flex-wrap: wrap;
+  background-color: #ffffff00;
+  box-shadow: 0 10px 30px #00000018;
+  width: 900px;
+  height: 430px;
 }
 
-/* Swiper 안쪽 */
-.sliderWrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-/* 각 슬라이드 카드 */
-.previewCard {
-  background: rgba(255, 255, 255, 0.46);
-  box-shadow: 0 10px 20px rgba(62, 62, 62, 0.128);
+/* 한 카드+라인 묶음 */
+.cardColumn {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  padding-bottom: 10px;
-  width: 260px;
-  height: 380px;
-  margin: auto;
+}
+
+/* 카드 자체 */
+.card {
+  width: 240px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
 .thumbnail {
@@ -63,92 +72,120 @@
 
 .cardContent {
   width: 100%;
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  position: relative;
+  gap: 6px;
 }
 
 .cardTitle {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "NanumSquareNeo";
   color: #111;
-  margin-left: 14px;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .subTitle {
   font-size: 13px;
-  color: #555;
-  margin-left: 14px;
+  color: #777;
+  font-family: "NanumSquareNeo";
+  text-align: left;
 }
 
 .moreButton {
-  padding: 6px 14px;
-  font-size: 13px;
-  background-color: #999;
-  color: #fff;
-  border-radius: 12px;
-  border: none;
+  font-size: 25px;
+  background-color: transparent;
+  color: #6a6a6a;
   cursor: pointer;
+  font-family: "NanumSquareNeo";
   align-self: flex-end;
   margin-top: 20px;
-  margin-right: 14px;
+  border: none;
+}
+.moreButton :hover {
+  color: #404040;
 }
 
-/* 커스텀 화살표 */
-.arrow {
-  width: 28px;
-  height: 28px;
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  color: #5e5e5e;
+/* 카드 사이 세로 라인 */
+.verticalLine {
+  width: 1px;
+  height: 100%;
+  background-color: #000000;
+  position: absolute;
+  right: -30px;
+  top: 0;
+}
+
+.allButtonWrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  margin-top: 50px;
+  text-align: center;
+}
+
+.allButton {
+  padding: 14px 14px;
+  font-size: 15px;
+  font-family: "NanumSquareNeo";
+  border: 1px solid #111;
+  background-color: transparent;
+  color: #111;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.2s ease;
-  z-index: 10;
-}
-
-.arrowLeft {
-  left: -50px;
-}
-
-.arrowRight {
-  right: -50px;
-}
-
-/* Swiper 커스텀 */
-.swiper-slide {
+  transition: all 0.25s ease;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 6px;
 }
 
-.swiper-wrapper {
-  gap: 40px;
+.allButton:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.arrowIcon {
+  font-size: 22px; /* 화살표 크기 */
+  margin-top: 1px;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 
 @media (max-width: 768px) {
-  .arrow {
+  .cardsWrapper {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    box-shadow: none;
+    background-color: transparent;
+    gap: 40px;
+  }
+
+  .card {
+    width: 80%;
+    padding: 15px;
+    background-color: #ffffff81;
+    box-shadow: 0 10px 30px #0000000b;
+  }
+
+  .verticalLine {
     display: none;
   }
 
-  .sliderOuterWrapper {
-    max-width: 100%;
+  .cardContent {
+    padding: 14px;
   }
 
-  .previewCard {
-    width: 90%;
+  .moreButton {
+    font-size: 22px;
+    margin-top: 14px;
   }
 
-  .swiper-wrapper {
-    gap: 20px;
+  .allButtonWrapper {
+    margin-top: 0px;
   }
 }
