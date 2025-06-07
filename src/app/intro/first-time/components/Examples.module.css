@@ -28,54 +28,60 @@
   margin-bottom: 50px;
 }
 
-.sliderWrapper {
+/* Swiper 래퍼 */
+.sliderOuterWrapper {
   position: relative;
-  max-width: calc(260px * 3 + 40px * 2); /* 카드 3장 + spacing 2개 */
+  max-width: calc(260px * 3 + 40px * 2);
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
-.sliderContainer {
-  overflow: visible;
+/* Swiper 안쪽 */
+.sliderWrapper {
+  overflow: hidden;
+  width: 100%;
 }
 
-.keen-slider__slide {
-  display: flex;
-  justify-content: center;
-}
-
+/* 각 슬라이드 카드 */
 .previewCard {
-  width: 260px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(62, 62, 62, 0.08);
+  background: rgba(255, 255, 255, 0.46);
+  box-shadow: 0 10px 20px rgba(62, 62, 62, 0.128);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  padding-bottom: 10px;
+  width: 260px;
+  height: 380px;
+  margin: auto;
 }
 
 .thumbnail {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
 }
 
 .cardContent {
   width: 100%;
-  padding: 16px;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
 }
 
 .cardTitle {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   color: #111;
-  margin: 0;
+  margin-left: 14px;
+}
+
+.subTitle {
+  font-size: 13px;
+  color: #555;
+  margin-left: 14px;
 }
 
 .moreButton {
@@ -86,44 +92,63 @@
   border-radius: 12px;
   border: none;
   cursor: pointer;
+  align-self: flex-end;
+  margin-top: 20px;
+  margin-right: 14px;
 }
 
+/* 커스텀 화살표 */
 .arrow {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   background-color: transparent;
   border: none;
-  border-radius: 50%;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  color: #282828;
+  color: #5e5e5e;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   transition: all 0.2s ease;
+  z-index: 10;
 }
 
 .arrowLeft {
-  position: absolute;
-  top: 50%;
-  left: -50px; /* 바깥으로 빼고 싶다면 음수 */
-  transform: translateY(-50%);
+  left: -50px;
 }
 
 .arrowRight {
-  position: absolute;
-  top: 50%;
   right: -50px;
-  transform: translateY(-50%);
 }
 
-.arrow:hover {
-  color: #757575;
+/* Swiper 커스텀 */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-wrapper {
+  gap: 40px;
 }
 
 @media (max-width: 768px) {
   .arrow {
     display: none;
+  }
+
+  .sliderOuterWrapper {
+    max-width: 100%;
+  }
+
+  .previewCard {
+    width: 90%;
+  }
+
+  .swiper-wrapper {
+    gap: 20px;
   }
 }
