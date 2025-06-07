@@ -1,0 +1,55 @@
+/* page.module.css */
+
+.aboutSection {
+  padding: 120px 5vw 80px;
+  background: linear-gradient(#f8f8f8, #ede9e4);
+  text-align: center;
+}
+
+.aboutEyebrow {
+  font-family: "NanumSquareNeo";
+  font-size: 14px;
+  color: #969696;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+.aboutTitle {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.aboutDescription {
+  font-family: "NanumSquareNeo";
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 60px;
+  line-height: 1.8;
+}
+
+.aboutContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: "NanumSquareNeo";
+  font-size: 15px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.aboutContent h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.aboutContent p {
+  margin-bottom: 30px;
+  color: #444;
+  white-space: pre-line;
+}
