@@ -30,6 +30,7 @@ export default function Examples() {
   const titleRef = useRef(null);
   const descRef = useRef(null);
   const cardsRef = useRef(null);
+  const allButtonRef = useRef(null);
 
   useEffect(() => {
     const animations = [
@@ -37,6 +38,7 @@ export default function Examples() {
       { ref: titleRef, delay: 0.6 },
       { ref: descRef, delay: 0.7 },
       { ref: cardsRef, delay: 1 },
+      { ref: allButtonRef, delay: 1.2 },
     ];
 
     animations.forEach(({ ref, delay }) => {
@@ -97,7 +99,7 @@ export default function Examples() {
           </div>
         ))}
       </div>
-      <div className={styles.allButtonWrapper}>
+      <div className={styles.allButtonWrapper} ref={allButtonRef}>
         <button className={styles.allButton}>
           All Examples
           <MdOutlineKeyboardArrowRight className={styles.arrowIcon} />

@@ -66,12 +66,12 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/about" onClick={handleClose}>
-                  About
+                  About Fylto
                 </Link>
               </li>
               <li>
                 <Link href="/contact" onClick={handleClose}>
-                  Contact
+                  Work with Us
                 </Link>
               </li>
             </ul>
