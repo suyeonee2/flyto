@@ -155,6 +155,9 @@
 }
 
 @media (max-width: 768px) {
+  .examplesSection {
+    padding: 100px 5vw 20px;
+  }
   .cardsWrapper {
     flex-direction: column;
     width: 100%;

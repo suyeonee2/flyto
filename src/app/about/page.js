@@ -7,6 +7,7 @@ import Header from "@/Components/Header/Header";
 import Footer from "@/Components/Footer/Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutPage() {
@@ -103,7 +104,13 @@ export default function AboutPage() {
         <div className={styles.content2_Container} ref={contentRef}>
           <div className={styles.cardContainer}>
             <div className={styles.card}>
-              <img src="/test.png" alt="mission" className={styles.cardImage} />
+              <Image
+                src="/our.png"
+                alt="our"
+                className={styles.cardImage}
+                width={150}
+                height={150}
+              />
               <div className={styles.cardText}>
                 <h3>우리가 하는 일</h3>
                 <div className={styles.cardDivider} />
@@ -112,13 +119,22 @@ export default function AboutPage() {
                   <br />
                   가장 잘 맞는 제품만 선별해드립니다.
                   <br />
-                  취향과 상황을 분석한 큐레이션이니까요.
+                  <span style={{ color: "#5783a2" }}>
+                    취향과 상황을 분석한 큐레이션
+                  </span>
+                  이니까요.
                 </p>
               </div>
             </div>
 
             <div className={styles.card}>
-              <img src="/test.png" alt="trust" className={styles.cardImage} />
+              <Image
+                src="/trust.png"
+                alt="trust"
+                className={styles.cardImage}
+                width={150}
+                height={150}
+              />
               <div className={styles.cardText}>
                 <h3>기반과 신뢰</h3>
                 <div className={styles.cardDivider} />
@@ -127,7 +143,10 @@ export default function AboutPage() {
                   <br />
                   약 500만 회의 사용자 반응을 직접 살펴봤습니다.
                   <br />
-                  그 실질적인 경험을 바탕으로
+                  <span style={{ color: "#5783a2" }}>
+                    그 실질적인 경험을 바탕
+                  </span>
+                  으로
                   <br />
                   취향 기반 큐레이션 서비스 Fylto가 시작되었습니다.
                 </p>

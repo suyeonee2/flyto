@@ -33,7 +33,7 @@ export default function FirstTime() {
 
   useEffect(() => {
     const timers = [
-      setTimeout(() => setVisibleBubbles([true, false, false]), 300),
+      setTimeout(() => setVisibleBubbles([true, false, false]), 200),
       setTimeout(() => setVisibleBubbles([true, true, false]), 2200),
       setTimeout(() => setVisibleBubbles([true, true, true]), 4000),
       setTimeout(() => {
@@ -188,109 +188,119 @@ export default function FirstTime() {
       </section>
 
       <section className={styles.processGridSection} ref={processRef}>
-        <div className={styles.processGrid} ref={addToStepRefs}>
-          <div className={styles.gridImage}>
-            <Image src="/test.png" alt="Step 1" width={500} height={500} />
-          </div>
-          <div className={styles.gridText}>
-            <span className={styles.stepBadge}>STEP 1</span>
-            <h3 className={styles.stepTitle}>큐레이션 로직 설정</h3>
-            <p className={styles.stepDescription}>
-              우선 브랜드와 협의해 큐레이션 로직을 정해요.
-              <br />
-              어떤 기준으로 제품을 묶고, 어떤 방식으로 추천할지
-              <br />
-              구조를 먼저 설계합니다.
-            </p>
-            <div className={styles.stepDivider} />
-            <p className={styles.stepExample}>
-              ex) 로직 타입 예시
-              <br />
-              🎨 색상별: 립 전 색상 중 톤별 추천
-              <br />
-              💭 무드별: 제품이 주는 분위기별 추천
-              <br />
-              📦 상황별: 출근용, 선물용 등 상황별 기준
-            </p>
-          </div>
-        </div>
+        <div className={styles.cardContainer}>
+          {[
+            {
+              step: "1",
+              img: "/logic.png",
+              alt: "Step 1",
+              title: "큐레이션 로직 설정",
+              desc: [
+                "우선 브랜드와 협의해 큐레이션 로직을 정해요.",
+                "어떤 방식으로 추천할지 구조를 먼저 설계합니다.",
+              ],
+              exampleTitle: "ex) 로직 타입 예시",
+              examples: [
+                "🎨 색상별: 립 전 색상 중 톤별 추천",
+                "💭 무드별: 제품이 주는 분위기별 추천",
+                "📦 상황별: 출근용, 선물용 등 상황별 기준",
+              ],
+            },
+            {
+              step: "2",
+              img: "/minitest.png",
+              alt: "Step 2",
+              title: "미니 테스트 기획",
+              desc: [
+                "로직에 맞는 질문과 선택지를 기획해요.",
+                "고객의 취향∙상황∙감정을 파악할 수 있도록",
+                "타깃에 맞는 테스트를 만듭니다.",
+              ],
+              exampleTitle: "ex) 질문 예시",
+              examples: [
+                "💄 메이크업: “나랑 제일 잘 어울린다고 생각하는 컬러는?”",
+                "🧴 스킨케어: “요즘 피부에서 가장 신경 쓰이는 부분은?”",
+                "🌸 향수: “내가 어떤 이미지로 보였으면 하나요?”",
+              ],
+            },
+            {
+              step: "3",
+              img: "/curate.png",
+              alt: "Step 3",
+              title: "큐레이션 실행",
+              desc: [
+                "미니테스트의 응답 결과에",
+                "로직을 적용해 추천 구조를 도출해요.",
+                "고객에게 가장 적합한 제품 구성을 만듭니다.",
+              ],
+              exampleTitle: "ex) 구조 흐름 예시",
+              examples: [
+                "📝 테스트 결과값 → 🎯 색상 큐레이션 로직 적용",
+                " → 💡 제품 3종 추천",
+              ],
+            },
+            {
+              step: "4",
+              img: "/brandstyling.png",
+              alt: "Step 4",
+              title: "콘텐츠 스타일링",
+              desc: [
+                "테스트 콘텐츠를 브랜드 무드에 맞춰 스타일링해요.",
+                "제품군과 목적에 따라 다양한 스타일로 구현됩니다.",
+              ],
+              exampleTitle: "ex) 스타일 타입 예시",
+              examples: [
+                "🎨 미니멀한 2D 그래픽",
+                "🧊 직관적인 3D 비주얼",
+                "✨ 애니메이션 or 인터랙티브 연출",
+              ],
+            },
+          ].map((step, idx) => (
+            <div
+              key={idx}
+              className={`${styles.processGrid} ${
+                step.reverse ? styles.reverse : ""
+              }`}
+              ref={addToStepRefs}
+            >
+              {/* 중앙 정렬 영역 */}
+              <div className={styles.gridTopCenter}>
+                <span className={styles.stepBadge}>{`STEP ${step.step}`}</span>
+                <div className={styles.gridImage}>
+                  <Image
+                    src={step.img}
+                    alt={step.alt}
+                    width={200}
+                    height={200}
+                  />
+                </div>
+                <h3 className={styles.stepTitle}>{step.title}</h3>
+              </div>
 
-        <div
-          className={`${styles.processGrid} ${styles.reverse}`}
-          ref={addToStepRefs}
-        >
-          <div className={styles.gridImage}>
-            <Image src="/test.png" alt="Step 2" width={500} height={500} />
-          </div>
-          <div className={styles.gridText}>
-            <span className={styles.stepBadge}>STEP 2</span>
-            <h3 className={styles.stepTitle}>미니 테스트 기획</h3>
-            <p className={styles.stepDescription}>
-              로직에 맞는 질문과 선택지를 기획해요.
-              <br />
-              고객의 취향∙상황∙감정을 파악할 수 있도록
-              <br />
-              타깃에 맞는 테스트를 만듭니다.
-            </p>
-            <div className={styles.stepDivider} />
-            <p className={styles.stepExample}>
-              ex) 질문 예시
-              <br />
-              💄 메이크업: “나랑 제일 잘 어울린다고 생각하는 컬러는?”
-              <br />
-              🧴 스킨케어: “요즘 피부에서 가장 신경 쓰이는 부분은?”
-              <br />
-              🌸 향수: “내가 어떤 이미지로 보였으면 하나요?”
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.processGrid} ref={addToStepRefs}>
-          <div className={styles.gridImage}>
-            <Image src="/test.png" alt="Step 3" width={500} height={500} />
-          </div>
-          <div className={styles.gridText}>
-            <span className={styles.stepBadge}>STEP 3</span>
-            <h3 className={styles.stepTitle}>큐레이션 실행</h3>
-            <p className={styles.stepDescription}>
-              미니테스트의 응답 결과에 로직을 적용해 추천 구조를 도출해요.
-              <br />
-              결과값을 분석해 고객에게 가장 적합한 제품 구성을 만듭니다.
-            </p>
-            <div className={styles.stepDivider} />
-            <p className={styles.stepExample}>
-              ex) 구조 흐름
-              <br />
-              📝 테스트 결과값 → 🎯 색상 큐레이션 로직 적용 → 💡 제품 3종 추천
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={`${styles.processGrid} ${styles.reverse}`}
-          ref={addToStepRefs}
-        >
-          <div className={styles.gridImage}>
-            <Image src="/test.png" alt="Step 4" width={500} height={500} />
-          </div>
-          <div className={styles.gridText}>
-            <span className={styles.stepBadge}>STEP 4</span>
-            <h3 className={styles.stepTitle}>콘텐츠 스타일링</h3>
-            <p className={styles.stepDescription}>
-              테스트와 결과 페이지를 브랜드 무드에 맞춰 스타일링해요.
-              <br />
-              제품군과 목적에 따라 다양한 시각적 스타일로 구현됩니다.
-            </p>
-            <div className={styles.stepDivider} />
-            <p className={styles.stepExample}>
-              ex) 스타일 타입 예시
-              <br />
-              🎨 미니멀한 2D 그래픽
-              <br />
-              🧊 직관적인 3D 비주얼
-              <br />✨ 애니메이션 or 인터랙티브 연출
-            </p>
-          </div>
+              {/* 왼쪽 정렬 영역 */}
+              <div className={styles.gridText}>
+                <p className={styles.stepDescription}>
+                  {step.desc.map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </p>
+                <div className={styles.stepDivider} />
+                <p className={styles.stepExample}>
+                  {step.exampleTitle}
+                  <br />
+                  {step.examples.map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <Examples />

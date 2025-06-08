@@ -10,6 +10,7 @@ const Contact = () => {
   const titleRef = useRef(null);
   const processRef = useRef(null);
   const descRef = useRef(null);
+  const buttonGroupRef = useRef(null);
   const formRef = useRef(null);
 
   const [formVisible, setFormVisible] = useState(false);
@@ -40,6 +41,23 @@ const Contact = () => {
         );
       }
     });
+
+    if (buttonGroupRef.current) {
+      gsap.fromTo(
+        buttonGroupRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: buttonGroupRef.current,
+            start: "top 85%",
+          },
+        }
+      );
+    }
   }, []);
 
   useEffect(() => {
@@ -84,7 +102,7 @@ const Contact = () => {
           편하신 방법으로 문의해주세요😉
         </p>
 
-        <div className={styles.buttonGroup}>
+        <div className={styles.buttonGroup} ref={buttonGroupRef}>
           <button
             className={styles.contactButton}
             onClick={() => setFormVisible(true)}

@@ -2,7 +2,7 @@
 .scene_wrapper {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   background-color: #f0f0f0;
 }
@@ -36,7 +36,6 @@
   pointer-events: none;
 }
 
-/* 🟣 필토 아이콘 */
 .fylto_icon {
   display: flex;
   justify-content: center;
@@ -47,7 +46,6 @@
   animation: float 3s ease-in-out infinite;
 }
 
-/* 🟣 콘텐츠 영역 */
 .content {
   position: relative;
   z-index: 1;
@@ -56,7 +54,6 @@
   align-items: center;
 }
 
-/* 🟣 말풍선 공통 */
 .bubble {
   font-family: "NanumSquareNeo";
   font-size: 14px;
@@ -75,7 +72,6 @@
   animation: fadeInUp 1s ease-out forwards;
 }
 
-/* 🟣 애니메이션 */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -99,7 +95,6 @@
   }
 }
 
-/* 🟣 Scroll Cue */
 .scrollCue {
   opacity: 0;
   text-align: center;
@@ -138,13 +133,10 @@
 
 .scrollQuestion {
   font-family: "Ownglyph_wiseelist-Rg";
-  font-display: swap;
   font-size: 23px;
   margin-bottom: 10px;
-  transition: none;
 }
 
-/* 🟣 화살표 색상변화 */
 .bouncingArrow {
   display: inline-block;
   animation: arrowColorPulse 2s ease-in-out infinite;
@@ -160,10 +152,9 @@
   }
 }
 
-/* 🟣 큐레이션 콘텐츠 소개 */
 .processIntroSection {
   background: linear-gradient(#f8f8f8, #ede9e4);
-  padding: 80px 5vw 130px;
+  padding: 80px 5vw 80px;
   text-align: center;
   font-family: "Nanum Myeongjo", serif;
 }
@@ -181,103 +172,148 @@
   font-size: 36px;
   font-weight: 500;
   color: #111;
-  margin-bottom: 24px;
+  margin-bottom: -10px;
   line-height: 1.4;
 }
-
-.processHeroDescription {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
-  font-style: italic;
+.processGridSection {
+  background-color: #ede9e4;
+  padding: 60px 5vw;
+  display: flex;
+  justify-content: center;
 }
 
-/* 🟣 제작 과정 그리드 */
-.processGridSection {
-  padding: 10px 5vw;
-  background-color: #ede9e4;
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 750px;
 }
 
 .processGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  background-color: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 24px 25px;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.processGrid:hover {
+  transform: translateY(-3px);
+}
+
+/* ✅ 위쪽 중앙 정렬 그룹 (뱃지, 이미지, 타이틀) */
+.gridTopCenter {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  max-width: 900px;
-  margin: 0 auto 70px auto;
-}
-
-.processGrid.reverse {
-  direction: rtl;
-}
-
-.processGrid.reverse .gridText,
-.processGrid.reverse .gridImage {
-  direction: ltr;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .gridImage img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: -20px 0 -10px 0;
 }
 
 .stepBadge {
   display: inline-block;
-  background-color: #f5f5f5;
-  color: #666;
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 4px 12px;
-  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #777;
+  background-color: #eee;
   border: 1px solid #ddd;
-  margin-bottom: 15px;
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 17px;
 }
 
 .stepTitle {
   font-family: "NanumSquareNeoExtraBold";
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+/* ✅ 아래쪽 텍스트 영역 왼쪽 정렬 */
+.gridText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .stepDescription {
   font-family: "NanumSquareNeo";
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #444;
   line-height: 1.6;
+  white-space: pre-line;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .stepDivider {
   width: 50px;
   height: 1px;
-  background-color: #b1b1b1;
-  margin: 20px 0;
+  background-color: #aaa;
+  margin: 15px 0;
 }
 
 .stepExample {
   font-family: "NanumSquareNeo";
-  font-size: 13px;
-  color: #888;
-  line-height: 1.6;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.8;
   white-space: pre-line;
+  text-align: left;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* 🟣 반응형 */
+/* ✅ 모바일 대응 */
 @media (max-width: 768px) {
-  .bubble {
-    font-size: 17px;
+  .processIntroSection {
+    padding: 80px 5vw 55px;
   }
 
-  .scrollQuestion {
-    font-size: 29px;
+  .processGridSection {
+    padding: 10px 20px;
+  }
+
+  .cardContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .processGrid {
-    grid-template-columns: 1fr;
+    padding: 20px 20px;
   }
 
-  .processGrid.reverse {
-    direction: ltr;
+  .gridImage img {
+    width: 150px;
+    height: 150px;
+    margin: -10px 0 0 0;
+  }
+
+  .stepTitle {
+    font-size: 1.1rem;
+  }
+
+  .stepDescription {
+    font-size: 0.85rem;
+  }
+
+  .stepExample {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
   }
 }
