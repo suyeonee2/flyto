@@ -82,38 +82,58 @@ export default function AboutPage() {
     <div style={{ overflowX: "hidden", width: "100%" }}>
       <Header />
       <section className={styles.aboutSection}>
-        <p className={styles.aboutEyebrow} ref={eyebrowRef}>
-          <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
-          <br />
-          <br />
-          Fylto 소개
-        </p>
-        <h2 className={styles.aboutTitle} ref={titleRef}>
-          About Fylto
-        </h2>
-        <p className={styles.aboutDescription} ref={descRef}>
-          큐레이션을 통해 브랜드와 고객 사이를 이어주는
-          <br />
-          콘텐츠 스튜디오, Fylto를 소개합니다.
-        </p>
-
-        <div className={styles.aboutContent} ref={contentRef}>
-          <h3>우리가 하는 일</h3>
-          <p>
-            Fylto는 고객의 취향과 상황을 읽어내는
+        <div className={styles.grid_bg} />
+        <div className={styles.content}>
+          <p className={styles.aboutEyebrow} ref={eyebrowRef}>
+            <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
             <br />
-            큐레이션 기반 콘텐츠를 제작합니다.
-          </p>
-
-          <h3>중심 철학</h3>
-          <p>
-            우리는 ‘선택의 확신’을 줄 수 있는 경험을 만듭니다.
             <br />
-            복잡한 선택지 속에서 ‘이거다!’ 싶은 콘텐츠를 제공하는 게 목표예요.
+            Fylto 소개
           </p>
+          <h2 className={styles.aboutTitle} ref={titleRef}>
+            About Fylto
+          </h2>
+          <p className={styles.aboutDescription} ref={descRef}>
+            큐레이션을 통해 브랜드와 고객 사이를 이어주는
+            <br />
+            콘텐츠 스튜디오, Fylto를 소개합니다.
+          </p>
+        </div>
 
-          <h3>핵심 키워드</h3>
-          <p>필터링, 선별, 취향, 연결, 감성, 추천</p>
+        <div className={styles.content2_Container} ref={contentRef}>
+          <div className={styles.cardContainer}>
+            <div className={styles.card}>
+              <img src="/test.png" alt="mission" className={styles.cardImage} />
+              <div className={styles.cardText}>
+                <h3>우리가 하는 일</h3>
+                <div className={styles.cardDivider} />
+                <p>
+                  고객이 직접 찾고 비교하지 않아도,
+                  <br />
+                  가장 잘 맞는 제품만 선별해드립니다.
+                  <br />
+                  취향과 상황을 분석한 큐레이션이니까요.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.card}>
+              <img src="/test.png" alt="trust" className={styles.cardImage} />
+              <div className={styles.cardText}>
+                <h3>기반과 신뢰</h3>
+                <div className={styles.cardDivider} />
+                <p>
+                  테스트 사이트 운영을 통해
+                  <br />
+                  약 500만 회의 사용자 반응을 직접 살펴봤습니다.
+                  <br />
+                  그 실질적인 경험을 바탕으로
+                  <br />
+                  취향 기반 큐레이션 서비스 Fylto가 시작되었습니다.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
