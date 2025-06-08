@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./Examples.module.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -31,6 +32,11 @@ export default function Examples() {
   const descRef = useRef(null);
   const cardsRef = useRef(null);
   const allButtonRef = useRef(null);
+  const router = useRouter();
+
+  const handleGoToExamples = () => {
+    router.push("/examples");
+  };
 
   useEffect(() => {
     const animations = [
@@ -100,7 +106,7 @@ export default function Examples() {
         ))}
       </div>
       <div className={styles.allButtonWrapper} ref={allButtonRef}>
-        <button className={styles.allButton}>
+        <button className={styles.allButton} onClick={handleGoToExamples}>
           All Examples
           <MdOutlineKeyboardArrowRight className={styles.arrowIcon} />
         </button>
