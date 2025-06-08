@@ -56,7 +56,7 @@
   color: #111;
   line-height: 1.6;
   margin-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .contactButton {
@@ -84,6 +84,7 @@
   color: #111;
   cursor: pointer;
   transition: all 0.25s ease;
+  text-decoration: none;
 }
 
 .contactButton:hover {
@@ -104,4 +105,36 @@
   .line {
     width: 11px;
   }
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.optionButton {
+  font-size: 15px;
+  font-family: "NanumSquareNeo";
+  padding: 14px 22px;
+  border: 1px solid #111;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.optionButton:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.formWrapper {
+  overflow: hidden;
+  max-width: 640px;
+  margin: 0 auto;
+  transition: all 0.5s ease;
 }

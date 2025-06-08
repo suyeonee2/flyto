@@ -204,13 +204,13 @@ export default function FirstTime() {
             </p>
             <div className={styles.stepDivider} />
             <p className={styles.stepExample}>
-              ex) 큐레이션 로직 타입
+              ex) 로직 타입 예시
               <br />
-              🎨 색상 큐레이션: 립 전 색상 중 톤별 추천
+              🎨 색상별: 립 전 색상 중 톤별 추천
               <br />
-              💭 무드 큐레이션: 제품이 주는 분위기별 추천
+              💭 무드별: 제품이 주는 분위기별 추천
               <br />
-              📦 상황 큐레이션: 출근용, 선물용 등 상황별 기준
+              📦 상황별: 출근용, 선물용 등 상황별 기준
             </p>
           </div>
         </div>
@@ -259,7 +259,7 @@ export default function FirstTime() {
             </p>
             <div className={styles.stepDivider} />
             <p className={styles.stepExample}>
-              ex) 분석 흐름
+              ex) 구조 흐름
               <br />
               📝 테스트 결과값 → 🎯 색상 큐레이션 로직 적용 → 💡 제품 3종 추천
             </p>
@@ -283,7 +283,7 @@ export default function FirstTime() {
             </p>
             <div className={styles.stepDivider} />
             <p className={styles.stepExample}>
-              ex) 스타일 타입
+              ex) 스타일 타입 예시
               <br />
               🎨 미니멀한 2D 그래픽
               <br />

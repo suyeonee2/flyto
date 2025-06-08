@@ -138,6 +138,7 @@
 
 .scrollQuestion {
   font-family: "Ownglyph_wiseelist-Rg";
+  font-display: swap;
   font-size: 23px;
   margin-bottom: 10px;
   transition: none;

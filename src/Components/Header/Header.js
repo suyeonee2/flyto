@@ -33,6 +33,18 @@ export default function Header() {
     }
   };
 
+  const handleScrollToContact = (e) => {
+    e.preventDefault();
+    const target = document.querySelector("#contact");
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+      handleClose();
+    } else {
+      router.push("/intro/first-time#contact");
+    }
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.innerContainer}>
@@ -70,9 +82,9 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" onClick={handleClose}>
-                  Work with Us
-                </Link>
+                <a href="#contact" onClick={handleScrollToContact}>
+                  Let's Work Together!
+                </a>
               </li>
             </ul>
           </nav>
