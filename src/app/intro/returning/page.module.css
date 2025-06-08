@@ -1,0 +1,108 @@
+/* 🟣 전체 래퍼 */
+.scene_wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🟣 배경 그리드 */
+.grid_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #eee 1px, transparent 1px),
+    linear-gradient(to bottom, #eee 1px, transparent 1px),
+    url("/intro_back.png");
+  background-size: 30px 30px, 30px 30px, cover;
+  background-repeat: repeat, repeat, no-repeat;
+  background-position: top left, top left, bottom center;
+  background-blend-mode: multiply;
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.grid_bg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.7), transparent);
+  pointer-events: none;
+}
+
+/* 🟣 말풍선 콘텐츠 그룹 */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+/* 💬 공통 말풍선 스타일 */
+.bubble {
+  font-family: "NanumSquareNeo";
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 280px;
+  padding: 14px 18px;
+  border-radius: 20px 20px 20px 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* 👈 왼쪽 말풍선 */
+.leftBubble {
+  align-self: flex-start;
+  margin-left: 20px;
+}
+
+/* 👉 오른쪽 말풍선 (버튼형) */
+.rightBubble {
+  align-self: flex-end;
+  background-color: #3e3e3e;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px 20px 4px 20px;
+  margin-right: 20px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.rightBubble:hover {
+  background-color: #747474;
+  transform: translateY(-2px);
+}
+
+/* 👉 오른쪽 버튼 그룹 */
+.optionsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: flex-end;
+}
+
+/* 📱 반응형 */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 15px;
+  }
+
+  .bubble {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
