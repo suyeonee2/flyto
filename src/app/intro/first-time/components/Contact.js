@@ -110,7 +110,12 @@ const Contact = () => {
             폼으로 문의하기
           </button>
 
-          <a className={styles.contactButton} href="mailto:suyeonee2@gmail.com">
+          <a
+            className={styles.contactButton}
+            href="mailto:fylto.studio@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             메일로 문의하기
           </a>
         </div>
@@ -118,7 +123,7 @@ const Contact = () => {
         {formVisible && (
           <div ref={formRef} className={styles.formWrapper}>
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSe_NPIUV6_fIsTfcy-Uan5fTcF-PzcL-iiJPBIaEF81DCxr9g/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdn8M_JgMTT1Y3xTFLMJg5xnQL66gpYxKPIdQg4QHs2h49KDg/viewform?embedded=true"
               width="100%"
               height="1300"
               frameBorder="0"

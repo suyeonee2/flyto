@@ -148,7 +148,7 @@ export default function AboutPage() {
                   </span>
                   으로
                   <br />
-                  취향 기반 큐레이션 서비스 Fylto가 시작되었습니다.
+                  큐레이션 콘텐츠 스튜디오 Fylto가 시작되었습니다.
                 </p>
               </div>
             </div>
