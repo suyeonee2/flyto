@@ -95,7 +95,7 @@
 }
 
 /* 반응형 */
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .HeroTitle {
     font-size: 28px;
   }

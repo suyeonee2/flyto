@@ -1,0 +1,22 @@
+/* ContentLayout.module.css */
+
+.wrapper {
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 3rem;
+}
+
+@media (max-width: 640px) {
+  .inner {
+    max-width: 640px;
+    margin-top: -3rem;
+  }
+}

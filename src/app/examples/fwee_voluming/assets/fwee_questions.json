@@ -1,0 +1,218 @@
+[
+  {
+    "id": "q1",
+    "question": "당신의 피부톤은 어떻게 느껴지나요?",
+    "options": [
+      {
+        "label": "맑고 핑크빛이 돌아요 (쿨톤)",
+        "value": "cool"
+      },
+      {
+        "label": "따뜻하고 노란빛이 돌아요 (웜톤)",
+        "value": "warm"
+      },
+      {
+        "label": "둘 다 아닌 것 같아요 (뉴트럴)",
+        "value": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "입술 본연의 색은 어떤가요?",
+    "options": [
+      {
+        "label": "붉고 진한 편",
+        "value": "deep"
+      },
+      {
+        "label": "연하고 핑크빛",
+        "value": "light"
+      },
+      {
+        "label": "살구빛/브라운빛",
+        "value": "warm"
+      }
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "평소 선호하는 립 메이크업 분위기는?",
+    "options": [
+      {
+        "label": "청순하고 맑은",
+        "value": "pure"
+      },
+      {
+        "label": "귀엽고 발랄한",
+        "value": "playful"
+      },
+      {
+        "label": "시크하고 세련된",
+        "value": "chic"
+      },
+      {
+        "label": "유니크하고 튀는",
+        "value": "bold"
+      }
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "가장 자주 입는 옷 스타일은?",
+    "options": [
+      {
+        "label": "화이트/블루/네이비 계열",
+        "value": "cool"
+      },
+      {
+        "label": "아이보리/브라운/베이지 계열",
+        "value": "warm"
+      },
+      {
+        "label": "올블랙/모노톤",
+        "value": "neutral"
+      },
+      {
+        "label": "컬러풀한 포인트 룩",
+        "value": "bold"
+      }
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "어떤 메이크업 톤을 더 선호하나요?",
+    "options": [
+      {
+        "label": "로즈/핑크 메이크업",
+        "value": "cool"
+      },
+      {
+        "label": "코랄/오렌지 메이크업",
+        "value": "warm"
+      },
+      {
+        "label": "베이지/브라운 메이크업",
+        "value": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "입술에 립을 바르면 어떤 톤이 잘 어울리나요?",
+    "options": [
+      {
+        "label": "선명하고 맑은 색",
+        "value": "vivid"
+      },
+      {
+        "label": "차분하고 부드러운 색",
+        "value": "soft"
+      },
+      {
+        "label": "딥하고 고급스러운 색",
+        "value": "deep"
+      }
+    ]
+  },
+  {
+    "id": "q7",
+    "question": "립 발색 농도는 어떤 게 좋아요?",
+    "options": [
+      {
+        "label": "은은한 30%",
+        "value": "light"
+      },
+      {
+        "label": "확실한 70%",
+        "value": "bold"
+      }
+    ]
+  },
+  {
+    "id": "q8",
+    "question": "립을 바르는 주 용도는?",
+    "options": [
+      {
+        "label": "데일리 메이크업용",
+        "value": "daily"
+      },
+      {
+        "label": "특별한 날 포인트용",
+        "value": "point"
+      }
+    ]
+  },
+  {
+    "id": "q9",
+    "question": "립에 자주 생기는 고민은?",
+    "options": [
+      {
+        "label": "건조하고 각질이 잘 생겨요",
+        "value": "dry"
+      },
+      {
+        "label": "입술에 끼임이 싫어요",
+        "value": "cling"
+      },
+      {
+        "label": "광택 있는 느낌이 좋아요",
+        "value": "gloss"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "주로 립을 바르는 장소는?",
+    "options": [
+      {
+        "label": "학교/직장 등 일상",
+        "value": "daily"
+      },
+      {
+        "label": "데이트/모임 등 외출",
+        "value": "event"
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "어울린다고 느끼는 립 컬러는?",
+    "options": [
+      {
+        "label": "연한 핑크 / 푸시아",
+        "value": "cool"
+      },
+      {
+        "label": "코랄 / 오렌지",
+        "value": "warm"
+      },
+      {
+        "label": "브라운 / 누드",
+        "value": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "립 메이크업에서 가장 중요한 요소는?",
+    "options": [
+      {
+        "label": "톤 조화",
+        "value": "tone"
+      },
+      {
+        "label": "텍스처",
+        "value": "texture"
+      },
+      {
+        "label": "발색",
+        "value": "pigment"
+      },
+      {
+        "label": "지속력",
+        "value": "lasting"
+      }
+    ]
+  }
+]

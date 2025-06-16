@@ -1,0 +1,38 @@
+.bgFwee {
+  background-color: #ffe3ea;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* 썸네일 이미지 */
+.thumbnail {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* 시작 버튼 */
+.imageButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-top: -9.5rem;
+  transition: transform 0.2s ease;
+}
+
+.imageButton:hover {
+  transform: scale(1.05);
+}

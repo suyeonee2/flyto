@@ -1,0 +1,14 @@
+{
+  "cool-light-daily": ["A01 바닐라 VANILLA 30%", "B10 요거트 YOGURT 70%"],
+  "cool-light-bold": ["B03 캔디 CANDY 70%", "B10 요거트 YOGURT 70%"],
+  "cool-deep-soft": ["A05 커런트 CURRANT 30%", "B11 타로 TARO 70%"],
+  "cool-deep-bold": ["B05 커런트 CURRANT 70%", "B11 타로 TARO 70%"],
+  "warm-light-daily": ["A01 바닐라 VANILLA 30%", "A02 소르베 SORBET 30%"],
+  "warm-light-bold": ["B07 피치 PEACH 70%", "B02 소르베 SORBET 70%"],
+  "warm-deep-bold": ["B06 스카치 SCOTCH 70%", "B08 로지 ROZY 70%"],
+  "warm-deep-soft": ["A06 스카치 SCOTCH 30%", "B08 로지 ROZY 70%"],
+  "neutral-medium-daily": ["B09 리치 LYCHEE 70%", "A04 앵두 AENGDU 30%"],
+  "neutral-medium-bold": ["B04 앵두 AENGDU 70%", "B03 캔디 CANDY 70%"],
+  "neutral-light-soft": ["A01 바닐라 VANILLA 30%", "A02 소르베 SORBET 30%"],
+  "neutral-deep-bold": ["B06 스카치 SCOTCH 70%", "B04 앵두 AENGDU 70%"]
+}

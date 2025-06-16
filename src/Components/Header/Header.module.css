@@ -107,7 +107,7 @@
 }
 
 /* ✅ 모바일 반응형 */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .logo a {
     font-size: 18px;
   }
