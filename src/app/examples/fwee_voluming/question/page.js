@@ -5,8 +5,11 @@ import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import content from "../assets/fwee_questions.json";
 import ContentLayout from "@/Components/ContentLayout";
+import Image from "next/image";
+import questionBg from "../assets/q_Img.png";
+import Header from "@/Components/Header/Header";
 
-export default function FweeVolumingQuestion() {
+export default function FweeVolumingQ() {
   const router = useRouter();
   const questions = content;
 
@@ -27,24 +30,35 @@ export default function FweeVolumingQuestion() {
   const currentQ = questions[step];
 
   return (
-    <ContentLayout className={styles.bgFwee}>
-      <div className={styles.questionSection}>
-        <div className={styles.step}>
-          Q{step + 1}/{questions.length}
+    <>
+      <Header />
+      <ContentLayout className={styles.bgFwee}>
+        <div className={styles.questionSection}>
+          <div className={styles.progressBar}>
+            <div
+              className={styles.progress}
+              style={{ width: `${((step + 1) / questions.length) * 100}%` }}
+            />
+          </div>
+
+          <div className={styles.questionBox}>
+            <p className={styles.step}>Q{step + 1}</p>
+            <h2 className={styles.question}>{currentQ.question}</h2>
+
+            <ul className={styles.options}>
+              {currentQ.options.map((opt, idx) => (
+                <li
+                  key={idx}
+                  className={styles.option}
+                  onClick={() => handleSelect(opt.value)}
+                >
+                  {opt.label}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <h2 className={styles.question}>{currentQ.question}</h2>
-        <ul className={styles.options}>
-          {currentQ.options.map((opt, idx) => (
-            <li
-              key={idx}
-              className={styles.option}
-              onClick={() => handleSelect(opt.value)}
-            >
-              {opt.label}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </ContentLayout>
+      </ContentLayout>
+    </>
   );
 }

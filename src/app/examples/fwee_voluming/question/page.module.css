@@ -1,42 +1,100 @@
 .bgFwee {
-  background: linear-gradient(#fffaf6, #fff);
-  font-family: "SUIT", sans-serif;
+  background-color: #ffe3ea;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .questionSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnail {
+  border-radius: 20px;
   width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* 진행도 표시 바 */
+.progressBar {
+  width: 100%;
+  max-width: 400px;
+  height: 6px;
+  background-color: #ffe5f0;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ff69a8;
+  transition: width 0.3s ease;
+}
+
+/* 질문 영역 */
+.questionBox {
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
 .step {
   font-size: 0.9rem;
   color: #999;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .question {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
+/* 옵션 버튼들 */
 .options {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
 .option {
-  background: #f8f8f8;
-  padding: 1rem;
-  border-radius: 1rem;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  text-align: center;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
   font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .option:hover {
-  background: #eee;
+  background: #fff0f5;
+  border-color: #ff80aa;
+}
+
+/* 모바일 대응 */
+@media (max-width: 640px) {
+  .questionBox {
+    padding: 1.25rem;
+  }
+
+  .question {
+    font-size: 1.1rem;
+  }
+
+  .option {
+    font-size: 0.95rem;
+  }
 }

@@ -28,9 +28,12 @@ export default function FweeVolumingStart() {
             className={styles.imageButton}
             onClick={() => router.push("/examples/fwee_voluming/question")}
           >
-            <Image src={startBtn} alt="시작 버튼" width={135} height={120} />
+            <Image src={startBtn} alt="시작 버튼" fill />
           </button>
         </div>
+        <p>
+          * 포트폴리오 목적으로 제작된 콘텐츠이며, 실제 브랜드와 무관합니다.
+        </p>
       </ContentLayout>
     </>
   );
