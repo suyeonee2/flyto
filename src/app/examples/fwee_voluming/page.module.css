@@ -1,9 +1,10 @@
 .bgFwee {
   background-color: #ffe3ea;
-  min-height: 100vh;
+  height: 115vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .startSection {
@@ -23,24 +24,23 @@
   display: block;
 }
 
-/* 시작 버튼 */
-.imageButton {
-  position: relative;
-  width: 135px;
-  height: 120px;
-  background: none;
+.startButton {
+  margin-top: -7.5rem;
+  background: linear-gradient(to bottom right, #ffa3b4, #ff8a8a);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
   border: none;
-  padding: 0;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
   cursor: pointer;
-  margin-top: -10.5rem;
+  box-shadow: 0 4px 10px rgba(255, 145, 165, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.buttonImage {
-  object-fit: contain;
-}
-
-.imageButton:hover {
+.startButton:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 145, 165, 0.4);
 }
 
 /* 콘텐츠 출처 알림 문구 */
@@ -48,13 +48,26 @@
   font-size: 0.75rem;
   color: #999;
   text-align: center;
-  margin-top: 3rem;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 }
-
 @media (max-width: 640px) {
-  .imageButton {
-    width: 115px;
-    height: 100px;
-    margin-top: -9rem;
+  .bgFwee {
+    height: 100vh;
+  }
+
+  .startSection {
+    transform: translateY(-3vh); /* ✅ 살짝만 위로 올림 */
+  }
+
+  .startButton {
+    margin-top: -6.5rem;
+  }
+
+  .bgFwee p {
+    bottom: 10.5rem;
   }
 }

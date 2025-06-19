@@ -3,10 +3,9 @@
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import ContentLayout from "@/Components/ContentLayout";
-import Image from "next/image";
-import startImg from "./assets/startImg.png";
-import startBtn from "./assets/startBtn.png";
 import Header from "@/Components/Header/Header";
+import startImg from "./assets/startImg.png";
+import Image from "next/image";
 
 export default function FweeVolumingStart() {
   const router = useRouter();
@@ -18,17 +17,17 @@ export default function FweeVolumingStart() {
         <div className={styles.startSection}>
           <Image
             src={startImg}
-            alt="fwee 시작 썸네일"
+            alt="fwee 시작 이미지"
+            className={styles.thumbnail}
             width={891}
             height={1260}
-            className={styles.thumbnail}
+            unoptimized
           />
-
           <button
-            className={styles.imageButton}
+            className={styles.startButton}
             onClick={() => router.push("/examples/fwee_voluming/question")}
           >
-            <Image src={startBtn} alt="시작 버튼" fill />
+            테스트 시작하기
           </button>
         </div>
         <p>

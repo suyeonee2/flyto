@@ -34,30 +34,52 @@ export default function FweeVolumingQ() {
       <Header />
       <ContentLayout className={styles.bgFwee}>
         <div className={styles.questionSection}>
-          <div className={styles.progressBar}>
-            <div
-              className={styles.progress}
-              style={{ width: `${((step + 1) / questions.length) * 100}%` }}
+          <div className={styles.imageWrapper}>
+            {/* ✅ 배경 이미지 */}
+            <Image
+              src={questionBg}
+              alt="질문 배경"
+              className={styles.thumbnail}
+              width={891}
+              height={1260}
+              unoptimized
             />
-          </div>
 
-          <div className={styles.questionBox}>
-            <p className={styles.step}>Q{step + 1}</p>
-            <h2 className={styles.question}>{currentQ.question}</h2>
+            {/* ✅ 오버레이 콘텐츠 */}
 
-            <ul className={styles.options}>
-              {currentQ.options.map((opt, idx) => (
-                <li
-                  key={idx}
-                  className={styles.option}
-                  onClick={() => handleSelect(opt.value)}
-                >
-                  {opt.label}
-                </li>
-              ))}
-            </ul>
+            <div className={styles.contentOverlay}>
+              <div className={styles.progressBar}>
+                <div
+                  className={styles.progress}
+                  style={{
+                    width: `${((step + 1) / questions.length) * 100}%`,
+                  }}
+                />
+              </div>
+
+              <div className={styles.questionBox}>
+                <h2 className={styles.question}>{currentQ.question}</h2>
+
+                <ul className={styles.options}>
+                  {currentQ.options.map((opt, idx) => (
+                    <li
+                      key={idx}
+                      className={styles.option}
+                      onClick={() => handleSelect(opt.value)}
+                    >
+                      {opt.label}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* ✅ 하단 출처 고정 */}
+        <p>
+          * 포트폴리오 목적으로 제작된 콘텐츠이며, 실제 브랜드와 무관합니다.
+        </p>
       </ContentLayout>
     </>
   );
