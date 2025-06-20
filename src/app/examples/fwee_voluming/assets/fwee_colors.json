@@ -1,0 +1,96 @@
+[
+  {
+    "id": "vanilla",
+    "name": "바닐라 VANILLA",
+    "code": "A01/B01",
+    "variants": [
+      "A01",
+      "B01"
+    ]
+  },
+  {
+    "id": "sorbet",
+    "name": "소르베 SORBET",
+    "code": "A02/B02",
+    "variants": [
+      "A02",
+      "B02"
+    ]
+  },
+  {
+    "id": "candy",
+    "name": "캔디 CANDY",
+    "code": "A03/B03",
+    "variants": [
+      "A03",
+      "B03"
+    ]
+  },
+  {
+    "id": "aengdu",
+    "name": "앵두 AENGDU",
+    "code": "A04/B04",
+    "variants": [
+      "A04",
+      "B04"
+    ]
+  },
+  {
+    "id": "currant",
+    "name": "커런트 CURRANT",
+    "code": "A05/B05",
+    "variants": [
+      "A05",
+      "B05"
+    ]
+  },
+  {
+    "id": "scotch",
+    "name": "스카치 SCOTCH",
+    "code": "A06/B06",
+    "variants": [
+      "A06",
+      "B06"
+    ]
+  },
+  {
+    "id": "peach",
+    "name": "피치 PEACH",
+    "code": "B07",
+    "variants": [
+      "B07"
+    ]
+  },
+  {
+    "id": "rozy",
+    "name": "로지 ROZY",
+    "code": "B08",
+    "variants": [
+      "B08"
+    ]
+  },
+  {
+    "id": "lychee",
+    "name": "리치 LYCHEE",
+    "code": "B09",
+    "variants": [
+      "B09"
+    ]
+  },
+  {
+    "id": "yogurt",
+    "name": "요거트 YOGURT",
+    "code": "B10",
+    "variants": [
+      "B10"
+    ]
+  },
+  {
+    "id": "taro",
+    "name": "타로 TARO",
+    "code": "B11",
+    "variants": [
+      "B11"
+    ]
+  }
+]

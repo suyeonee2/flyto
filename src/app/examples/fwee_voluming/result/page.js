@@ -4,21 +4,29 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { matchColorType } from "@/logic/color-pick";
 import resultMap from "../assets/fwee_resultMap.json";
+import colors from "../assets/fwee_colors.json";
 import styles from "./page.module.css";
-import ContentLayout from "@/components/ContentLayout"; // ← 경로 소문자로 수정
+import ContentLayout from "@/Components/ContentLayout";
 
 export default function FweeVolumingResult() {
   const searchParams = useSearchParams();
   const [recommended, setRecommended] = useState([]);
 
   useEffect(() => {
-    const answers = [];
-    for (let i = 0; i < 12; i++) {
-      const val = searchParams.get(`a${i}`);
-      if (val) answers.push(val);
-    }
+    // q1, q3, q4, q5만 사용 (a0, a2, a3, a4)
+    const answers = {
+      q1: searchParams.get("a0"),
+      q3: searchParams.get("a2"),
+      q4: searchParams.get("a3"),
+      q5: searchParams.get("a4"),
+    };
+
     const key = matchColorType(answers);
-    setRecommended(resultMap[key] || []);
+    console.log("answers in result:", answers);
+    console.log("matched key:", key);
+
+    const ids = resultMap[key] || [];
+    setRecommended(ids);
   }, [searchParams]);
 
   if (!recommended.length) {
@@ -36,11 +44,17 @@ export default function FweeVolumingResult() {
         <p className={styles.subtitle}>컬러 큐레이션 결과예요 🎨</p>
 
         <ul className={styles.resultList}>
-          {recommended.map((item, idx) => (
-            <li key={idx} className={styles.resultItem}>
-              <div className={styles.colorName}>{item}</div>
-            </li>
-          ))}
+          {recommended.map((id, idx) => {
+            const item = colors.find((c) => c.id === id);
+            return (
+              <li key={idx} className={styles.resultItem}>
+                <div className={styles.colorName}>
+                  <span className={styles.code}>{item?.code}</span> –{" "}
+                  {item?.name}
+                </div>
+              </li>
+            );
+          })}
         </ul>
 
         <p className={styles.note}>

@@ -18,8 +18,12 @@ export default function FweeVolumingQ() {
 
   const handleSelect = (value) => {
     const updated = [...answers, value];
+
+    console.log(`Q${step + 1} 응답값:`, value); // ✅ 클릭할 때마다 콘솔에 출력
+
     if (step === questions.length - 1) {
       const query = updated.map((v, i) => `a${i}=${v}`).join("&");
+      console.log("최종 query string:", query); // ✅ 쿼리 확인용
       router.push(`/examples/fwee_voluming/result?${query}`);
     } else {
       setAnswers(updated);
@@ -46,7 +50,6 @@ export default function FweeVolumingQ() {
             />
 
             {/* ✅ 오버레이 콘텐츠 */}
-
             <div className={styles.contentOverlay}>
               <div className={styles.progressBar}>
                 <div

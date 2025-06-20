@@ -21,9 +21,8 @@
   position: relative;
   width: 100%;
   max-width: 400px;
-  aspect-ratio: 891 / 1260;
   margin: 0 auto;
-  overflow: visible; /* ✅ 선택지 늘어나도 보여지도록 */
+  overflow: visible;
 }
 
 /* 썸네일 이미지 */
@@ -31,7 +30,6 @@
   border-radius: 20px;
   width: 100%;
   height: auto;
-  object-fit: contain;
   display: block;
 }
 
@@ -39,10 +37,10 @@
 .contentOverlay {
   position: absolute;
   inset: 0;
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* ✅ 상단 정렬 */
+  justify-content: flex-start;
   align-items: center;
   z-index: 1;
 }
@@ -50,9 +48,9 @@
 /* 진행도 바 */
 .progressBar {
   width: 100%;
-  height: 10px;
+  height: 7px;
   border-radius: 999px;
-  background-color: #ffd1e0;
+  background-color: #fff0f5;
   overflow: hidden;
   margin-bottom: 2rem;
 }
@@ -68,14 +66,15 @@
 .questionBox {
   width: 100%;
   text-align: center;
-  margin-top: 1rem; /* ✅ 진행도 아래 여백 */
+  margin-top: 1rem;
+  white-space: pre-line;
 }
 
 .question {
   font-size: 1.3rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* 옵션 리스트 */
@@ -93,8 +92,9 @@
 .option {
   width: 100%;
   max-width: 250px;
-  background-color: white;
-  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.601);
+  border: 1px solid #ffaec6;
+  border-radius: 2rem;
   padding: 1rem;
   text-align: center;
   font-size: 1rem;
