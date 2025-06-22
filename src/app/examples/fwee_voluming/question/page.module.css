@@ -68,13 +68,15 @@
   text-align: center;
   margin-top: 1rem;
   white-space: pre-line;
+  line-height: 1.5;
 }
 
 .question {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #333;
+  color: #4c2f25;
   margin-bottom: 3rem;
+  font-family: "NEXON Lv1 Gothic OTF";
 }
 
 /* 옵션 리스트 */
@@ -82,7 +84,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.3rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -97,9 +99,9 @@
   border-radius: 2rem;
   padding: 1rem;
   text-align: center;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333;
+  font-size: 0.9rem;
+  font-family: "NEXON Lv1 Gothic OTF";
+  color: #4c2f25;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
@@ -127,11 +129,13 @@
   .bgFwee {
     height: 100vh;
   }
-
   .imageWrapper {
     transform: translateY(-3vh);
   }
 
+  .progressBar {
+    margin-top: 2rem;
+  }
   .contentOverlay {
     padding: 2rem 1.25rem;
   }
@@ -145,6 +149,6 @@
   }
 
   .bgFwee p {
-    bottom: 10.5rem;
+    bottom: 12rem;
   }
 }

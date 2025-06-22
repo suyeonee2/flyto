@@ -1,6 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 
 @font-face {
+  font-family: "Ownglyph_ParkDaHyun";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GumiRomanceTTF";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/GumiRomanceTTF.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "NEXON Lv1 Gothic OTF";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
     format("woff");
