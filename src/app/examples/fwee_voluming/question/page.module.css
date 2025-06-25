@@ -1,19 +1,26 @@
-/* 전체 배경 */
 .bgFwee {
   background-color: #ffe3ea;
-  height: 115vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 
-/* 질문 섹션 래퍼 */
 .questionSection {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: -2rem;
+}
+
+/* 썸네일 이미지 */
+.thumbnail {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* 이미지 + 콘텐츠 */
@@ -23,14 +30,6 @@
   max-width: 400px;
   margin: 0 auto;
   overflow: visible;
-}
-
-/* 썸네일 이미지 */
-.thumbnail {
-  border-radius: 20px;
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* 콘텐츠 오버레이 */
@@ -118,7 +117,7 @@
   color: #999;
   text-align: center;
   position: absolute;
-  bottom: 5rem;
+  bottom: 4.5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;

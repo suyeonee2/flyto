@@ -19,7 +19,7 @@ export default function FweeVolumingStart() {
             muted
             loop
             playsInline
-            className={styles.videoBackground}
+            className={styles.thumbnail}
           />
 
           <button
