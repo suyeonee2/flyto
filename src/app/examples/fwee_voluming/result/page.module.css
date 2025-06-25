@@ -49,6 +49,16 @@
   width: 100%;
   height: auto;
   border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* 슬라이드 전용 컨테이너 */
@@ -103,6 +113,10 @@
     height: 100vh;
   }
 
+  .resultImage {
+    width: 110%;
+  }
+
   .imageWrapper {
     transform: translateY(-3vh);
   }
@@ -111,15 +125,14 @@
     padding: 2rem 1.25rem;
   }
 
-  .resultImage {
-    width: 90%;
+  .slideControls {
+    margin-top: -1.5rem;
   }
-
   .slideControls button {
     font-size: 1.5rem;
   }
 
   .notice {
-    bottom: 12rem;
+    bottom: 13rem;
   }
 }

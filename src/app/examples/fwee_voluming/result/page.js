@@ -63,6 +63,7 @@ export default function FweeVolumingResult() {
               {recommended.length > 0 && (
                 <div className={styles.slideWrapper}>
                   <Image
+                    key={currentSlide}
                     src={
                       fweeColors.find((c) => c.id === recommended[currentSlide])
                         ?.image

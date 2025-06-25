@@ -51,7 +51,7 @@
   border-radius: 999px;
   background-color: #fff0f5;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .progress {
@@ -71,10 +71,9 @@
 }
 
 .question {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #4c2f25;
-  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  color: #b13e70;
+  margin-bottom: 2rem;
   font-family: "NEXON Lv1 Gothic OTF";
 }
 
@@ -83,7 +82,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.3rem;
+  gap: 1rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -100,7 +99,7 @@
   text-align: center;
   font-size: 0.9rem;
   font-family: "NEXON Lv1 Gothic OTF";
-  color: #4c2f25;
+  color: #d36595;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
