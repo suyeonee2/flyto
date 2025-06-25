@@ -130,7 +130,12 @@ export default function FirstTime() {
         <div className={styles.grid_bg} />
 
         <div className={styles.fylto_icon}>
-          <Image src="/fylto_icon.png" alt="필토" width={50} height={50} />
+          <Image
+            src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/fylto_icon.avif"
+            alt="필토"
+            width={50}
+            height={50}
+          />
         </div>
 
         <div className={styles.content}>
@@ -192,7 +197,7 @@ export default function FirstTime() {
           {[
             {
               step: "1",
-              img: "/logic.png",
+              img: "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/logic.avif",
               alt: "Step 1",
               title: "큐레이션 로직 설정",
               desc: [
@@ -208,7 +213,7 @@ export default function FirstTime() {
             },
             {
               step: "2",
-              img: "/minitest.png",
+              img: "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/minitest.avif",
               alt: "Step 2",
               title: "미니 테스트 기획",
               desc: [
@@ -225,7 +230,7 @@ export default function FirstTime() {
             },
             {
               step: "3",
-              img: "/curate.png",
+              img: "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/curate.avif",
               alt: "Step 3",
               title: "큐레이션 실행",
               desc: [
@@ -241,7 +246,7 @@ export default function FirstTime() {
             },
             {
               step: "4",
-              img: "/brandstyling.png",
+              img: "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/brandstyling.avif",
               alt: "Step 4",
               title: "콘텐츠 스타일링",
               desc: [

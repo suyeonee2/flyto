@@ -14,7 +14,7 @@ export default function FweeVolumingStart() {
       <ContentLayout className={styles.bgFwee}>
         <div className={styles.startSection}>
           <video
-            src="/fwee.mp4"
+            src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fwee_voluming/fwee.mp4"
             autoPlay
             muted
             loop

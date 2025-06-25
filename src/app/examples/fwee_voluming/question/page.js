@@ -6,7 +6,6 @@ import styles from "./page.module.css";
 import content from "../assets/fwee_questions.json";
 import ContentLayout from "@/Components/ContentLayout";
 import Image from "next/image";
-import questionBg from "../assets/q_Img.png";
 import Header from "@/Components/Header/Header";
 
 export default function FweeVolumingQ() {
@@ -41,7 +40,7 @@ export default function FweeVolumingQ() {
           <div className={styles.imageWrapper}>
             {/* ✅ 배경 이미지 */}
             <Image
-              src={questionBg}
+              src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fwee_voluming/q_Img.avif"
               alt="질문 배경"
               className={styles.thumbnail}
               width={891}

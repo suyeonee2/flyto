@@ -4,12 +4,11 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { matchColorType } from "@/logic/color-pick";
 import resultMap from "../assets/fwee_resultMap.json";
-import { fweeColors } from "../assets/fwee_colors";
+import fweeColors from "../assets/fwee_colors.json";
 import styles from "./page.module.css";
 import ContentLayout from "@/Components/ContentLayout";
 import Image from "next/image";
 import Header from "@/Components/Header/Header";
-import resultBg from "../assets/r_Img.png";
 
 export default function FweeVolumingResult() {
   const searchParams = useSearchParams();
@@ -68,7 +67,7 @@ export default function FweeVolumingResult() {
         <div className={styles.R_section}>
           <div className={styles.imageWrapper}>
             <Image
-              src={resultBg}
+              src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fwee_voluming/r_Img.avif"
               alt="결과 배경"
               className={styles.thumbnail}
               width={891}
@@ -80,7 +79,6 @@ export default function FweeVolumingResult() {
               {recommended.length > 0 && (
                 <div className={styles.slideWrapper}>
                   <Image
-                    key={currentSlide}
                     src={
                       fweeColors.find((c) => c.id === recommended[currentSlide])
                         ?.image

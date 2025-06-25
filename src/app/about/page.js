@@ -105,7 +105,7 @@ export default function AboutPage() {
           <div className={styles.cardContainer}>
             <div className={styles.card}>
               <Image
-                src="/our.png"
+                src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/our.avif"
                 alt="our"
                 className={styles.cardImage}
                 width={150}
@@ -129,7 +129,7 @@ export default function AboutPage() {
 
             <div className={styles.card}>
               <Image
-                src="/trust.png"
+                src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/trust.avif"
                 alt="trust"
                 className={styles.cardImage}
                 width={150}
