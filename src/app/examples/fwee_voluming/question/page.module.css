@@ -72,7 +72,7 @@
 
 .question {
   font-size: 1.1rem;
-  color: #b13e70;
+  color: #724b66;
   margin-bottom: 2rem;
   font-family: "NEXON Lv1 Gothic OTF";
 }
@@ -99,7 +99,7 @@
   text-align: center;
   font-size: 0.9rem;
   font-family: "NEXON Lv1 Gothic OTF";
-  color: #d36595;
+  color: #9b678c;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);

@@ -15,6 +15,7 @@ export default function FweeVolumingResult() {
   const searchParams = useSearchParams();
   const [recommended, setRecommended] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const answers = {
@@ -33,7 +34,10 @@ export default function FweeVolumingResult() {
         : ids;
 
     setRecommended(selected);
-    setCurrentSlide(0); // 초기화
+    setCurrentSlide(0);
+
+    const timer = setTimeout(() => setIsLoading(false), 3000);
+    return () => clearTimeout(timer);
   }, [searchParams]);
 
   const handlePrev = () => {
@@ -43,6 +47,19 @@ export default function FweeVolumingResult() {
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % recommended.length);
   };
+
+  if (isLoading) {
+    return (
+      <div className={styles.loadingPage}>
+        <p className={styles.loadingText}>어울리는 컬러를 분석 중...</p>
+        <div className={styles.spinner}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -91,7 +108,14 @@ export default function FweeVolumingResult() {
         </div>
 
         <p className={styles.notice}>
-          * 포트폴리오 목적으로 제작된 콘텐츠이며, 실제 브랜드와 무관합니다.
+          <a
+            href="https://fwee.kr/product/%ED%93%8C-3d-%EB%B3%BC%EB%A5%98%EB%B0%8D-%EA%B8%80%EB%A1%9C%EC%8A%A4-17-colors/167/category/30/display/1/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            퓌 공식몰
+          </a>
+          에서 더 많은 컬러를 확인해보세요! 🩷
         </p>
       </ContentLayout>
     </>
