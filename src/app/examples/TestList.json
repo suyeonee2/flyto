@@ -1,14 +1,9 @@
 [
   {
-    "id": "animal2025",
+    "id": "fwee_voluming",
     "image": "https://snackcat.click/static/media/2025Animal_sample.21441278c647ce5ae5d0.png",
-    "title": "2025 동물타로 MBTI",
-    "desc": "내 이미지와 비슷한 동물은?"
-  },
-  {
-    "id": "core",
-    "image": "https://snackcat.click/static/media/Core_sample.05fa34a335099a6ba04f.png",
-    "title": "코어감정 테스트",
-    "desc": "나를 이루는 코어감정은?"
+    "title": "Fwee Voluming Gloss",
+    "desc": "나만의 퓌 볼류밍 글로스는?",
+    "tag": "컬러큐레이션"
   }
 ]

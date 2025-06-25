@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useRef } from "react";
 import styles from "./page.module.css";
 import exampleData from "./TestList.json";
@@ -7,6 +6,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Header from "@/Components/Header/Header";
 import Link from "next/link";
+import ExampleCard from "./components/ExampleCard";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ExamplesPage() {
@@ -68,19 +69,13 @@ export default function ExamplesPage() {
               key={card.id}
               className={styles.cardLink}
             >
-              <div className={styles.card}>
-                <div className={styles.thumbnailWrapper}>
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className={styles.thumbnail}
-                  />
-                </div>
-                <div className={styles.cardContent}>
-                  <p className={styles.cardTitle}>{card.title}</p>
-                  <p className={styles.cardDesc}>{card.desc}</p>
-                </div>
-              </div>
+              <ExampleCard
+                id={card.id}
+                image={card.image}
+                title={card.title}
+                desc={card.desc}
+                tag={card.tag}
+              />
             </Link>
           ))}
         </div>

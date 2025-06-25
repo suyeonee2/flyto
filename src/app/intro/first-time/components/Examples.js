@@ -4,27 +4,12 @@ import { useRouter } from "next/navigation";
 import styles from "./Examples.module.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { BsPlusLg } from "react-icons/bs";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-gsap.registerPlugin(ScrollTrigger);
+import exampleData from "@/app/examples/TestList.json";
+import ExampleCard from "@/app/examples/components/ExampleCard";
+import Link from "next/link";
 
-const cards = [
-  {
-    title: "SUN di Gioia",
-    subtitle: "Eau de Parfum",
-    image: "/test.png",
-  },
-  {
-    title: "Becca",
-    subtitle: "Highlighter",
-    image: "/test.png",
-  },
-  {
-    title: "Eau de Raisin",
-    subtitle: "Moisturizer",
-    image: "/test.png",
-  },
-];
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Examples() {
   const eyebrowRef = useRef(null);
@@ -82,29 +67,20 @@ export default function Examples() {
       </p>
 
       <div className={styles.cardsWrapper} ref={cardsRef}>
-        {cards.map((card, i) => (
+        {exampleData.slice(0, 3).map((card, i) => (
           <div className={styles.cardColumn} key={i}>
-            <div className={styles.card}>
-              <img
-                src={card.image}
-                alt={card.title}
-                className={styles.thumbnail}
+            <Link href={`/examples/${card.id}`} className={styles.cardLink}>
+              <ExampleCard
+                image={card.image}
+                title={card.title}
+                desc={card.desc}
+                tag={card.tag}
               />
-
-              <div className={styles.cardContent}>
-                <p className={styles.cardTitle}>어뮤즈 베베틴트</p>
-                <p className={styles.subTitle}>
-                  나에게 찰떡같이 어울리는 베베틴트는?
-                </p>
-                <button className={styles.moreButton}>
-                  <BsPlusLg />
-                </button>
-              </div>
-            </div>
-            {i < cards.length - 1 && <div className={styles.verticalLine} />}
+            </Link>
           </div>
         ))}
       </div>
+
       <div className={styles.allButtonWrapper} ref={allButtonRef}>
         <button className={styles.allButton} onClick={handleGoToExamples}>
           All Examples

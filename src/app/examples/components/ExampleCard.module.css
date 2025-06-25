@@ -1,55 +1,71 @@
 .card {
-  width: 100%;
-  max-width: 300px;
-  background: #fff;
-  padding: 18px;
-  border: 1px solid #ddd;
-  border-radius: 14px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
-  text-align: center;
-  position: relative;
-}
-
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 100%;
+  width: 280px;
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  transition: transform 0.25s ease;
+  position: relative;
+  border-radius: 6px;
 }
 
-.image {
-  position: absolute;
-  top: 0;
-  left: 0;
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.thumbnailWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  display: block;
 }
 
-.badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #ff3c00;
-  color: white;
-  font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 999px;
-  font-family: "NanumSquareNeo";
-  letter-spacing: 0.04em;
+.cardContent {
+  padding: 20px;
+  text-align: left;
 }
 
-.title {
+.cardTitle {
   font-family: "NanumSquareNeoBold";
   font-size: 16px;
-  margin: 8px 0 4px 0;
+  margin-bottom: 10px;
+  color: #111;
 }
 
-.desc {
+.cardDesc {
   font-family: "NanumSquareNeo";
   font-size: 14px;
-  color: #666;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cardTag {
+  font-size: 0.75rem;
+  width: fit-content;
+  color: #777777;
+  border: 1px solid #777777;
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin-top: 1rem;
+  margin-left: auto;
+}
+
+/* 반응형 대응 */
+@media (max-width: 640px) {
+  .cardContent {
+    padding: 16px;
+  }
 }
