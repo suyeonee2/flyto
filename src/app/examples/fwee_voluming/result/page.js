@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { matchColorType } from "@/logic/color-pick";
 import resultMap from "../assets/fwee_resultMap.json";
 import fweeColors from "../assets/fwee_colors.json";
@@ -9,12 +9,16 @@ import styles from "./page.module.css";
 import ContentLayout from "@/Components/ContentLayout";
 import Image from "next/image";
 import Header from "@/Components/Header/Header";
+import ShareButton from "@/Components/utils/ShareButtons";
+import exampleData from "@/app/examples/TestList.json";
 
 export default function FweeVolumingResult() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [recommended, setRecommended] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const testInfo = exampleData.find((t) => t.id === "fwee_voluming");
 
   useEffect(() => {
     const answers = {
@@ -45,6 +49,14 @@ export default function FweeVolumingResult() {
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % recommended.length);
+  };
+
+  const handleRetry = () => {
+    if (testInfo?.path) {
+      router.push(testInfo.path);
+    } else {
+      alert("테스트 경로를 찾을 수 없습니다.");
+    }
   };
 
   if (isLoading) {
@@ -115,6 +127,16 @@ export default function FweeVolumingResult() {
           </a>
           에서 더 많은 컬러를 확인해보세요! 🩷
         </p>
+
+        <div className={styles.Btn_container}>
+          <button onClick={handleRetry}>테스트 다시하기</button>
+          <ShareButton
+            title={testInfo.title}
+            description={testInfo.desc}
+            imageUrl={testInfo.image}
+            shareUrl={`https://www.fylto.kr${testInfo.path}`}
+          />
+        </div>
       </ContentLayout>
     </>
   );
