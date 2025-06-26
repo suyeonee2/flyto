@@ -149,16 +149,32 @@
   transform: scale(1.2);
 }
 
-/* 하단 고정 문구 */
-.notice {
-  font-size: 0.9rem;
-  color: #999;
-  text-align: center;
+.buttonRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: -1rem;
 }
 
-.notice a {
-  color: #ff5e74;
-  text-decoration: underline;
+.glassButton {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  color: #ff4081;
+  font-weight: 600;
+  padding: 12px 20px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.glassButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ff1c6b;
 }
 
 .Btn_container {

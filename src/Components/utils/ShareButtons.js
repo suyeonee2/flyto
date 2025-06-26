@@ -1,24 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { copyURL } from "@/Components/utils/copyURL";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import styles from "./ShareButtons.module.css";
 
 const ShareButtons = ({ title, description, imageUrl, shareUrl }) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   useEffect(() => {
     if (typeof window !== "undefined" && window.Kakao) {
       const { Kakao } = window;
@@ -66,8 +54,9 @@ const ShareButtons = ({ title, description, imageUrl, shareUrl }) => {
           <Image
             src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/kakao.avif"
             alt="카카오톡 공유"
-            width={25}
-            height={25}
+            className={styles.iconImage}
+            width={30}
+            height={30}
             priority
           />
         </div>
@@ -76,8 +65,9 @@ const ShareButtons = ({ title, description, imageUrl, shareUrl }) => {
           <Image
             src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/link.avif"
             alt="링크 복사"
-            width={25}
-            height={25}
+            className={styles.iconImage}
+            width={30}
+            height={30}
             priority
           />
         </div>
@@ -87,9 +77,10 @@ const ShareButtons = ({ title, description, imageUrl, shareUrl }) => {
             <Image
               src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/X.avif"
               alt="X 공유"
+              className={styles.iconImage2}
               style={{ marginTop: "3px" }}
-              width={20}
-              height={20}
+              width={25}
+              height={25}
               priority
             />
           </TwitterShareButton>
@@ -100,9 +91,10 @@ const ShareButtons = ({ title, description, imageUrl, shareUrl }) => {
             <Image
               src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/facebook.avif"
               alt="Facebook 공유"
+              className={styles.iconImage}
               style={{ marginTop: "3px" }}
-              width={25}
-              height={25}
+              width={30}
+              height={30}
               priority
             />
           </FacebookShareButton>

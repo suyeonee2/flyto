@@ -117,19 +117,25 @@ export default function FweeVolumingResult() {
           </div>
         </div>
 
-        <p className={styles.notice}>
+        <div className={styles.buttonRow}>
           <a
-            href="https://fwee.kr/product/%ED%93%8C-3d-%EB%B3%BC%EB%A5%98%EB%B0%8D-%EA%B8%80%EB%A1%9C%EC%8A%A4-17-colors/167/category/30/display/1/"
+            href="https://fwee.co.kr"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles.glassButton}
           >
-            퓌 공식몰
+            퓌 공식몰 보기
           </a>
-          에서 더 많은 컬러를 확인해보세요! 🩷
-        </p>
+
+          <button
+            className={styles.glassButton}
+            onClick={() => router.push(testInfo.path)}
+          >
+            테스트 다시하기
+          </button>
+        </div>
 
         <div className={styles.Btn_container}>
-          <button onClick={handleRetry}>테스트 다시하기</button>
           <ShareButton
             title={testInfo.title}
             description={testInfo.desc}
