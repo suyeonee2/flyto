@@ -172,7 +172,7 @@ export default function FirstTime() {
             <div
               className={`${styles.scrollCue} ${showCue ? styles.visible : ""}`}
             >
-              <p className={styles.scrollQuestion}>"어떻게 만드는데?🤔"</p>
+              <p className={styles.scrollQuestion}>{`"어떻게 만드는데?🤔"`}</p>
               <MdKeyboardDoubleArrowDown
                 size={25}
                 className={styles.bouncingArrow}

@@ -80,7 +80,7 @@ const Contact = () => {
           큐레이션 콘텐츠 제작문의
         </p>
         <h2 className={styles.contactTitle} ref={titleRef}>
-          Let's Work Together!
+          {`Let's Work Together!`}
         </h2>
 
         <div className={styles.processWrapper} ref={processRef}>

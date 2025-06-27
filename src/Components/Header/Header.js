@@ -83,7 +83,7 @@ export default function Header() {
               </li>
               <li>
                 <a href="#contact" onClick={handleScrollToContact}>
-                  Let's Work Together!
+                  {`Let's Work Together!`}
                 </a>
               </li>
             </ul>

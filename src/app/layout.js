@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
         <meta property="og:site_name" content="Fylto" />
 
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
 
         {/* Kakao SDK */}
         <Script
