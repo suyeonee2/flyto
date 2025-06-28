@@ -7,6 +7,7 @@ import styles from "./IntroStart.module.css";
 import Spline from "@splinetool/react-spline";
 import Header from "@/Components/Header/Header";
 import Link from "next/link";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,10 +15,10 @@ export default function IntroStart() {
   const sectionRef = useRef(null);
   const logoRef = useRef(null);
   const bgRef = useRef(null);
-  const circleRefs = useRef([]);
   const splineRef = useRef(null);
   const buttonRef = useRef(null);
   const headerRef = useRef(null);
+  const scrollIconRef = useRef(null);
 
   const [showSpline, setShowSpline] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
@@ -36,7 +37,7 @@ export default function IntroStart() {
             if (self.progress > 0.99) {
               setShowSpline(true);
 
-              // 헤더 먼저 보여주기
+              // 헤더 등장
               setShowHeader(true);
               gsap.fromTo(
                 headerRef.current,
@@ -49,7 +50,7 @@ export default function IntroStart() {
                 }
               );
 
-              // 버튼은 나중에 등장
+              // 버튼 등장
               gsap.delayedCall(1.5, () => {
                 setShowButtons(true);
                 gsap.fromTo(
@@ -67,14 +68,32 @@ export default function IntroStart() {
         },
       });
 
-      // 로고 & 배경 진입 애니메이션
+      // 초기 상태
+      gsap.set(logoRef.current, {
+        filter: "blur(0px)",
+        letterSpacing: "0px",
+        opacity: 1,
+        scale: 1,
+      });
+
+      gsap.set(bgRef.current, {
+        scale: 1.05,
+      });
+
+      gsap.set(scrollIconRef.current, {
+        filter: "blur(0px)",
+        opacity: 1,
+        scale: 1,
+      });
+
+      // 스크롤 시 효과
       tl.to(
         logoRef.current,
         {
-          filter: "blur(0px)",
-          letterSpacing: "0px",
-          opacity: 1,
-          scale: 1,
+          filter: "blur(10px)",
+          letterSpacing: "10px",
+          opacity: 0.3,
+          scale: 1.3,
           ease: "power2.out",
           duration: 1.2,
         },
@@ -84,31 +103,24 @@ export default function IntroStart() {
       tl.to(
         bgRef.current,
         {
-          scale: 1.05,
+          scale: 1,
           ease: "power2.out",
           duration: 1.2,
         },
         0
       );
 
-      // 원형 포커스 애니메이션
-      circleRefs.current.forEach((circle, i) => {
-        const length = circle.getTotalLength();
-        circle.style.strokeDasharray = length;
-        circle.style.strokeDashoffset = length;
-        circle.style.opacity = 0;
-
-        tl.to(
-          circle,
-          {
-            strokeDashoffset: -1,
-            opacity: 0.15,
-            duration: 0.4,
-            ease: "power2.out",
-          },
-          0.2 + i * 0.15
-        );
-      });
+      tl.to(
+        scrollIconRef.current,
+        {
+          filter: "blur(10px)",
+          opacity: 0,
+          scale: 1.3,
+          ease: "power2.out",
+          duration: 1.2,
+        },
+        0
+      );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -131,21 +143,13 @@ export default function IntroStart() {
         <h1 ref={logoRef} className={styles.intro_logo}>
           Fylto.
         </h1>
-        <svg width="360" height="360" className={styles.focus_svg}>
-          {[...Array(4)].map((_, i) => (
-            <circle
-              key={i}
-              ref={(el) => (circleRefs.current[i] = el)}
-              cx={180 + i * 2}
-              cy={180 - i * 2.5}
-              r={100 + i * 1.5}
-              stroke="black"
-              strokeWidth={i === 0 ? 2 : 1}
-              fill="none"
-              className={styles.focus_circle}
-            />
-          ))}
-        </svg>
+
+        {/* 스크롤 유도 아이콘 */}
+        {!showSpline && (
+          <div className={styles.scroll_icon} ref={scrollIconRef}>
+            <MdKeyboardDoubleArrowDown size={27} />
+          </div>
+        )}
       </div>
 
       {/* Spline 씬 */}
@@ -180,6 +184,7 @@ export default function IntroStart() {
             </h2>
             <p className={styles.subText}>저희 스튜디오에 처음 오셨나요?</p>
           </div>
+
           {showButtons && (
             <div className={styles.choice_buttons} ref={buttonRef}>
               <Link href="/intro/first-time" className={styles.choice_link}>

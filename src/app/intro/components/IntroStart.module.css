@@ -70,22 +70,25 @@
     20px 25px 60px rgba(0, 0, 0, 0.08);
 }
 
-/* 🔹 원형 포커스 */
-.focus_svg {
+.scroll_icon {
   position: absolute;
-  top: 50%;
+  bottom: 12rem;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 360px;
-  height: 360px;
+  transform: translateX(-50%);
+  z-index: 10;
+  animation: bounce 2s infinite;
+  opacity: 0.8;
+  color: #232323;
 }
 
-.focus_circle {
-  stroke: rgb(68, 68, 68);
-  fill: none;
-  opacity: 0.15;
-  stroke-linecap: round;
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
 }
 
 /* 🔹 상태 전환 */
