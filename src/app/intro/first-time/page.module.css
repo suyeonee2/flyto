@@ -131,12 +131,19 @@
   }
 }
 
-.scrollQuestion {
-  font-family: "Ownglyph_wiseelist-Rg";
-  font-size: 23px;
-  margin-bottom: 10px;
+.questionImage {
+  display: block;
+  margin: 0 auto 12px auto;
+  object-fit: contain;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
 }
 
+.visible .questionImage {
+  opacity: 1;
+  transform: translateY(0) scale(0.6);
+}
 .bouncingArrow {
   display: inline-block;
   animation: arrowColorPulse 2s ease-in-out infinite;
@@ -169,12 +176,14 @@
 }
 
 .processHeroTitle {
+  font-family: "Nanum Myeongjo", serif;
   font-size: 36px;
   font-weight: 500;
   color: #111;
   margin-bottom: -10px;
   line-height: 1.4;
 }
+
 .processGridSection {
   background-color: #ede9e4;
   padding: 60px 5vw;
@@ -234,7 +243,7 @@
 }
 
 .stepTitle {
-  font-family: "NanumSquareNeoExtraBold";
+  font-family: "NanumSquareNeoBold";
   font-size: 1.3rem;
   color: #111;
   margin-bottom: 10px;

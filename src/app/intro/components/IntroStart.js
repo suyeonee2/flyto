@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./IntroStart.module.css";
@@ -36,9 +36,9 @@ export default function IntroStart() {
           onUpdate: (self) => {
             if (self.progress > 0.99) {
               setShowSpline(true);
-
-              // 헤더 등장
               setShowHeader(true);
+              setShowButtons(true); // 🔹 버튼 보이기 상태 변경 (애니메이션은 useEffect로)
+
               gsap.fromTo(
                 headerRef.current,
                 { opacity: 0, y: -40 },
@@ -49,26 +49,15 @@ export default function IntroStart() {
                   ease: "expo.out",
                 }
               );
-
-              // 버튼 등장
-              gsap.delayedCall(1.5, () => {
-                setShowButtons(true);
-                gsap.fromTo(
-                  buttonRef.current,
-                  { opacity: 0, y: 20 },
-                  { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
-                );
-              });
             } else {
               setShowSpline(false);
-              setShowButtons(false);
               setShowHeader(false);
+              setShowButtons(false);
             }
           },
         },
       });
 
-      // 초기 상태
       gsap.set(logoRef.current, {
         filter: "blur(0px)",
         letterSpacing: "0px",
@@ -86,7 +75,6 @@ export default function IntroStart() {
         scale: 1,
       });
 
-      // 스크롤 시 효과
       tl.to(
         logoRef.current,
         {
@@ -126,16 +114,25 @@ export default function IntroStart() {
     return () => ctx.revert();
   }, []);
 
+  // 🔸 버튼 애니메이션 트리거
+  useEffect(() => {
+    if (showButtons && buttonRef.current) {
+      gsap.fromTo(
+        buttonRef.current,
+        { opacity: 0, y: 5 },
+        { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }
+      );
+    }
+  }, [showButtons]);
+
   return (
     <section ref={sectionRef} className={styles.scene_wrapper}>
-      {/* 헤더 */}
       {showHeader && (
         <div ref={headerRef} className={styles.header_wrapper}>
           <Header />
         </div>
       )}
 
-      {/* Intro 화면 */}
       <div
         className={`${styles.intro_wrapper} ${showSpline ? styles.hidden : ""}`}
       >
@@ -144,7 +141,6 @@ export default function IntroStart() {
           Fylto.
         </h1>
 
-        {/* 스크롤 유도 아이콘 */}
         {!showSpline && (
           <div className={styles.scroll_icon} ref={scrollIconRef}>
             <MdKeyboardDoubleArrowDown size={27} />
@@ -152,14 +148,12 @@ export default function IntroStart() {
         )}
       </div>
 
-      {/* Spline 씬 */}
       <div
         className={`${styles.spline_scene} ${
           showSpline ? styles.reveal : styles.hidden
         }`}
       >
         <div className={styles.grid_bg} />
-
         <div className={styles.scene2_container}>
           <Spline
             ref={splineRef}

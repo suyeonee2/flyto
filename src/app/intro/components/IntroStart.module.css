@@ -26,11 +26,9 @@
   width: 100%;
   height: 100%;
   transform: scale(1);
-
   background-image: linear-gradient(to right, #eee 1px, transparent 1px),
     linear-gradient(to bottom, #eee 1px, transparent 1px),
     url("https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fylto_assets/intro_back.avif");
-
   background-size: 30px 30px, 30px 30px, cover;
   background-repeat: repeat, repeat, no-repeat;
   background-position: top left, top left, bottom center;
@@ -39,7 +37,6 @@
   z-index: 0;
 }
 
-/* 🔹 배경 그라디언트 효과 */
 .grid_bg::after {
   content: "";
   position: absolute;
@@ -70,6 +67,7 @@
     20px 25px 60px rgba(0, 0, 0, 0.08);
 }
 
+/* 🔹 스크롤 아이콘 */
 .scroll_icon {
   position: absolute;
   bottom: 12rem;
@@ -96,6 +94,12 @@
   opacity: 0;
   pointer-events: none;
   z-index: 0;
+}
+
+.reveal {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
 }
 
 /* 🔹 Spline 화면 */
@@ -142,24 +146,29 @@
   color: #777;
 }
 
-.reveal {
-  opacity: 1;
-  pointer-events: auto;
-  z-index: 2;
-}
-
+/* 🔹 버튼 컨테이너 트랜지션 적용 */
 .choice_buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
   position: absolute;
-  top: 63%;
+  top: 58%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateY(20px);
   z-index: 2;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease, visibility 0s linear 0.8s;
 }
 
+.choice_buttons.reveal {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0px);
+  visibility: visible;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 🔹 버튼 링크 */
 .choice_link {
   font-size: 16px;
   padding: 12px 18px;
@@ -180,6 +189,7 @@
   transform: translateY(-2px);
 }
 
+/* 🔹 헤더 */
 .header_wrapper {
   position: fixed;
   top: 0%;

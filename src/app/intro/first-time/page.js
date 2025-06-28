@@ -172,7 +172,13 @@ export default function FirstTime() {
             <div
               className={`${styles.scrollCue} ${showCue ? styles.visible : ""}`}
             >
-              <p className={styles.scrollQuestion}>{`"어떻게 만드는데?🤔"`}</p>
+              <Image
+                src="/question.png"
+                alt="어떻게 만드는데?"
+                width={320}
+                height={60}
+                className={styles.questionImage}
+              />
               <MdKeyboardDoubleArrowDown
                 size={25}
                 className={styles.bouncingArrow}
