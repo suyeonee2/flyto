@@ -12,7 +12,7 @@ export async function generateMetadata() {
     };
   }
 
-  const siteName = "필토";
+  const siteName = "필토 | Fylto.";
   const fullTitle = `${testData.desc} | ${siteName}`;
 
   return {
@@ -21,22 +21,20 @@ export async function generateMetadata() {
     openGraph: {
       title: fullTitle,
       description: testData.desc,
+      url: `https://fylto.com${testData.path}`, // 절대 경로
+      siteName: siteName,
       images: [
         {
           url: testData.image,
           alt: testData.title,
         },
       ],
-      url: testData.path,
     },
     twitter: {
+      card: "summary_large_image",
       title: fullTitle,
       description: testData.desc,
-      images: [
-        {
-          url: testData.image,
-        },
-      ],
+      images: [testData.image],
     },
   };
 }
