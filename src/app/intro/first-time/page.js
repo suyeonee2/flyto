@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./page.module.css";
-import Header from "@/Components/Header/Header";
-import Footer from "@/Components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import gsap from "gsap";

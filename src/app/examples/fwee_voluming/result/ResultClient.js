@@ -6,10 +6,10 @@ import { matchColorType } from "@/logic/color-pick";
 import resultMap from "../assets/fwee_resultMap.json";
 import fweeColors from "../assets/fwee_colors.json";
 import styles from "./ResultClient.module.css";
-import ContentLayout from "@/Components/ContentLayout";
+import ContentLayout from "@/components/ContentLayout";
 import Image from "next/image";
-import Header from "@/Components/Header/Header";
-import ShareButton from "@/Components/utils/ShareButtons";
+import Header from "@/components/Header/Header";
+import ShareButton from "@/components/utils/ShareButtons";
 import exampleData from "@/app/examples/TestList.json";
 
 export default function FweeVolumingResult() {

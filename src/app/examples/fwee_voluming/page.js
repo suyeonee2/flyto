@@ -2,10 +2,10 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { logTestPageView } from "@/Components/utils/gtag";
+import { logTestPageView } from "@/components/utils/gtag";
 import styles from "./page.module.css";
-import ContentLayout from "@/Components/ContentLayout";
-import Header from "@/Components/Header/Header";
+import ContentLayout from "@/components/ContentLayout";
+import Header from "@/components/Header/Header";
 
 export default function FweeVolumingStart() {
   const router = useRouter();

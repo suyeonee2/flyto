@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef } from "react";
 import styles from "./page.module.css";
-import Header from "@/Components/Header/Header";
-import Footer from "@/Components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRouter } from "next/navigation";

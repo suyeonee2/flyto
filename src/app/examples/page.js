@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import exampleData from "./TestList.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Header from "@/Components/Header/Header";
+import Header from "@/components/Header/Header";
 import Link from "next/link";
 import ExampleCard from "./components/ExampleCard";
 

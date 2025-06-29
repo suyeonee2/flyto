@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./IntroStart.module.css";
 import Spline from "@splinetool/react-spline";
-import Header from "@/Components/Header/Header";
+import Header from "@/components/Header/Header";
 import Link from "next/link";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 

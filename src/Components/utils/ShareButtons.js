@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { copyURL } from "@/Components/utils/copyURL";
+import { copyURL } from "@/components/utils/copyURL";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import styles from "./ShareButtons.module.css";
 

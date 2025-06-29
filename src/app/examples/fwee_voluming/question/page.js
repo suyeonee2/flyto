@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import content from "../assets/fwee_questions.json";
-import ContentLayout from "@/Components/ContentLayout";
+import ContentLayout from "@/components/ContentLayout";
 import Image from "next/image";
-import Header from "@/Components/Header/Header";
+import Header from "@/components/Header/Header";
 
 export default function FweeVolumingQ() {
   const router = useRouter();
