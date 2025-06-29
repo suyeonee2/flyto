@@ -3,6 +3,7 @@
 import "./globals.css";
 import Script from "next/script";
 import { META } from "@/components/utils/metadata";
+import KakaoInitializer from "@/components/utils/KakaoInitializer";
 
 export const metadata = {
   title: META.title,
@@ -43,6 +44,14 @@ export default function RootLayout({ children }) {
     <html lang="ko">
       <body suppressHydrationWarning>
         {children}
+        <KakaoInitializer />
+
+        {/* Kakao SDK */}
+        <Script
+          src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+          integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx"
+          crossOrigin="anonymous"
+        />
 
         {/* GA 스크립트 */}
         {META.googleAnalyticsId && (
