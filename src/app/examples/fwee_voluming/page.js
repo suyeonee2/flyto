@@ -12,7 +12,7 @@ export async function generateMetadata() {
     };
   }
 
-  const siteName = "필토 | Fylto.";
+  const siteName = "Fylto.";
   const fullTitle = `${testData.desc} | ${siteName}`;
 
   return {
