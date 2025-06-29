@@ -9,6 +9,10 @@ export const metadata = {
   title: META.title,
   description: META.description,
   keywords: META.keyword,
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: META.openGraph.title,
     description: META.openGraph.description,
