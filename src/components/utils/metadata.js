@@ -1,8 +1,7 @@
 export const META = {
   title: "필토 | Fylto.",
   siteName: "필토 | Fylto.",
-  description:
-    "좋은 제품이 더 많은 사랑을 받을 수 있도록. 브랜드를 위한 큐레이션 콘텐츠 스튜디오",
+  description: "브랜드를 위한 큐레이션 콘텐츠 스튜디오",
   keyword: [
     "Fylto",
     "필토",
@@ -23,8 +22,7 @@ export const META = {
   googleAnalyticsId: "G-433RVH46M5",
   openGraph: {
     title: "필토 | Fylto.",
-    description:
-      "좋은 제품이 더 많은 사랑을 받을 수 있도록. 브랜드를 위한 큐레이션 콘텐츠 스튜디오",
+    description: "브랜드를 위한 큐레이션 콘텐츠 스튜디오",
     url: "https://fylto.com",
     siteName: "필토 | Fylto.",
     images: {
