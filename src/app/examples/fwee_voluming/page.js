@@ -1,12 +1,17 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { logTestPageView } from "@/Components/utils/gtag";
 import styles from "./page.module.css";
 import ContentLayout from "@/Components/ContentLayout";
 import Header from "@/Components/Header/Header";
 
 export default function FweeVolumingStart() {
   const router = useRouter();
+  useEffect(() => {
+    logTestPageView("Fwee_Voluming Gloss");
+  }, []);
 
   return (
     <>
