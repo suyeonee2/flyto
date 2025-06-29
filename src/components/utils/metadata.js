@@ -17,7 +17,7 @@ export const META = {
   url: "https://fylto.com",
   googleVerification: "TkGbjNrfliw2r9qAZ08bQ8VO-Spvmsb2hSRIEfSAAFY",
   naverVerification: "5ede445a30b1c882a9fc56f1857c28b6da6a64ed",
-  ogImage: "/og_fylto.jpg",
+  ogImage: "/fylto_og.png",
   icon: "/favicon.png",
   appleIcon: "/favicon.png",
   googleAnalyticsId: "G-433RVH46M5",
@@ -28,7 +28,7 @@ export const META = {
     url: "https://fylto.com",
     siteName: "필토 | Fylto.",
     images: {
-      url: "/og_fylto.jpg",
+      url: "/fylto_og.png",
     },
   },
 };
