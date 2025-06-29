@@ -6,6 +6,7 @@ import { META } from "@/components/utils/metadata";
 import KakaoInitializer from "@/components/utils/KakaoInitializer";
 
 export const metadata = {
+  metadataBase: new URL("https://fylto.kr"),
   title: META.title,
   description: META.description,
   keywords: META.keyword,

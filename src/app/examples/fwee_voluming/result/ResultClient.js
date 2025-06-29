@@ -117,16 +117,24 @@ export default function FweeVolumingResult() {
           </div>
         </div>
 
-        <div className={styles.buttonRow}>
+        <div style={{ marginTop: "24px", textAlign: "center" }}>
           <a
-            href="https://fwee.co.kr"
+            href="https://fwee.kr/product/%ED%93%8C-3d-%EB%B3%BC%EB%A5%98%EB%B0%8D-%EA%B8%80%EB%A1%9C%EC%8A%A4-17-colors/167/category/30/display/1/"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.glassButton}
           >
-            퓌 공식몰 보기
+            <Image
+              src="https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fwee_voluming/mall.png"
+              alt="퓌 공식몰 배너"
+              width={420}
+              height={150}
+              className={styles.mallBanner}
+              unoptimized
+            />
           </a>
+        </div>
 
+        <div className={styles.buttonRow}>
           <button
             className={styles.glassButton}
             onClick={() => router.push(testInfo.path)}
