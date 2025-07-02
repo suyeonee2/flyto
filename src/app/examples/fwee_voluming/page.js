@@ -21,7 +21,7 @@ export async function generateMetadata() {
     openGraph: {
       title: fullTitle,
       description: testData.desc,
-      url: `https://fylto.com${testData.path}`, // 절대 경로
+      url: `https://fylto.kr${testData.path}`, // 절대 경로
       siteName: siteName,
       images: [
         {

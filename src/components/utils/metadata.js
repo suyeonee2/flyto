@@ -13,7 +13,7 @@ export const META = {
     "브랜드 마케팅",
     "마케팅",
   ],
-  url: "https://fylto.com",
+  url: "https://fylto.kr",
   googleVerification: "TkGbjNrfliw2r9qAZ08bQ8VO-Spvmsb2hSRIEfSAAFY",
   naverVerification: "5ede445a30b1c882a9fc56f1857c28b6da6a64ed",
   ogImage: "/fylto_og.png",
@@ -23,7 +23,7 @@ export const META = {
   openGraph: {
     title: "필토 | Fylto.",
     description: "브랜드를 위한 큐레이션 콘텐츠 스튜디오",
-    url: "https://fylto.com",
+    url: "https://fylto.kr",
     siteName: "필토 | Fylto.",
     images: {
       url: "/fylto_og.png",
