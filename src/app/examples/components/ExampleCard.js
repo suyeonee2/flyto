@@ -18,7 +18,15 @@ const ExampleCard = ({ image, title, desc, tag }) => {
       <div className={styles.cardContent}>
         <p className={styles.cardTitle}>{title}</p>
         <p className={styles.cardDesc}>{desc}</p>
-        {tag && <p className={styles.cardTag}>#{tag}</p>}
+        {tag && Array.isArray(tag) && (
+          <div className={styles.cardTagWrapper}>
+            {tag.map((t, idx) => (
+              <span key={idx} className={styles.cardTag}>
+                #{t}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

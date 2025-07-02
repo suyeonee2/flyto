@@ -34,7 +34,7 @@
 }
 
 .cardContent {
-  padding: 20px;
+  padding: 20px 20px 15px 20px;
   text-align: left;
 }
 
@@ -52,15 +52,21 @@
   line-height: 1.6;
 }
 
+.cardTagWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
 .cardTag {
   font-size: 0.75rem;
-  width: fit-content;
-  color: #777777;
-  border: 1px solid #777777;
-  border-radius: 50px;
-  padding: 5px 10px;
-  margin-top: 1rem;
-  margin-left: auto;
+  padding: 0.3rem 0.8rem;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 9999px;
+  background-color: #f9f9f9;
+  white-space: nowrap;
 }
 
 /* 반응형 대응 */

@@ -95,9 +95,9 @@ export default function AboutPage() {
             About Fylto
           </h2>
           <p className={styles.aboutDescription} ref={descRef}>
-            큐레이션을 통해 브랜드와 고객 사이를 이어주는
+            브랜드와 고객을 잇는
             <br />
-            콘텐츠 스튜디오, Fylto를 소개합니다.
+            큐레이션 콘텐츠 스튜디오, Fylto.
           </p>
         </div>
 

@@ -19,6 +19,7 @@ export default function IntroStart() {
   const buttonRef = useRef(null);
   const headerRef = useRef(null);
   const scrollIconRef = useRef(null);
+  const subtitleRef = useRef(null);
 
   const [showSpline, setShowSpline] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
@@ -65,6 +66,12 @@ export default function IntroStart() {
         scale: 1,
       });
 
+      gsap.set(subtitleRef.current, {
+        filter: "blur(0px)",
+        opacity: 1,
+        scale: 1,
+      });
+
       gsap.set(bgRef.current, {
         scale: 1.05,
       });
@@ -80,6 +87,18 @@ export default function IntroStart() {
         {
           filter: "blur(10px)",
           letterSpacing: "10px",
+          opacity: 0.3,
+          scale: 1.3,
+          ease: "power2.out",
+          duration: 1.2,
+        },
+        0
+      );
+
+      tl.to(
+        subtitleRef.current,
+        {
+          filter: "blur(10px)",
           opacity: 0.3,
           scale: 1.3,
           ease: "power2.out",
@@ -137,10 +156,13 @@ export default function IntroStart() {
         className={`${styles.intro_wrapper} ${showSpline ? styles.hidden : ""}`}
       >
         <div ref={bgRef} className={styles.grid_bg} />
+
         <h1 ref={logoRef} className={styles.intro_logo}>
           Fylto.
         </h1>
-
+        <p ref={subtitleRef} className={styles.intro_subtitle}>
+          큐레이션 콘텐츠 스튜디오
+        </p>
         {!showSpline && (
           <div className={styles.scroll_icon} ref={scrollIconRef}>
             <MdKeyboardDoubleArrowDown size={27} />
