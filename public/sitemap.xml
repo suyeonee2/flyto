@@ -3,31 +3,37 @@
 
   <url>
     <loc>https://fylto.kr/</loc>
-    <lastmod>2025-06-29T11:44:49.588Z</lastmod>
+    <lastmod>2025-07-03T03:01:18.008Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fylto.kr/intro</loc>
-    <lastmod>2025-06-29T11:44:49.588Z</lastmod>
+    <lastmod>2025-07-03T03:01:18.008Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fylto.kr/intro/first-time</loc>
-    <lastmod>2025-06-29T11:44:49.588Z</lastmod>
+    <lastmod>2025-07-03T03:01:18.008Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fylto.kr/intro/returning</loc>
+    <lastmod>2025-07-03T03:01:18.008Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fylto.kr/about</loc>
-    <lastmod>2025-06-29T11:44:49.588Z</lastmod>
+    <lastmod>2025-07-03T03:01:18.008Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fylto.kr/examples/fwee_voluming</loc>
-    <lastmod>2025-06-29T11:44:49.588Z</lastmod>
+    <lastmod>2025-07-03T03:01:18.008Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

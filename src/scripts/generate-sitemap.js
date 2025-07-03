@@ -15,7 +15,13 @@ const outputPath = path.join(process.cwd(), "public", "sitemap.xml");
 const BASE_URL = "https://fylto.kr";
 
 // 정적 라우트
-const staticRoutes = ["/", "/intro", "/intro/first-time", "/about"];
+const staticRoutes = [
+  "/",
+  "/intro",
+  "/intro/first-time",
+  "/intro/returning",
+  "/about",
+];
 
 // 동적 라우트
 const testList = JSON.parse(fs.readFileSync(testListPath, "utf-8"));
