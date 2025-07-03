@@ -28,6 +28,9 @@ export const META = {
     images: {
       url: "/fylto_og.png",
     },
+    other: {
+      robots: "index,follow",
+    },
   },
 };
 

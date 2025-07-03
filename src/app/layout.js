@@ -42,6 +42,9 @@ export const metadata = {
       "naver-site-verification": META.naverVerification,
     },
   },
+  other: {
+    robots: "index,follow",
+  },
 };
 
 export default function RootLayout({ children }) {
