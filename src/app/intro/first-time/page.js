@@ -8,8 +8,8 @@ import Image from "next/image";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Examples from "./components/Examples";
 import Contact from "./components/Contact";
+import ContentsGuide from "./components/ContentsGuide";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -314,7 +314,7 @@ export default function FirstTime() {
           ))}
         </div>
       </section>
-      <Examples />
+      <ContentsGuide />
       <Contact />
       <Footer />
     </div>

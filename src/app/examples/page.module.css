@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 5vw;
   background: linear-gradient(#ede9e4, #eaefff);
+  padding: 100px 5vw;
   text-align: center;
 }
 
@@ -13,7 +13,7 @@
   font-size: 14px;
   color: #969696;
   letter-spacing: 0.04em;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .HeroTitle {
@@ -21,7 +21,7 @@
   font-size: 36px;
   font-weight: 500;
   color: #111;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .HeroDescription {
@@ -32,16 +32,48 @@
   margin-bottom: 50px;
 }
 
+/* 카드 전체를 감싸는 래퍼 */
 .cardsWrapper {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  flex-wrap: wrap;
+  width: 900px;
+  height: 430px;
+}
+
+/* 한 카드+라인 묶음 */
+.cardColumn {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-  margin-top: 50px;
-  max-width: 650px;
+}
+
+/* 카드 자체 */
+.card {
+  width: 240px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.thumbnail {
   width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cardContent {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .cardLink {
@@ -50,16 +82,105 @@
   display: block;
 }
 
-/* 반응형 */
-@media (max-width: 640px) {
-  .HeroTitle {
-    font-size: 28px;
+.cardTitle {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "NanumSquareNeo";
+  color: #111;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.subTitle {
+  font-size: 13px;
+  color: #777;
+  font-family: "NanumSquareNeo";
+  text-align: left;
+}
+
+.moreButton {
+  font-size: 25px;
+  background-color: transparent;
+  color: #6a6a6a;
+  cursor: pointer;
+  font-family: "NanumSquareNeo";
+  align-self: flex-end;
+  margin-top: 20px;
+  border: none;
+}
+.moreButton :hover {
+  color: #404040;
+}
+
+.allButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 50px;
+  text-align: center;
+}
+
+.allButton {
+  padding: 14px 14px;
+  font-size: 15px;
+  font-family: "NanumSquareNeo";
+  border: 1px solid #111;
+  background-color: transparent;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.allButton:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.arrowIcon {
+  font-size: 22px; /* 화살표 크기 */
+  margin-top: 1px;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+@media (max-width: 768px) {
+  .examplesSection {
+    padding: 100px 5vw 20px;
+  }
+  .cardsWrapper {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    box-shadow: none;
+    background-color: transparent;
+    gap: 40px;
   }
 
-  .cardsWrapper {
-    grid-template-columns: repeat(1, 1fr);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .card {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .verticalLine {
+    display: none;
+  }
+
+  .cardContent {
+    padding: 14px;
+  }
+
+  .moreButton {
+    font-size: 22px;
+    margin-top: 14px;
+  }
+
+  .allButtonWrapper {
+    margin-top: 0px;
   }
 }

@@ -33,6 +33,18 @@ export default function Header() {
     }
   };
 
+  const handleScrollToGuide = (e) => {
+    e.preventDefault();
+    const target = document.querySelector("#guide");
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+      handleClose();
+    } else {
+      router.push("/intro/first-time#guide");
+    }
+  };
+
   const handleScrollToContact = (e) => {
     e.preventDefault();
     const target = document.querySelector("#contact");
@@ -69,6 +81,11 @@ export default function Header() {
               <li>
                 <a href="#process" onClick={handleInternalScroll}>
                   How We Curate
+                </a>
+              </li>
+              <li>
+                <a href="#guide" onClick={handleScrollToGuide}>
+                  Content Guide
                 </a>
               </li>
               <li>

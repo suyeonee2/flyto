@@ -35,9 +35,7 @@ export default function FweeVolumingMain() {
           </button>
         </div>
 
-        <p>
-          * 포트폴리오 목적으로 제작된 콘텐츠이며, 실제 브랜드와 무관합니다.
-        </p>
+        <p>* 예시 콘텐츠로 제작되었으며, 실제 브랜드와 무관합니다.</p>
       </ContentLayout>
     </>
   );
