@@ -94,7 +94,7 @@ const Contact = () => {
           className={styles.contactButton}
           onClick={() => router.push("/estimate")}
         >
-          견적 요청하기
+          빠르게 문의하기
         </button>
       </div>
 

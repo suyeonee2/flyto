@@ -42,7 +42,7 @@ export default function EstimatePage() {
       );
 
       // 응답을 못 읽으니까 그냥 성공으로 간주
-      alert("성공적으로 제출되었어요! 감사합니다 :)");
+      alert("확인 후 연락 드리겠습니다. 감사합니다 :)");
       setStep(0);
       setAnswers({});
     } catch (error) {
@@ -64,15 +64,8 @@ export default function EstimatePage() {
       <Header />
       <div className={styles.grid_bg} />
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>큐레이션 콘텐츠 견적 요청</h1>
-          <p className={styles.subtitle}>
-            간단한 질문에 답하고, 적합한 견적을 확인해보세요.
-          </p>
-        </div>
-
         <div className={styles.questionContainer}>
-          <p className={styles.questionText}>{currentQuestion.question}</p>
+          <p className={styles.question_Text}>{currentQuestion.question}</p>
 
           {currentQuestion.type === "input" ? (
             <input
@@ -107,7 +100,7 @@ export default function EstimatePage() {
                 : !answers[currentQuestion.id]
             }
           >
-            {step === questions.length - 1 ? "견적 요청하기" : "다음"}
+            {step === questions.length - 1 ? "💌 제출하기" : "다음"}
           </button>
         </div>
       </div>

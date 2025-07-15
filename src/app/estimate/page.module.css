@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 100px;
+  padding: 80px 25px;
   background-color: #f0f0f0;
   position: relative;
   overflow: hidden;
@@ -40,9 +40,12 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 720px;
-  margin: 0 auto;
-  padding: 80px 5vw;
+  margin-top: 4rem;
+  width: 90%;
   font-family: "NanumSquareNeo";
   z-index: 10;
 }
@@ -50,31 +53,21 @@
 .header {
   text-align: center;
   margin-bottom: 60px;
-}
-
-.title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 8px;
-}
-
-.subtitle {
-  font-size: 15px;
-  color: #777;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 .questionContainer {
   text-align: center;
+  max-width: 300px;
 }
 
-.questionText {
-  font-size: 17px;
+.question_Text {
+  font-size: 18px;
   font-weight: 500;
   color: #111;
-  margin-bottom: 28px;
+  margin-bottom: 50px;
   line-height: 1.5;
+  white-space: pre-line;
 }
 
 .optionsWrapper {
@@ -97,6 +90,7 @@
   cursor: pointer;
   transition: all 0.25s ease;
   text-align: center;
+  white-space: pre-line;
 }
 
 .optionButton:hover {
@@ -104,15 +98,19 @@
   background-color: #eee;
 }
 
-.selected {
-  border-color: #111;
-  background-color: #111;
-  color: #fff;
+.optionButton.selected {
+  border-color: #111 !important;
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+.optionButton:active {
+  background-color: inherit;
+  color: inherit;
 }
 
 .textInput {
-  width: 100%;
-  max-width: 360px;
+  width: 250px;
   padding: 14px 16px;
   font-size: 15px;
   border: 1px solid #ccc;
@@ -129,6 +127,7 @@
 }
 
 .nextButton {
+  width: 100%;
   padding: 14px 28px;
   background-color: #111;
   color: #fff;

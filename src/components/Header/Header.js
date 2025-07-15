@@ -68,7 +68,7 @@ export default function Header() {
             <ul>
               <li>
                 <a href="#process" onClick={handleInternalScroll}>
-                  큐레이션 콘텐츠 제작 과정
+                  콘텐츠 제작 과정
                 </a>
               </li>
               <li>
@@ -83,7 +83,7 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/estimate" onClick={handleClose}>
-                  견적 알아보기
+                  빠른 문의
                 </Link>
               </li>
               <li>
