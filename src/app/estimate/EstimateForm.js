@@ -67,6 +67,22 @@ export default function EstimateForm() {
   return (
     <div className={styles.scene_wrapper}>
       <Header />
+      <ToastContainer
+        position="top-center"
+        hideProgressBar={true}
+        closeOnClick
+        autoClose={5000}
+        draggable={false}
+        toastStyle={{
+          zIndex: 9999,
+          borderRadius: "10px",
+          fontSize: "14px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+      />
       <div className={styles.grid_bg} />
       <div className={styles.container}>
         <div className={styles.questionContainer}>
@@ -108,13 +124,6 @@ export default function EstimateForm() {
             {step === questions.length - 1 ? "💌 제출하기" : "다음"}
           </button>
         </div>
-        <ToastContainer
-          position="bottom-center"
-          autoClose={3000}
-          hideProgressBar={false}
-          closeOnClick
-          pauseOnHover
-        />
       </div>
     </div>
   );
