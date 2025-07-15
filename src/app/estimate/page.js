@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import styles from "./page.module.css";
 import questions from "./data/estimateQuestions";
 import Header from "@/components/Header/Header";
@@ -8,6 +9,8 @@ import Header from "@/components/Header/Header";
 export default function EstimatePage() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState({});
+  const searchParams = useSearchParams();
+  const selectedType = searchParams.get("type"); // basic, standard, premium 중 하나
 
   const currentQuestion = questions[step];
   const currentAnswer = answers[currentQuestion.id];
@@ -25,12 +28,13 @@ export default function EstimatePage() {
       timestamp: new Date().toLocaleString("ko-KR", {
         timeZone: "Asia/Seoul",
       }),
+      type: selectedType || "미지정", // 쿼리 없을 경우 fallback
       ...answers,
     };
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbxxuJCHjDqxqpt4TpNCO3uEvTM2ri3hmq3osEKtqVttDrQ5QvhLEqWLyFA3NslpFbF6/exec",
+        "https://script.google.com/macros/s/AKfycbyT1JRvyqy7OI7QbOoq8ui-NqsPpqYAGgOlUhWOv6cxialNs2z1kAqLa6bk5zTM4PDK/exec",
         {
           method: "POST",
           mode: "no-cors",
@@ -41,7 +45,6 @@ export default function EstimatePage() {
         }
       );
 
-      // 응답을 못 읽으니까 그냥 성공으로 간주
       alert("확인 후 연락 드리겠습니다. 감사합니다 :)");
       setStep(0);
       setAnswers({});
@@ -50,6 +53,7 @@ export default function EstimatePage() {
       alert("오류가 발생했어요. 나중에 다시 시도해주세요.");
     }
   };
+
   const handleNext = () => {
     if (step < questions.length - 1) {
       setStep(step + 1);

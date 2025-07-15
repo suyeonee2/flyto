@@ -79,7 +79,7 @@ export default function GuideCard({
       </div>
       <button
         className={styles.buttonSecondary}
-        onClick={() => router.push("/intro/first-time#contact")}
+        onClick={() => router.push(`/estimate?type=${type}`)}
       >
         제작문의하기
       </button>
