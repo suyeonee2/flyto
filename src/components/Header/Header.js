@@ -45,18 +45,6 @@ export default function Header() {
     }
   };
 
-  const handleScrollToContact = (e) => {
-    e.preventDefault();
-    const target = document.querySelector("#contact");
-
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-      handleClose();
-    } else {
-      router.push("/intro/first-time#contact");
-    }
-  };
-
   return (
     <header className={styles.header}>
       <div className={styles.innerContainer}>
@@ -80,28 +68,28 @@ export default function Header() {
             <ul>
               <li>
                 <a href="#process" onClick={handleInternalScroll}>
-                  How We Curate
+                  큐레이션 콘텐츠 제작 과정
                 </a>
               </li>
               <li>
                 <a href="#guide" onClick={handleScrollToGuide}>
-                  Content Guide
+                  콘텐츠 유형 가이드
                 </a>
               </li>
               <li>
                 <Link href="/examples" onClick={handleClose}>
-                  Examples
+                  예시 콘텐츠 보기
+                </Link>
+              </li>
+              <li>
+                <Link href="/estimate" onClick={handleClose}>
+                  견적 알아보기
                 </Link>
               </li>
               <li>
                 <Link href="/about" onClick={handleClose}>
-                  About Fylto
+                  Fylto 소개
                 </Link>
-              </li>
-              <li>
-                <a href="#contact" onClick={handleScrollToContact}>
-                  {`Let's Work Together!`}
-                </a>
               </li>
             </ul>
           </nav>

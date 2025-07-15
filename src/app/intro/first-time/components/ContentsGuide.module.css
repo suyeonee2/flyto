@@ -1,11 +1,11 @@
-.examplesSection {
+.guridSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: linear-gradient(#ede9e4, #eaefff);
   padding: 100px 5vw;
   text-align: center;
+  height: 100vh;
 }
 
 .Eyebrow {
@@ -41,7 +41,7 @@
   position: relative;
   flex-wrap: wrap;
   width: 900px;
-  height: 430px;
+  height: 100%;
 }
 
 /* 한 카드+라인 묶음 */

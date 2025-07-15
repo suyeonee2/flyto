@@ -91,15 +91,15 @@ export default function ContentsGuide() {
   }, []);
 
   return (
-    <section className={styles.examplesSection} id="guide">
+    <section className={styles.guridSection} id="guide">
       <p className={styles.Eyebrow} ref={eyebrowRef}>
         <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
         <br />
         <br />
-        큐레이션 콘텐츠 가이드
+        큐레이션 콘텐츠 유형 가이드
       </p>
       <h2 className={styles.HeroTitle} ref={titleRef}>
-        Content Guide
+        Content Type Guide
       </h2>
       <p className={styles.HeroDescription} ref={descRef}>
         원하는 예산과 스타일에 맞는 큐레이션 콘텐츠를 선택해보세요

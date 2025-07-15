@@ -69,30 +69,36 @@
   margin-left: 20px;
 }
 
-/* 👉 오른쪽 말풍선 (버튼형) */
+/* 👉 오른쪽 말풍선 */
 .rightBubble {
   align-self: flex-end;
   background-color: #3e3e3e;
   color: #ffffff;
   border: none;
-  cursor: pointer;
+  cursor: default;
   border-radius: 20px 20px 4px 20px;
   margin-right: 20px;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.rightBubble:hover {
-  background-color: #747474;
-  transform: translateY(-2px);
+/* 🔗 리스트 형태 선택지 */
+.linkList {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
-/* 👉 오른쪽 버튼 그룹 */
-.optionsGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
-  align-items: flex-end;
+.linkItem {
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.linkItem:hover {
+  color: #ffd83c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
 }
 
 /* 📱 반응형 */

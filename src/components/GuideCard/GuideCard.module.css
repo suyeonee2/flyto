@@ -3,7 +3,7 @@
   padding: 20px;
   width: 100%;
   max-width: 220px;
-  min-height: 500px;
+  min-height: 530px;
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.811);
@@ -63,7 +63,7 @@
   font-size: 13px;
   line-height: 1.6;
   list-style: none;
-  margin: 0 13px 20px;
+  margin: 0 13px 0px;
   padding: 0;
 }
 
@@ -82,7 +82,7 @@
 .metaBox {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   font-size: 13px;
   color: #444;
   margin-top: auto;
@@ -102,26 +102,34 @@
   color: #888;
 }
 
-/* ✅ 예시 보기 버튼 */
-.buttonWrapper {
-  margin-top: 25px;
-  text-align: center;
+.exampleLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  text-decoration: none;
+  transition: 0.2s ease;
 }
 
-.button {
+.exampleLink:hover {
+  color: #4e6cff;
+  text-decoration: underline;
+}
+
+.buttonSecondary {
+  margin-top: 24px;
   display: inline-block;
-  padding: 10px 26px;
+  padding: 13px 26px;
   font-size: 13px;
-  font-weight: 500;
-  border: 1.5px solid #000;
+  border: 1px solid #000;
   background: transparent;
   color: #000;
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.button:hover {
+.buttonSecondary:hover {
   background: #000;
   color: #fff;
 }

@@ -56,18 +56,31 @@
   color: #111;
   line-height: 1.6;
   margin-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
+/* 🔘 버튼 그룹 */
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* 🔘 버튼 공통 스타일 */
 .contactButton {
   font-size: 15px;
   font-family: "NanumSquareNeo";
-  padding: 14px 24px;
+  padding: 14px 26px;
   border: 1px solid #111;
   background: transparent;
   color: #111;
   cursor: pointer;
   transition: all 0.25s ease;
+  text-decoration: none;
+  border-radius: 4px;
 }
 
 .contactButton:hover {
@@ -75,23 +88,29 @@
   color: #fff;
 }
 
-.contactButton {
-  padding: 14px 18px;
-  font-size: 15px;
+/* ✉️ 메일 안내 텍스트 */
+.subText {
+  margin-top: -10px;
+  font-size: 14px;
+  color: #666;
   font-family: "NanumSquareNeo";
-  border: 1px solid #111;
-  background-color: transparent;
-  color: #111;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  text-align: center;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.subText a {
+  color: #666;
+  text-decoration: none;
+  word-break: keep-all;
+}
+
+.subText a:hover {
+  color: #000;
   text-decoration: none;
 }
 
-.contactButton:hover {
-  background-color: #111;
-  color: #fff;
-}
-
+/* 📱 반응형 */
 @media (max-width: 640px) {
   .processWrapper {
     gap: 7px;
@@ -102,39 +121,18 @@
     height: 40px;
     font-size: 11px;
   }
+
   .line {
     width: 11px;
   }
-}
 
-.buttonGroup {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-}
+  .contactButton {
+    width: 100%;
+    text-align: center;
+  }
 
-.optionButton {
-  font-size: 15px;
-  font-family: "NanumSquareNeo";
-  padding: 14px 22px;
-  border: 1px solid #111;
-  background: transparent;
-  color: #111;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.optionButton:hover {
-  background-color: #111;
-  color: #fff;
-}
-
-.formWrapper {
-  overflow: hidden;
-  max-width: 640px;
-  margin: 0 auto;
-  transition: all 0.5s ease;
+  .subText {
+    font-size: 13px;
+    padding: 0 10px;
+  }
 }

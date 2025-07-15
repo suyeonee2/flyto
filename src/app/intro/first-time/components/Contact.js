@@ -1,8 +1,10 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "./Contact.module.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useRouter } from "next/navigation";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
@@ -11,9 +13,7 @@ const Contact = () => {
   const processRef = useRef(null);
   const descRef = useRef(null);
   const buttonGroupRef = useRef(null);
-  const formRef = useRef(null);
-
-  const [formVisible, setFormVisible] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const animations = [
@@ -60,83 +60,48 @@ const Contact = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (formVisible && formRef.current) {
-      gsap.fromTo(
-        formRef.current,
-        { height: 0, opacity: 0 },
-        { height: "auto", opacity: 1, duration: 0.6, ease: "power2.out" }
-      );
-    }
-  }, [formVisible]);
-
   return (
-    <div>
-      <section className={styles.contactSection} id="contact">
-        <p className={styles.contactEyebrow} ref={eyebrowRef}>
-          <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
-          <br />
-          <br />
-          큐레이션 콘텐츠 제작문의
-        </p>
-        <h2 className={styles.contactTitle} ref={titleRef}>
-          {`Let's Work Together!`}
-        </h2>
+    <section className={styles.contactSection} id="contact">
+      <p className={styles.contactEyebrow} ref={eyebrowRef}>
+        <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
+        <br />
+        <br />
+        큐레이션 콘텐츠 제작문의
+      </p>
+      <h2 className={styles.contactTitle} ref={titleRef}>
+        {`Let's Work Together!`}
+      </h2>
 
-        <div className={styles.processWrapper} ref={processRef}>
-          <div className={styles.processStep}>문의</div>
-          <div className={styles.line} />
-          <div className={styles.processStep}>기획</div>
-          <div className={styles.line} />
-          <div className={styles.processStep}>제작</div>
-          <div className={styles.line} />
-          <div className={styles.processStep}>피드백</div>
-          <div className={styles.line} />
-          <div className={styles.processStep}>릴리즈</div>
-        </div>
+      <div className={styles.processWrapper} ref={processRef}>
+        <div className={styles.processStep}>문의</div>
+        <div className={styles.line} />
+        <div className={styles.processStep}>기획</div>
+        <div className={styles.line} />
+        <div className={styles.processStep}>제작</div>
+        <div className={styles.line} />
+        <div className={styles.processStep}>피드백</div>
+        <div className={styles.line} />
+        <div className={styles.processStep}>릴리즈</div>
+      </div>
 
-        <p className={styles.contactDescription} ref={descRef}>
-          브랜드의 감성을 온전히 <br /> 큐레이션 콘텐츠에 담아드릴게요.
-          <br />
-          <br />
-          편하신 방법으로 문의해주세요😉
-        </p>
+      <p className={styles.contactDescription} ref={descRef}>
+        브랜드에 딱 맞는 큐레이션 콘텐츠를 <br />
+        가장 편한 방법으로 문의해보세요!
+      </p>
 
-        <div className={styles.buttonGroup} ref={buttonGroupRef}>
-          <button
-            className={styles.contactButton}
-            onClick={() => setFormVisible(true)}
-          >
-            폼으로 문의하기
-          </button>
+      <div className={styles.buttonGroup} ref={buttonGroupRef}>
+        <button
+          className={styles.contactButton}
+          onClick={() => router.push("/estimate")}
+        >
+          견적 요청하기
+        </button>
+      </div>
 
-          <a
-            className={styles.contactButton}
-            href="mailto:fylto.studio@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            메일로 문의하기
-          </a>
-        </div>
-
-        {formVisible && (
-          <div ref={formRef} className={styles.formWrapper}>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdn8M_JgMTT1Y3xTFLMJg5xnQL66gpYxKPIdQg4QHs2h49KDg/viewform?embedded=true"
-              width="100%"
-              height="1300"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-              title="Google Form"
-            >
-              로드 중…
-            </iframe>
-          </div>
-        )}
-      </section>
-    </div>
+      <p className={styles.subText}>
+        <a href="mailto:fylto.studio@gmail.com">fylto.studio@gmail.com</a>
+      </p>
+    </section>
   );
 };
 

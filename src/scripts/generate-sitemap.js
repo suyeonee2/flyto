@@ -20,7 +20,9 @@ const staticRoutes = [
   "/intro",
   "/intro/first-time",
   "/intro/returning",
+  "/examples",
   "/about",
+  "/estimate",
 ];
 
 // 동적 라우트
