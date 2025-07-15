@@ -5,6 +5,8 @@ import { useSearchParams } from "next/navigation";
 import styles from "./page.module.css";
 import questions from "./data/estimateQuestions";
 import Header from "@/components/Header/Header";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function EstimateForm() {
   const [step, setStep] = useState(0);
@@ -45,12 +47,11 @@ export default function EstimateForm() {
         }
       );
 
-      alert("확인 후 연락 드리겠습니다. 감사합니다 :)");
+      toast.success("확인 후 연락 드리겠습니다. 감사합니다 :)");
       setStep(0);
       setAnswers({});
     } catch (error) {
-      console.error("제출 에러:", error);
-      alert("오류가 발생했어요. 나중에 다시 시도해주세요.");
+      toast.error("오류가 발생했어요. 나중에 다시 시도해주세요.");
     }
   };
 
@@ -107,6 +108,13 @@ export default function EstimateForm() {
             {step === questions.length - 1 ? "💌 제출하기" : "다음"}
           </button>
         </div>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          closeOnClick
+          pauseOnHover
+        />
       </div>
     </div>
   );
