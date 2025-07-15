@@ -123,18 +123,18 @@ export default function Returning() {
             style={{ opacity: 0, transform: "translateY(20px)" }}
           >
             <p>
-              [ 브랜드에 맞는 콘텐츠가 궁금하다면? ]
+              [ 빠르게 제작 문의를 하고 싶다면? ]
               <br />
               👉{" "}
               <span
-                onClick={() => handleNavigate("/recommend")}
+                onClick={() => handleNavigate("/estimate")}
                 style={{
                   cursor: "pointer",
                   textDecoration: "underline",
                   lineHeight: 2,
                 }}
               >
-                지금 바로 추천받기!
+                지금 바로 문의하기!
               </span>
             </p>
           </div>

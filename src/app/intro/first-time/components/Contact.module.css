@@ -56,7 +56,7 @@
   color: #111;
   line-height: 1.6;
   margin-top: 70px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 /* 🔘 버튼 그룹 */
@@ -71,6 +71,7 @@
 
 /* 🔘 버튼 공통 스타일 */
 .contactButton {
+  margin-bottom: 20px;
   font-size: 15px;
   font-family: "NanumSquareNeo";
   padding: 14px 26px;
