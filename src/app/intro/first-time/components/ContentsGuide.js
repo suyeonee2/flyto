@@ -27,7 +27,7 @@ export default function ContentsGuide() {
         "심플한 스타일링",
       ],
       duration: "1~2주",
-      exampleLink: "/examples/fwee_voluming",
+      exampleLink: "/examples/comingsoon",
       image: "/basic.png",
     },
     {
@@ -58,7 +58,7 @@ export default function ContentsGuide() {
         "사용자 인터랙션 포함",
       ],
       duration: "4주 이상",
-      exampleLink: "/examples/fwee_voluming",
+      exampleLink: "/examples/comingsoon",
       image: "/premium.png",
     },
   ];
