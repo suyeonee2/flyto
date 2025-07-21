@@ -125,4 +125,7 @@
   .mallBanner {
     max-width: 335px;
   }
+  .resultSection {
+    margin-top: 7rem;
+  }
 }

@@ -28,7 +28,7 @@ export default function ContentsGuide() {
         "심플한 비주얼 스타일",
       ],
       duration: "1~2주",
-      exampleLink: "/examples/comingsoon",
+      exampleLink: "/examples/rush_body",
       image: "/basic.png",
     },
     {
