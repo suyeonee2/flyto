@@ -60,7 +60,7 @@ export default function GuideCard({
         <div className={styles.metaItem}>
           <TbPigMoney className={styles.metaIcon} />
           <span>
-            <strong>제작단가&nbsp;&nbsp;</strong>
+            <strong>기본 제작단가&nbsp;&nbsp;</strong>
             {budget}
           </span>
         </div>

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "q1",
+    "question": "어떤 계열을 좋아하시나요?",
+    "type": "single",
+    "options": [
+      { "label": "프레쉬", "value": "프레쉬" },
+      { "label": "플로럴", "value": "플로럴" },
+      { "label": "시트러스", "value": "시트러스" },
+      { "label": "프루티", "value": "프루티" },
+      { "label": "스위트", "value": "스위트" },
+      { "label": "우디", "value": "우디" }
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "요즘 어떤 무드가 끌리세요?",
+    "type": "single",
+    "options": [
+      { "label": "상쾌한", "value": "상쾌한" },
+      { "label": "개운한", "value": "개운한" },
+      { "label": "포근한", "value": "포근한" },
+      { "label": "우아한", "value": "우아한" },
+      { "label": "상큼한", "value": "상큼한" },
+      { "label": "달콤한", "value": "달콤한" },
+      { "label": "묵직한", "value": "묵직한" }
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "선호하는 향의 메인 노트는?",
+    "type": "single",
+    "options": [
+      { "label": "라벤더", "value": "라벤더" },
+      { "label": "장미", "value": "장미" },
+      { "label": "자스민", "value": "자스민" },
+      { "label": "라임/레몬", "value": "라임/레몬" },
+      { "label": "만다린/오렌지", "value": "만다린/오렌지" },
+      { "label": "나무/숲", "value": "나무/숲" },
+      { "label": "요구르트", "value": "요구르트" },
+      { "label": "카라멜/바닐라", "value": "카라멜/바닐라" },
+      { "label": "꿀", "value": "꿀" },
+      { "label": "자몽/베리", "value": "자몽/베리" }
+    ]
+  }
+]

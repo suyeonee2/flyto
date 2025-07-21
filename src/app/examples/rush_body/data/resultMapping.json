@@ -1,0 +1,152 @@
+[
+  {
+    "id": "dirty",
+    "name": "더티",
+    "keywords": {
+      "계열": ["프레쉬", "플로럴", "우디"],
+      "무드": ["상쾌한"],
+      "향": ["라벤더", "나무/숲"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_dirty.avif"
+  },
+  {
+    "id": "big",
+    "name": "빅",
+    "keywords": {
+      "계열": ["프레쉬", "플로럴", "시트러스"],
+      "무드": ["상쾌한", "개운한"],
+      "향": ["만다린/오렌지", "네롤리", "바닐라"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_big.avif"
+  },
+  {
+    "id": "sleepy",
+    "name": "슬리피",
+    "keywords": {
+      "계열": ["플로럴", "스위트"],
+      "무드": ["포근한"],
+      "향": ["라벤더"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_sleepy.avif"
+  },
+  {
+    "id": "salty",
+    "name": "솔티",
+    "keywords": {
+      "계열": ["프레쉬", "우디"],
+      "무드": ["우아한"],
+      "향": ["장미"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_salty.avif"
+  },
+  {
+    "id": "sexbomb",
+    "name": "섹스밤",
+    "keywords": {
+      "계열": ["프레쉬", "플로럴"],
+      "무드": ["우아한"],
+      "향": ["자스민"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_sexbomb.avif"
+  },
+  {
+    "id": "zesty",
+    "name": "제스티",
+    "keywords": {
+      "계열": ["시트러스", "프루티", "스위트"],
+      "무드": ["상큼한"],
+      "향": ["라임/레몬"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_zesty.avif"
+  },
+  {
+    "id": "plumrain",
+    "name": "플럼 레인",
+    "keywords": {
+      "계열": ["프루티", "스위트"],
+      "무드": ["묵직한"],
+      "향": ["만다린/오렌지"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_plumrain.avif"
+  },
+  {
+    "id": "guardian",
+    "name": "가디언 오브 더 포레스트",
+    "keywords": {
+      "계열": ["프레쉬", "시트러스", "우디"],
+      "무드": ["상쾌한"],
+      "향": ["나무/숲"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_guardian.avif"
+  },
+  {
+    "id": "avocado",
+    "name": "아보카도 코-워시",
+    "keywords": {
+      "계열": ["시트러스", "스위트"],
+      "무드": ["상큼한"],
+      "향": ["요구르트"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_avocado.avif"
+  },
+  {
+    "id": "rosejam",
+    "name": "로즈 잼",
+    "keywords": {
+      "계열": ["프레쉬", "플로럴", "스위트"],
+      "무드": ["달콤한"],
+      "향": ["장미"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_rosejam.avif"
+  },
+  {
+    "id": "goodtimes",
+    "name": "렛 더 굿 타임즈 롤",
+    "keywords": {
+      "계열": ["스위트"],
+      "무드": ["달콤한"],
+      "향": ["카라멜/바닐라"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_goodtimes.avif"
+  },
+  {
+    "id": "lemon",
+    "name": "데드스 가든 레몬 트리",
+    "keywords": {
+      "계열": ["프레쉬", "시트러스"],
+      "무드": ["상쾌한"],
+      "향": ["라임/레몬"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_lemon.avif"
+  },
+  {
+    "id": "honey",
+    "name": "허니 아이 워시드 더 키즈",
+    "keywords": {
+      "계열": ["스위트"],
+      "무드": ["묵직한"],
+      "향": ["꿀"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_honey.avif"
+  },
+  {
+    "id": "sakura",
+    "name": "사쿠라",
+    "keywords": {
+      "계열": ["플로럴", "시트러스", "프루티"],
+      "무드": ["달콤한"],
+      "향": ["자스민"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_sakura.avif"
+  },
+  {
+    "id": "comforter",
+    "name": "더 컴포터",
+    "keywords": {
+      "계열": ["프루티", "스위트"],
+      "무드": ["묵직한"],
+      "향": ["자몽/베리"]
+    },
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_comforter.avif"
+  }
+]

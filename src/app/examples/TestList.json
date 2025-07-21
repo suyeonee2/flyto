@@ -1,5 +1,13 @@
 [
   {
+    "id": "rush_body",
+    "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/rush_Body+Spray/rush_th.avif",
+    "path": "/examples/rush_body",
+    "title": "러쉬 보디 스프레이",
+    "desc": "내 취향에 딱 맞는 러쉬 보디 스프레이는?",
+    "tag": ["베이직", "2D", "제품컷"]
+  },
+  {
     "id": "fwee_voluming",
     "image": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/fwee_voluming/Fylto_samples.png",
     "path": "/examples/fwee_voluming",

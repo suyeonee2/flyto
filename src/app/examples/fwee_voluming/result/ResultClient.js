@@ -51,14 +51,6 @@ export default function FweeVolumingResult() {
     setCurrentSlide((prev) => (prev + 1) % recommended.length);
   };
 
-  const handleRetry = () => {
-    if (testInfo?.path) {
-      router.push(testInfo.path);
-    } else {
-      alert("테스트 경로를 찾을 수 없습니다.");
-    }
-  };
-
   if (isLoading) {
     return (
       <div className={styles.loadingPage}>

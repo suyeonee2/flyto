@@ -10,7 +10,7 @@ import Header from "@/components/Header/Header";
 export default function FweeVolumingMain() {
   const router = useRouter();
   useEffect(() => {
-    logTestPageView("Fwee_Voluming Gloss");
+    logTestPageView("Fwee_Voluming_Gloss");
   }, []);
 
   return (

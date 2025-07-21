@@ -19,7 +19,7 @@ export default function ContentsGuide() {
       type: "basic",
       title: "베이직",
       summary: "가볍게 시도해볼 수 있는 2D 기반 콘텐츠",
-      budget: "100만 원 미만",
+      budget: "100만 원",
       items: [
         "간단한 미니 테스트",
         "2D 일러스트 OR 제품컷 활용",
@@ -35,7 +35,7 @@ export default function ContentsGuide() {
       type: "standard",
       title: "스탠다드",
       summary: "브랜드 무드를 살린 3D 그래픽 콘텐츠",
-      budget: "150~200만 원",
+      budget: "200만 원",
       items: [
         "중간 규모 테스트",
         "3D 렌더링 기반",
@@ -51,7 +51,7 @@ export default function ContentsGuide() {
       type: "premium",
       title: "프리미엄",
       summary: "인터랙티브 3D로 완성하는 고급형 콘텐츠",
-      budget: "250만 원 이상",
+      budget: "300만 원",
       items: [
         "풀스케일 테스트",
         "인터랙티브 3D 기반",
@@ -123,6 +123,10 @@ export default function ContentsGuide() {
           </div>
         ))}
       </div>
+      <p className={styles.notice}>
+        ✻ 제작단가는 옵션에 따라 달라질 수 있습니다. 정확한 견적은 상담 후
+        안내드립니다.
+      </p>
     </section>
   );
 }
