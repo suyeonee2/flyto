@@ -2,7 +2,7 @@
   border-radius: 16px;
   padding: 20px;
   width: 100%;
-  max-width: 220px;
+  max-width: 230px;
   min-height: 530px;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@
 
 .list {
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.4;
   list-style: none;
   margin: 0 13px 0px;
   padding: 0;
@@ -69,7 +69,7 @@
 
 .list li {
   display: flex;
-  align-items: center;
+  align-items: start;
   margin-bottom: 10px;
   white-space: pre-line;
 }

@@ -1,0 +1,179 @@
+[
+  {
+    "id": "cypres",
+    "title": "CYPRÈS 21",
+    "summary": "숲속 오두막에서 쉬는 듯한 고요하고 자연스러운 편백, 허브 향",
+    "keywords": ["숲", "편백나무", "고요함", "내추럴", "스파이시 우디", "휴식"],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/cypres.mp4"
+  },
+  {
+    "id": "ambroxyde",
+    "title": "AMBROXYDE 17",
+    "summary": "낯설고 조용하지만, 계속 생각나는 은은한 머스크 우디 향",
+    "keywords": ["몽환적", "머스크", "우디", "감각적", "신비로움", "잔향"],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/ambroxyde.mp4"
+  },
+  {
+    "id": "santal",
+    "title": "SANTAL 26",
+    "summary": "부잣집 서재에 퍼지는 가죽과 나무 향",
+    "keywords": [
+      "스모키",
+      "레더",
+      "우디",
+      "고급스러움",
+      "묵직함",
+      "따뜻함",
+      "세련됨"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/santal.mp4"
+  },
+  {
+    "id": "encens",
+    "title": "ENCENS 9",
+    "summary": "고요한 공간을 채우는 ‘따뜻한 인센스 명상향’",
+    "keywords": [
+      "유향",
+      "인센스",
+      "레진 앰버",
+      "정향",
+      "따뜻함",
+      "평온",
+      "명상"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/encens.mp4"
+  },
+  {
+    "id": "palo",
+    "title": "PALO SANTO 14",
+    "summary": "마음을 가라앉히는 나무 향이 공간을 채우는, 조용한 위로와 휴식 같은 향",
+    "keywords": [
+      "부드러운 인센스",
+      "나무",
+      "패출리",
+      "라다넘",
+      "따뜻함",
+      "안정감"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/palo.mp4"
+  },
+  {
+    "id": "calone",
+    "title": "CALONE 17",
+    "summary": "파도소리 들리며 바람 솔솔 부는 ‘바닷가 별장’의 청량한 향",
+    "keywords": [
+      "마린",
+      "청량함",
+      "제라늄",
+      "앰버",
+      "시원한 바람",
+      "바다",
+      "휴양지"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/calone.mp4"
+  },
+  {
+    "id": "figue",
+    "title": "FIGUE 15",
+    "summary": "달콤하고 부드러운 과일 향이 공간을 감싸는, 포근하고 감성적인 무화과 블렌드",
+    "keywords": [
+      "무화과",
+      "블랙커런트",
+      "과일 향",
+      "달콤함",
+      "포근함",
+      "중성적"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/figue.mp4"
+  },
+  {
+    "id": "laurier",
+    "title": "LAURIER 62",
+    "summary": "다채로운 허브와 우디 향이 뒤섞인, 풍성하고 이국적인 허브 정원의 무드",
+    "keywords": [
+      "허브",
+      "로즈마리",
+      "백리향",
+      "유칼립투스",
+      "스파이시",
+      "복잡함",
+      "우디",
+      "앰버"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/laurier.mp4"
+  },
+  {
+    "id": "petitgrain",
+    "title": "PETIT GRAIN 21",
+    "summary": "상쾌한 시트러스와 꽃향이 어우러진, 햇살 가득한 비터 오렌지 정원의 무드",
+    "keywords": [
+      "오렌지 블라썸",
+      "시트러스",
+      "비터 오렌지",
+      "상쾌함",
+      "그린",
+      "따뜻함",
+      "지중해"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/petitgrain.mp4"
+  },
+  {
+    "id": "cade",
+    "title": "CADE 26",
+    "summary": "묵직하고 스모키한 레더 우드가 공간을 감싸는 깊고 진한 다크우드 무드",
+    "keywords": [
+      "스모키",
+      "다크 우드",
+      "케이드우드",
+      "레더",
+      "묵직함",
+      "바삭한 나무결"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/cade.mp4"
+  },
+  {
+    "id": "pin",
+    "title": "PIN 12",
+    "summary": "조용히 눈 내리는 날, ‘겨울 솔숲 산책’ 같은 포근한 파인우드 향",
+    "keywords": [
+      "솔잎",
+      "아로마틱",
+      "앰버",
+      "머스크",
+      "은은함",
+      "포근함",
+      "겨울"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/pin.mp4"
+  },
+  {
+    "id": "verveine",
+    "title": "VERVEINE 32",
+    "summary": "상큼한 라임과 허브, 꽃 향이 어우러진 맑고 화사한 허브 부케",
+    "keywords": [
+      "버베나",
+      "시트러스",
+      "라임",
+      "허브",
+      "상큼함",
+      "플로럴",
+      "맑음"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/verveine.mp4"
+  },
+  {
+    "id": "cedre",
+    "title": "CEDRE 11",
+    "summary": "깊고 어두운 숲속에서 겨울밤 불멍하는 듯한 진한 우디향",
+    "keywords": [
+      "시더우드",
+      "버치",
+      "머스크",
+      "스모키",
+      "어둠",
+      "고요",
+      "따뜻함"
+    ],
+    "video": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/cedre.mp4"
+  }
+]

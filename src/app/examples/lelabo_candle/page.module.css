@@ -1,0 +1,74 @@
+.bgLelabo {
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-image: url("https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/lelabo_back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.startSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.thumbnail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 891px;
+  height: 1260px;
+  transform: translate(-50%, -50%) scale(0.45);
+  transform-origin: center center;
+  z-index: 0;
+  border-radius: 40px;
+  box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.208);
+}
+
+.startButton {
+  margin-top: 39rem;
+  background-color: #e5e5e5;
+  color: #333333;
+  font-size: 1rem;
+  font-family: "NEXON Lv1 Gothic OTF";
+  border: 1px solid #b6b6b6;
+  border-radius: 999px;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* 콘텐츠 출처 알림 문구 */
+.bgLelabo p {
+  font-size: 0.75rem;
+  color: #7b7b7b;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+@media (max-width: 640px) {
+  .bgLelabo {
+    height: 100vh;
+  }
+
+  .startSection {
+    transform: translateY(-3vh); /* ✅ 살짝만 위로 올림 */
+  }
+
+  .thumbnail {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+
+  .bgLelabo p {
+    bottom: 4rem;
+  }
+}
