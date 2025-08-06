@@ -75,6 +75,7 @@ export default function ExamplesPage() {
                 title={card.title}
                 desc={card.desc}
                 tag={card.tag}
+                type={card.type}
               />
             </Link>
           ))}

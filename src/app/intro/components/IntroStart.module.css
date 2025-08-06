@@ -115,8 +115,7 @@
   z-index: 2;
 }
 
-/* 🔹 Spline 화면 */
-.spline_scene {
+.second_screen {
   position: absolute;
   top: 0;
   left: 0;
@@ -128,11 +127,26 @@
   background-color: #f0f0f0;
 }
 
-.scene2_container {
+.fylto_icon {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rem;
+  margin-bottom: 24px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .text_wrapper {

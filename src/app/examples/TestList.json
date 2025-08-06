@@ -5,7 +5,8 @@
     "path": "/examples/rush_body",
     "title": "러쉬 보디 스프레이",
     "desc": "내 취향에 딱 맞는 러쉬 보디 스프레이는?",
-    "tag": ["베이직", "2D", "제품컷"]
+    "tag": ["2D", "제품컷"],
+    "type": "basic"
   },
   {
     "id": "lelabo_candle",
@@ -13,7 +14,8 @@
     "path": "/examples/lelabo_candle",
     "title": "르 라보 클래식 캔들",
     "desc": "13가지 무드, 나만의 클래식 캔들은?",
-    "tag": ["스탠다드", "3D렌더링"]
+    "tag": ["3D렌더링"],
+    "type": "standard"
   },
   {
     "id": "romand_juicyTint",
@@ -21,6 +23,7 @@
     "path": "/examples/romand_juicyTint",
     "title": "롬앤 더 쥬시 래스팅 틴트",
     "desc": "나만의 쥬시 래스팅 틴트는?",
-    "tag": ["프리미엄", "3D렌더링"]
+    "tag": ["3D렌더링", "영상"],
+    "type": "premium"
   }
 ]

@@ -3,10 +3,8 @@ import styles from "./GuideCard.module.css";
 import { useRouter } from "next/navigation";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { BsCalendar2Check } from "react-icons/bs";
-import { LiaHandPointRight } from "react-icons/lia";
 import { TbPigMoney } from "react-icons/tb";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function GuideCard({
   type,
@@ -64,25 +62,24 @@ export default function GuideCard({
             {budget}
           </span>
         </div>
-        {exampleLink && (
-          <div className={styles.metaItem}>
-            <Link href={exampleLink} className={styles.exampleLink}>
-              <span className={styles.metaIcon}>
-                <LiaHandPointRight />
-              </span>
-              <span className={styles.metaLabel}>
-                <strong>예시 콘텐츠 보기</strong>
-              </span>
-            </Link>
-          </div>
-        )}
       </div>
-      <button
-        className={styles.buttonSecondary}
-        onClick={() => router.push(`/estimate?type=${type}`)}
-      >
-        제작문의하기
-      </button>
+
+      <div className={styles.buttonGroup}>
+        {exampleLink && (
+          <button
+            className={styles.buttonSecondary}
+            onClick={() => router.push(exampleLink)}
+          >
+            예시 콘텐츠 보기
+          </button>
+        )}
+        <button
+          className={styles.buttonPrimary}
+          onClick={() => router.push(`/estimate?type=${type}`)}
+        >
+          제작문의하기
+        </button>
+      </div>
     </div>
   );
 }

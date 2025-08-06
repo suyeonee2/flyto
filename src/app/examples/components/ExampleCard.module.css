@@ -1,3 +1,11 @@
+.cardWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+}
+
 .card {
   width: 250px;
   height: 380px;
@@ -68,6 +76,34 @@
   border-radius: 9999px;
   background-color: #f9f9f9;
   white-space: nowrap;
+}
+
+.typeBadge {
+  position: absolute;
+  top: -8%;
+  transform: translateY(-50%);
+  padding: 6px 24px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-family: "NanumSquareNeoBold";
+  z-index: 10;
+}
+
+/* 타입별 색상 */
+.basic {
+  background-color: #e3e9ff;
+  color: #3b50b1;
+  border: 0.5px solid #a6b8ff;
+}
+.standard {
+  background-color: #fff4d1;
+  color: #c48b00;
+  border: 0.5px solid #ffd754;
+}
+.premium {
+  background-color: #ffe2e2;
+  color: #d94e4e;
+  border: 0.5px solid #ffa4a4;
 }
 
 /* 반응형 대응 */
