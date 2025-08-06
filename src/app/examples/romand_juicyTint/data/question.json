@@ -1,0 +1,161 @@
+[
+  {
+    "id": "q1",
+    "title": "1 / 2",
+    "question": "좋아하는 컬러 톤을 골라주세요",
+    "options": [
+      { "id": "coral", "label": "코랄", "hex": "#ff8165", "next": "q1_coral" },
+      { "id": "pink", "label": "핑크", "hex": "#ff7aa8", "next": "q1_pink" },
+      { "id": "brick", "label": "브릭", "hex": "#b0523f", "next": "q1_brick" },
+      { "id": "plum", "label": "플럼", "hex": "#974e75", "next": "q1_plum" },
+      { "id": "nude", "label": "누디", "hex": "#dab7a1", "next": "q1_nude" },
+      { "id": "red", "label": "레드", "hex": "#e82e2e", "next": "q1_red" }
+    ]
+  },
+  {
+    "id": "q1_coral",
+    "title": "2 / 2",
+    "question": "코랄 중 어떤 톤이 좋아요?",
+    "options": [
+      {
+        "id": "nudiorange",
+        "label": "누디오렌지",
+        "hex": "#ffa88d",
+        "next": null
+      },
+      { "id": "mlbb", "label": "MLBB", "hex": "#e36b5e", "next": null },
+      {
+        "id": "pinkcoral",
+        "label": "핑크코랄",
+        "hex": "#ff5d4f",
+        "next": null
+      },
+      {
+        "id": "mutedcoral",
+        "label": "뮤트코랄",
+        "hex": "#c16c5c",
+        "next": null
+      },
+      {
+        "id": "lightcoral",
+        "label": "밝은코랄",
+        "hex": "#ff7866",
+        "next": null
+      },
+      {
+        "id": "orangecoral",
+        "label": "오렌지코랄",
+        "hex": "#f96c5a",
+        "next": null
+      }
+    ]
+  },
+  {
+    "id": "q1_pink",
+    "title": "2 / 2",
+    "question": "핑크 중 어떤 스타일이 좋아요?",
+    "options": [
+      { "id": "mlbb", "label": "MLBB", "hex": "#dc8795", "next": null },
+      {
+        "id": "mauvepink",
+        "label": "모브핑크",
+        "hex": "#d56783",
+        "next": null
+      },
+      {
+        "id": "peachcoral",
+        "label": "피치코랄",
+        "hex": "#f58e9a",
+        "next": null
+      }
+    ]
+  },
+  {
+    "id": "q1_brick",
+    "title": "2 / 2",
+    "question": "브릭 계열 중 어떤 톤이 좋아요?",
+    "options": [
+      {
+        "id": "naturalredbrown",
+        "label": "내추럴레드브라운",
+        "hex": "#a3543d",
+        "next": null
+      },
+      { "id": "redbrick", "label": "레드브릭", "hex": "#ab3422", "next": null },
+      {
+        "id": "mutedbrick",
+        "label": "뮤트브릭",
+        "hex": "#e37056",
+        "next": null
+      },
+      {
+        "id": "deepredbrick",
+        "label": "딥레드브릭",
+        "hex": "#7f463d",
+        "next": null
+      },
+      {
+        "id": "chillybrick",
+        "label": "칠리브릭",
+        "hex": "#ab2f2f",
+        "next": null
+      }
+    ]
+  },
+  {
+    "id": "q1_plum",
+    "title": "2 / 2",
+    "question": "플럼 계열 중 어떤 느낌이 좋아요?",
+    "options": [
+      { "id": "mlbb", "label": "MLBB", "hex": "#bb707f", "next": null },
+      { "id": "pinkred", "label": "핑크레드", "hex": "#be3750", "next": null },
+      { "id": "plumred", "label": "플럼레드", "hex": "#8d273d", "next": null }
+    ]
+  },
+  {
+    "id": "q1_nude",
+    "title": "2 / 2",
+    "question": "누디 계열 중 어떤 게 더 끌리나요?",
+    "options": [
+      {
+        "id": "nudibiege",
+        "label": "누디베이지",
+        "hex": "#d89870",
+        "next": null
+      },
+      {
+        "id": "naturalredbrown",
+        "label": "내추럴레드브라운",
+        "hex": "#d18267",
+        "next": null
+      },
+      {
+        "id": "nudiorange",
+        "label": "누디오렌지",
+        "hex": "#f79b71",
+        "next": null
+      }
+    ]
+  },
+  {
+    "id": "q1_red",
+    "title": "2 / 2",
+    "question": "레드 계열 중 선호하는 톤은?",
+    "options": [
+      {
+        "id": "creamyred",
+        "label": "크리미레드",
+        "hex": "#c24f4f",
+        "next": null
+      },
+      {
+        "id": "cherryred",
+        "label": "체리레드",
+        "hex": "#a22424",
+        "next": null
+      },
+      { "id": "plumred", "label": "플럼레드", "hex": "#8d1d3b", "next": null },
+      { "id": "freshred", "label": "청량레드", "hex": "#ca2243", "next": null }
+    ]
+  }
+]

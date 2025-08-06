@@ -1,0 +1,193 @@
+.bgRomand {
+  background: #eedde3;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.R_section {
+  max-width: 420px;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.R_title {
+  font-size: 1.1rem;
+  color: #333;
+  font-family: "NanumSquareNeo";
+  margin-bottom: 1.5rem;
+}
+
+.colorSwatches {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tintImageWrapper {
+  max-width: 400px;
+  height: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.tintImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.AllColorBtnContainer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.AllColorBtn {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid #d0c4ae;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: #4d3b2f;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.AllColorBtn:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.colorSwatchesAll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 400px;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.swatchCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.swatchCircle:hover {
+  transform: scale(1.1);
+}
+
+.selectedPreview {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.miniImage {
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.bannerConatiner {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mallBanner {
+  max-width: 400px;
+  height: 100%;
+}
+
+.buttonRow {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.glassButton {
+  background-color: #ffffff;
+  border: 1px solid #e09d9d;
+  padding: 1rem 3rem;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333333;
+  font-size: 0.9rem;
+  font-family: "NEXON Lv1 Gothic OTF";
+  margin-bottom: -1rem;
+}
+
+.glassButton:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.Btn_container {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* 로딩 화면 */
+.loadingPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #eedde3;
+  color: #682a47;
+  font-family: "NanumSquareNeo";
+}
+
+.loadingText {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.spinner {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.spinner div {
+  width: 12px;
+  height: 12px;
+  background-color: #682a47;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.spinner div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.spinner div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 640px) {
+  .R_section {
+    margin-top: 6rem;
+  }
+  .mallBanner {
+    max-width: 340px;
+  }
+}

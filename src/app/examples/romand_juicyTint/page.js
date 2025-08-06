@@ -1,8 +1,8 @@
-import FweeVolumingMain from "./FweeVolumingMain";
+import RomandMain from "./RomandMain";
 import TestList from "../TestList.json";
 
 export async function generateMetadata() {
-  const currentTestId = "fwee_voluming";
+  const currentTestId = "romand_juicyTint";
   const testData = TestList.find((test) => test.id === currentTestId);
 
   if (!testData) {
@@ -21,7 +21,7 @@ export async function generateMetadata() {
     openGraph: {
       title: fullTitle,
       description: testData.desc,
-      url: `https://fylto.kr${testData.path}`, // 절대 경로
+      url: `https://fylto.kr${testData.path}`,
       siteName: siteName,
       images: [
         {
@@ -40,5 +40,5 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
-  return <FweeVolumingMain />;
+  return <RomandMain />;
 }

@@ -60,7 +60,7 @@ export default function ContentsGuide() {
         "사용자 인터랙션 요소 포함\n(컬러스와치, 슬라이드 등)",
       ],
       duration: "4주 이상",
-      exampleLink: "/examples/comingsoon",
+      exampleLink: "/examples/romand_juicyTint",
       image: "/premium.png",
     },
   ];

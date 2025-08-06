@@ -1,0 +1,186 @@
+[
+  {
+    "id": "01",
+    "name": "포멜로 스킨",
+    "hex": "#be9176",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/01.png",
+    "category": "누디",
+    "subcategory": ["누디베이지"]
+  },
+  {
+    "id": "02",
+    "name": "누카다미아",
+    "hex": "#a2604a",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/02.png",
+    "category": ["누디", "브릭"],
+    "subcategory": ["내추럴레드브라운"]
+  },
+  {
+    "id": "03",
+    "name": "베어 그레이프",
+    "hex": "#ad6b74",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/03.png",
+    "category": "핑크",
+    "subcategory": ["MLBB"]
+  },
+  {
+    "id": "04",
+    "name": "피그 피그",
+    "hex": "#a9515d",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/04.png",
+    "category": "핑크",
+    "subcategory": ["모브핑크"]
+  },
+  {
+    "id": "05",
+    "name": "쥬쥬브",
+    "hex": "#ac5e5e",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/05.png",
+    "category": "코랄",
+    "subcategory": ["MLBB"]
+  },
+  {
+    "id": "06",
+    "name": "필링 앵두",
+    "hex": "#a04242",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/06.png",
+    "category": "레드",
+    "subcategory": ["크리미레드"]
+  },
+  {
+    "id": "07",
+    "name": "체리 밤",
+    "hex": "#701d1d",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/07.png",
+    "category": "레드",
+    "subcategory": ["체리레드"]
+  },
+  {
+    "id": "08",
+    "name": "핑크 펌킨",
+    "hex": "#b25147",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/08.png",
+    "category": "코랄",
+    "subcategory": ["핑크코랄"]
+  },
+  {
+    "id": "09",
+    "name": "멀드 피치",
+    "hex": "#9b5446",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/09.png",
+    "category": "코랄",
+    "subcategory": ["뮤트코랄"]
+  },
+  {
+    "id": "10",
+    "name": "베어 애프리콧",
+    "hex": "#cb6a5e",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/10.png",
+    "category": "코랄",
+    "subcategory": ["밝은코랄"]
+  },
+  {
+    "id": "11",
+    "name": "파파야 잼",
+    "hex": "#c15f4b",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/11.png",
+    "category": "코랄",
+    "subcategory": ["오렌지코랄"]
+  },
+  {
+    "id": "12",
+    "name": "애플 브라운",
+    "hex": "#a2513d",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/12.png",
+    "category": "브릭",
+    "subcategory": ["뮤트브릭"]
+  },
+  {
+    "id": "13",
+    "name": "잇 도토리",
+    "hex": "#8e361b",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/13.png",
+    "category": "브릭",
+    "subcategory": ["레드브릭"]
+  },
+  {
+    "id": "14",
+    "name": "아몬드 로즈",
+    "hex": "#a24c43",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/14.png",
+    "category": "핑크",
+    "subcategory": ["MLBB"]
+  },
+  {
+    "id": "15",
+    "name": "베어 피그",
+    "hex": "#834760",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/15.png",
+    "category": "플럼",
+    "subcategory": ["MLBB"]
+  },
+  {
+    "id": "16",
+    "name": "플럼 콕",
+    "hex": "#732836",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/16.png",
+    "category": ["플럼", "레드"],
+    "subcategory": ["플럼레드"]
+  },
+  {
+    "id": "17",
+    "name": "다크 코코넛",
+    "hex": "#6a3326",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/17.png",
+    "category": "브릭",
+    "subcategory": ["딥레드브릭"]
+  },
+  {
+    "id": "19",
+    "name": "썸머 샌트",
+    "hex": "#e43535",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/19.png",
+    "category": "레드",
+    "subcategory": ["청량레드"]
+  },
+  {
+    "id": "20",
+    "name": "쥬쥬피그",
+    "hex": "#af5361",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/20.png",
+    "category": "핑크",
+    "subcategory": ["MLBB"]
+  },
+  {
+    "id": "21",
+    "name": "그레이프 밤",
+    "hex": "#ac395b",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/21.png",
+    "category": ["플럼", "레드"],
+    "subcategory": ["핑크레드"]
+  },
+  {
+    "id": "22",
+    "name": "도토리 밤",
+    "hex": "#702726",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/22.png",
+    "category": "브릭",
+    "subcategory": ["칠리브릭"]
+  },
+  {
+    "id": "23",
+    "name": "피치 피치 미",
+    "hex": "#db7082",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/23.png",
+    "category": "핑크",
+    "subcategory": ["피치코랄"]
+  },
+  {
+    "id": "24",
+    "name": "베어 쥬시 오",
+    "hex": "#e37439",
+    "img": "https://fylto-assets.s3.ap-northeast-2.amazonaws.com/romand_juicyTint/24.png",
+    "category": ["누디", "코랄"],
+    "subcategory": ["누디오렌지"]
+  }
+]

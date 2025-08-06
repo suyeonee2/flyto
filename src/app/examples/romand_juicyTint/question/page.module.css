@@ -1,15 +1,15 @@
-.bgLelabo {
-  /* background-color: #ebdccd; */
+.bgRomand {
+  background-color: #eedde3;
   height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 
-  background-image: url("https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/lelabo_back.png");
+  /* background-image: url("https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/lelabo_back.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .questionSection {
@@ -50,75 +50,84 @@
   margin-top: 2.5rem;
 }
 
-/* 진행도 바 */
-.progressBar {
-  position: absolute;
-  top: 60px;
-  left: 35px;
-  width: 80%;
-  height: 7px;
-  border-radius: 999px;
-  background-color: #fff3e8;
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background-color: #8b6c51;
-  border-radius: 999px;
-  transition: width 0.3s ease;
-}
-
 /* 질문 */
 .questionBox {
   width: 100%;
   text-align: center;
   white-space: pre-line;
-  line-height: 1.3;
 }
 
+.q_title {
+  font-family: "NanumSquareNeo";
+  font-size: 0.8rem;
+  color: #7b7b7b;
+  margin-bottom: 1.3rem;
+}
 .question {
-  font-size: 1.1rem;
-  color: #ffffff;
-  margin-bottom: 2rem;
-  font-family: "MaruBuri";
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  font-family: "NanumSquareNeo";
 }
 
-/* 옵션 리스트 */
-.options {
+.swatchList {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
-/* 옵션 버튼 */
-.option {
-  width: 100%;
-  max-width: 150px;
-  background-color: #fff2dc98;
-  border: 1px solid #d7c5a3;
-  border-radius: 2rem;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  font-family: "MaruBuri";
-  color: #62523f;
+.swatchItem {
+  width: 80px;
+  height: 80px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
 }
 
-.option:hover {
-  background-color: #fff0f5;
-  transform: scale(1.02);
+.swatchImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swatchColorBox {
+  width: 80px;
+  height: 80px;
+}
+
+.pantoneChip {
+  width: 90px;
+  height: 110px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+.pantoneChip:hover {
+  transform: translateY(-2px);
+}
+
+.colorBox {
+  flex: 1;
+  width: 100%;
+}
+
+.labelBox {
+  padding: 8px;
+  text-align: left;
+  font-size: 0.7rem;
+  color: #333;
+  font-family: "NanumSquareNeo";
 }
 
 /* 출처 고정 문구 */
-.bgLelabo p {
+.bgRomand p {
   font-size: 0.75rem;
   color: #7b7b7b;
   text-align: center;
@@ -131,15 +140,10 @@
 
 /* 모바일 대응 */
 @media (max-width: 640px) {
-  .bgLelabo {
+  .bgRomand {
     height: 100vh;
   }
-  .imageWrapper {
-    transform: translateY(-3vh);
-  }
-  .progressBar {
-    top: 50px;
-  }
+
   .contentOverlay {
     padding: 2.5rem 1.25rem;
   }
@@ -148,16 +152,20 @@
     font-size: 1rem;
   }
 
-  .option {
-    font-size: 0.85rem;
-    height: 15px;
+  .pantoneChip {
+    width: 80px;
+    height: 100px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    background: #fff;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
   }
 
-  .bgLelabo p {
-    bottom: 12rem;
+  .bgRomand p {
+    bottom: 11rem;
   }
 }
