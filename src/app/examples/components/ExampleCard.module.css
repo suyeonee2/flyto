@@ -111,4 +111,11 @@
   .cardContent {
     padding: 16px;
   }
+  .card {
+    width: 300px;
+    height: 420px;
+  }
+  .typeBadge {
+    top: -6%;
+  }
 }

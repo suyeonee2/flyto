@@ -121,6 +121,10 @@
 .buttonSecondary {
   border: 1px solid #6d6d6d;
   background-color: #ffffff;
+  color: #111;
+  -webkit-appearance: none;
+  appearance: none;
+  text-decoration: none;
 }
 
 .buttonSecondary:hover {

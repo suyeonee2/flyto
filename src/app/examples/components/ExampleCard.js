@@ -22,6 +22,7 @@ const ExampleCard = ({ image, title, desc, tag, type }) => {
             width={300}
             height={300}
             unoptimized
+            priority
           />
         </div>
         <div className={styles.cardContent}>

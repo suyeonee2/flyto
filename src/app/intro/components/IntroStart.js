@@ -30,7 +30,7 @@ export default function IntroStart() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=200%",
+          end: window.innerWidth < 640 ? "+=80%" : "+=180%",
           scrub: true,
           pin: true,
           onUpdate: (self) => {

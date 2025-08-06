@@ -5,11 +5,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-
-  /* background-image: url("https://fylto-assets.s3.ap-northeast-2.amazonaws.com/lelabo_candle/lelabo_back.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
 }
 
 .questionSection {
@@ -166,6 +161,6 @@
   }
 
   .bgRomand p {
-    bottom: 11rem;
+    bottom: 9.5rem;
   }
 }

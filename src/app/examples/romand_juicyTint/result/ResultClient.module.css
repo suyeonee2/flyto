@@ -120,14 +120,13 @@
 
 .glassButton {
   background-color: #ffffff;
-  border: 1px solid #e09d9d;
+  border: 1px solid #eaafc4;
+  color: #333333;
+  font-size: 1.1rem;
+  font-family: "NEXON Lv1 Gothic OTF";
   padding: 1rem 3rem;
   border-radius: 999px;
-  font-size: 14px;
   cursor: pointer;
-  color: #333333;
-  font-size: 0.9rem;
-  font-family: "NEXON Lv1 Gothic OTF";
   margin-bottom: -1rem;
 }
 
@@ -188,6 +187,6 @@
     margin-top: 6rem;
   }
   .mallBanner {
-    max-width: 340px;
+    max-width: 350px;
   }
 }
