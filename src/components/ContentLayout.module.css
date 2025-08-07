@@ -16,7 +16,7 @@
 
 @media (max-width: 640px) {
   .inner {
-    max-width: 640px;
+    max-width: 500px;
     margin-top: -3rem;
   }
 }
