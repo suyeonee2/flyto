@@ -190,7 +190,15 @@ export default function FirstTime() {
 
       <section className={styles.processIntroSection} id="process">
         <p className={styles.processEyebrow}>
-          <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
+          <span
+            style={{
+              fontSize: "23px",
+              color: "#bdbdbd",
+              fontFamily: "Nanum Myeongjo",
+            }}
+          >
+            ✱
+          </span>
           <br />
           <br />
           큐레이션 콘텐츠 제작과정

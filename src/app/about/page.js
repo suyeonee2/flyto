@@ -86,7 +86,15 @@ export default function AboutPage() {
         <div className={styles.grid_bg} />
         <div className={styles.content}>
           <p className={styles.aboutEyebrow} ref={eyebrowRef}>
-            <span style={{ fontSize: "23px", color: "#bdbdbd" }}>✱</span>
+            <span
+              style={{
+                fontSize: "23px",
+                color: "#bdbdbd",
+                fontFamily: "Nanum Myeongjo",
+              }}
+            >
+              ✱
+            </span>
             <br />
             <br />
             Fylto 소개
