@@ -121,6 +121,12 @@
   margin-bottom: 4rem;
 }
 
+.notice {
+  font-size: 0.75rem;
+  color: #999;
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .mallBanner {
     max-width: 335px;

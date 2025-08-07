@@ -174,6 +174,9 @@ export default function PremiumTintResult() {
               shareUrl={`https://www.fylto.kr${testInfo.path}`}
             />
           </div>
+          <p className={styles.notice}>
+            * 본 콘텐츠는 포트폴리오 예시로, 브랜드와 직접적인 관련은 없습니다.
+          </p>
         </div>
       </ContentLayout>
     </>

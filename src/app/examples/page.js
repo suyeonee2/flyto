@@ -59,7 +59,8 @@ export default function ExamplesPage() {
           Examples
         </h2>
         <p className={styles.HeroDescription} ref={descRef}>
-          상업 목적이 아닌 포트폴리오 용도로 제작되었습니다
+          본 콘텐츠들은 포트폴리오 용도로 제작되었으며 브랜드와 직접적인 관련은
+          없습니다.
         </p>
 
         <div className={styles.cardsWrapper} ref={cardsRef}>

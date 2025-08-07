@@ -122,15 +122,10 @@
 }
 
 /* 출처 고정 문구 */
-.bgRomand p {
+.notice {
   font-size: 0.75rem;
   color: #7b7b7b;
   text-align: center;
-  position: absolute;
-  bottom: 7rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
 }
 
 /* 모바일 대응 */
@@ -158,9 +153,5 @@
     background: #fff;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
-  }
-
-  .bgRomand p {
-    bottom: 9.5rem;
   }
 }

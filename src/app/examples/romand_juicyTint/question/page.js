@@ -79,8 +79,10 @@ export default function PremiumTintQPage() {
               </div>
             </div>
           </div>
+          <p className={styles.notice}>
+            * 본 콘텐츠는 포트폴리오 예시로, 브랜드와 직접적인 관련은 없습니다.
+          </p>
         </div>
-        <p>* 예시 콘텐츠로 제작되었으며, 실제 브랜드와 무관합니다.</p>
       </ContentLayout>
     </>
   );

@@ -118,12 +118,12 @@
 }
 
 /* 출처 고정 문구 */
-.bgLelabo p {
+.notice {
   font-size: 0.75rem;
-  color: #7b7b7b;
+  color: #636363;
   text-align: center;
   position: absolute;
-  bottom: 7rem;
+  bottom: 6rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -157,7 +157,7 @@
     text-align: center;
   }
 
-  .bgLelabo p {
+  .notice {
     bottom: 12rem;
   }
 }
